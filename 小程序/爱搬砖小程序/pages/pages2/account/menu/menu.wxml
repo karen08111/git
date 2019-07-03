@@ -1,0 +1,15 @@
+<!--pages/pages2/account/menu/menu.wxml-->
+<view class='main'>
+  <navigator class='li' hover-class="none" url="/pages/pages2/account/safe/safe">
+    <text>账户安全</text>
+    <text class='jiantous top'></text>
+  </navigator>
+  <navigator class='li' hover-class="none" url="/pages/pages2/account/book/book">
+    <text>资质证书</text>
+    <text class='jiantous top'></text>
+  </navigator>
+	<navigator class='li none' hover-class="none" url="/pages/pages2/wallet/walletIndex/walletIndex">
+	  <text>我的钱包</text>
+	  <text class='jiantous top'></text>
+	</navigator>
+</view>

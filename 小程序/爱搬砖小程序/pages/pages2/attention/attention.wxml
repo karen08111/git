@@ -1,0 +1,42 @@
+<view class='main'>
+  <view class='header'>
+    <text class="header-name zuo {{current==0?'active':''}}" data-current='0' bindtap='qiehuan'>我关注的会员</text>
+    <text class="header-name you {{current==1?'active':''}}"data-current="1" bindtap='qiehuan'>我关注的信息</text>
+  </view>
+  <scroll-view wx:if="{{current==0}}">
+    <view class='list'>
+      <view class='enter' wx:for="{{guanUser}}" data-id='{{item.follow_id}}' wx:key="{{index}}" bindtap='jumpUser'>
+        <view class='enter-title'>
+          <text class='enter-name' wx:if="{{item.name}}">{{item.name}}</text>
+          <image src="{{item.avatar?http+item.avatar:'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2785720064,1295263788&fm=58&s=5C05F616CD345C0156FCA97E03005073&bpow=121&bpoh=75'}}"></image>
+        </view>
+        <view class='enter-content' wx:if="{{item.content}}">
+        {{item.content}}
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{userMore}}" class='isMore'>没有内容~</view>
+  </scroll-view>
+  <wxs module="m1">
+    var give = function(arr,num){
+      var newArr=[] 
+      for( i=0;i<arr.length;i++){
+        if(arr[i].follow_type==num){
+          newArr.push(arr[i])
+        }
+      }
+      return newArr
+    }
+    module.exports.give = give;
+  </wxs>
+  <view class='listTwo' wx:else>
+    <scroll-view scroll-top="{{top}}" scroll-y="true" style="height:{{height}}px;" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+      <newProject wx:for="{{m1.give(guanXin,1)}}" project="{{item}}" http="{{http}}" flow="true" type="/resumeList" wx:key="{{index}}"></newProject>
+      <newProject wx:for="{{m1.give(guanXin,2)}}" project="{{item}}" http="{{http}}" flow="true" type="/teamList" wx:key="{{index}}"></newProject>
+      <newProject wx:for="{{m1.give(guanXin,3)}}" project="{{item}}" http="{{http}}" flow="true" type="/recruitList" wx:key="{{index}}"></newProject>
+      <newProject wx:for="{{m1.give(guanXin,4)}}" project="{{item}}" http="{{http}}" flow="true" type="/project/list" wx:key="{{index}}"></newProject>
+      <view wx:if="{{isMore}}" class='isMore'>没有内容~</view>
+    </scroll-view>
+  </view>
+  
+</view>

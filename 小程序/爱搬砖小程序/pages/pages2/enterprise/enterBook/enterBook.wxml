@@ -1,0 +1,17 @@
+<!--pages/pages2/resume/book/book.wxml-->
+<view class='main'>
+  <view class='book-list'>
+    <view class='book-li' wx:for="{{3}}" wx:key="{{index}}">
+      <text class='wai'>
+        <text class="nei {{index%2==0?'nei-active':''}}"></text>
+      </text>
+      <view class='book-img'>
+        <image src='/images/1.png'></image>
+      </view>
+      <view class='book-name'>名字</view>
+      <view class='book-icon'>初级</view>
+    </view>
+    <view class='save top'>保存</view>
+    <navigator class='add-name' url='/pages/pages2/account/book/book'>添加资质证书</navigator>
+  </view>
+</view>

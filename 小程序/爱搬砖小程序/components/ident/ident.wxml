@@ -1,0 +1,25 @@
+<view class='infor'>
+  <basOrd names="证书名称" pla="请输入正确的证书名称" bind:basOrd="basOrd"></basOrd>
+  <view class='bookImg'>
+    <text class='book-name'>证书图片:</text>
+    <view class='book-img' wx:if="{{!imgUrl}}">
+      <view class='tianjia auto' bindtap='addIdent'>
+          <text class='jia'>+</text>
+          <text class='tianTitle'>添加资质证书</text>
+      </view>
+      <text class='book-shuo'>请上传证书拍摄图片或者扫描文件</text>
+    </view>
+    <!-- 图片 -->
+      <view class='lanImgs' wx:if="{{imgUrl}}">
+        <image src='{{imgUrl}}' bindtap='itemLan' data-url='{{imgUrl}}'></image>
+        <view class='d' bindtap='itemDel'>
+          <image src='/images/dels.png'></image>
+        </view>
+      </view>
+  </view>
+  
+</view>
+<view class='savs'>
+  <text class='one' bindtap='submit'>确认</text>
+  <text class='two' bindtap='reset'>取消</text>
+</view>

@@ -1,0 +1,43 @@
+<view class="payMent">
+	<!-- 第一步 -->
+	<view class="pay-content" wx:if="{{store == 1}}">
+		<view class="mobile-title">手机验证</view>
+		<view class="mobile-toast">请输入手机{{mobile}}收到的验证码</view>
+		<view class="mobile-input">
+			<input placeholder="请输入验证码" type="number" bindinput="getMobile"></input>
+			<text class="getCode" bindtap="{{code<=60?'':'getCode'}}">{{code}}</text>
+		</view>
+		<view class="abz">
+			<view class="save" bindtap="next">下一步</view>
+		</view>
+	</view>
+	<!-- 第二步 -->
+	<view class="password" wx:elif="{{store ==2}}">
+		<view class="mobile-title">设置密码</view>
+		<view class="mobile-toast">请设置密码，用于支付验证</view>
+		<view class="mobile">
+			<block wx:for="{{Length}}" wx:key="{{index}}"> 
+			   <input class='iptbox' value="{{Value.length>=index+1?Value[index]:''}}" disabled password='{{ispassword}}' catchtap='Tap'></input> 
+			</block> 
+			<input style="width: 0;height: 0;top:25rpx;" name="password" type="number" password="{{true}}" class='ipt' maxlength="{{Length}}" focus="{{isFocus}}" bindinput="Focus"></input>
+		</view>
+		<!-- <view class="abz">
+			<view class="save" bindtap="next2">下一步</view>
+		</view> -->
+	</view>
+	<!-- 第三步再次输入密码 -->
+	<view class="password-que" wx:elif = "{{store == 3}}">
+		<view class="mobile-title">确认密码</view>
+		<view class="mobile-toast">请再次输入，以确认密码</view>
+		<view class="mobile">
+			<block wx:for="{{Length2}}" wx:key="{{index}}"> 
+			   <input class='iptbox' value="{{Value2.length>=index+1?Value2[index]:''}}" disabled password='{{ispassword2}}' catchtap='Tap2'></input> 
+			</block> 
+			<input style="width:0;height: 0;top:25rpx;" name="password" type="number" password="{{true}}" class='ipt' maxlength="{{Length2}}" focus="{{isFocus2}}" bindinput="Focus2"></input>
+		</view>
+		<view class="abz">
+			<view class="save" bindtap="next2">设置完成</view>
+		</view>
+	</view>
+	
+</view>

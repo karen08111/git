@@ -1,0 +1,41 @@
+/* pages/newDetail/newDetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+page{
+  padding: 25rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #e5e5e5
+}
+.main image{
+  height: 420rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  /* margin-bottom: 20rpx; */
+}
+.img{
+  /* height: 420rpx; */
+  margin-bottom: 10rpx;
+}
+.title{
+  font-family: MicrosoftYaHei;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #4d4d4d;
+  text-align: center;
+}
+.time{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: right;
+  font-family: MicrosoftYaHei;
+	font-size: 25rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: gainsboro;
+  margin-right: 20rpx
+}
+.author{
+  margin-right: 20rpx;
+}

@@ -1,0 +1,24 @@
+<view class="topUp" wx:if="{{store == 1}}">
+	<view class="money">
+		<view class='topMoney'>
+		  <text class='title'>充值金额:</text>
+		  <input bindinput='getMoney'  placeholder='请输入充值金额'></input>
+		</view>
+		<view class='topMoney bornone'>
+		  <text class='title'>微信充值:</text>
+		  <image src="/images/wx.png" mode="aspectFill"></image>
+		</view>
+	</view>
+	<view class="abz">
+		<view class="save" bindtap="{{isClick?'save':''}}">充值</view>
+	</view>
+</view>
+<view class="topUp" wx:else>
+	<view class="toast">
+		<image src="/images/success.png" mode="aspectFill"></image>
+		<view class="success">充值成功</view>
+	</view>
+	<view class="abz">
+		<view class="yes" bindtap="returns">确定</view>
+	</view>
+</view>

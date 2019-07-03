@@ -1,0 +1,12 @@
+<!--components/jobList/jobList.wxml-->
+<view class="section input-model">
+  <view class="input-title">担任职位</view>
+  <picker class='input-picker' mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="input-title-two">
+      {{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}}
+    </view>
+    <text class='jiantou'></text>
+  </picker>
+</view>
+
+

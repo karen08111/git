@@ -1,0 +1,16 @@
+<view class="main">
+  <view class='forms'>
+    <view class='li'>
+      <text class='title'>公司名称</text>
+      <input bindinput='getName' value='{{title}}' placeholder='请填写公司名称'></input>
+    </view>
+    <common array="{{jobList}}" title="title" pla="请选择行业" bind:getBing="getBing">行业名称</common>
+    <getDate value="请选择时间" bind:getDates="getDates">工作时间</getDate>
+    <pickCity pla="请选择工作地点">工作地点</pickCity>
+    <view class='border text'>
+      <text class='titles'>业绩说明</text>
+      <textarea name="job-content" placeholder='请填写业绩描述' value='{{content}}' bindinput='getContent' maxlength='500'></textarea>
+    </view>
+  </view>
+  <view class='save'>保存</view>
+</view>

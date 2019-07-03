@@ -1,0 +1,20 @@
+<!--pages/newList/newList.wxml-->
+<navigator class="newList" wx:for="{{newList}}" wx:key="{{index}}"  url="{{'/pages/newDetail/newDetail?id='+item.id}}">
+	<view class="newLeft">
+		<view class="title">{{item.title}}</view>
+		<view class="content">
+			<text>{{m1.r(item.abstract)}}</text>
+			<text class="more">查看更多</text> 
+		</view>
+	</view>
+	<view class="newRight">
+		<image src="{{item.img_path?http+item.img_path:''}}" mode="aspectFill"></image>
+	</view>
+</navigator>
+<wxs module="m1">
+	var s = function(str){
+		var i = str.slice(0,30)
+		return i
+	}
+	module.exports.r=s
+</wxs>

@@ -1,0 +1,91 @@
+<view class='main'>
+  <view class='menu'>
+    <view class='menu-li b-right' bindtap='show' data-lid='1'>
+      <text class="menu-name {{lid==1?'active':''}} ">{{names}}</text>
+      <text class="iconfont  {{lid==1?'icon-sanActive':'icon-san'}}  relative"></text>
+    </view>
+    <view class='menu-li b-right ' bindtap='show' data-lid='2' wx:if="{{nature == 1 || url=='/resumeList'}}">
+      <text class="menu-name {{lid==2?'active':''}}">工种分类</text>
+      <text class="iconfont {{lid==2?'icon-sanActive':'icon-san'}} relative"></text>
+    </view>
+    <view class='menu-li b-right ' bindtap='hangShow' data-lid='2' wx:if="{{nature == 2 || url=='/teamList'}}">
+      <text class="menu-name {{lid==2?'active':''}}">行业分类</text>
+      <text class="iconfont {{lid==2?'icon-sanActive':'icon-san'}} relative"></text>
+    </view>
+    <view class='menu-li' bindtap='show' data-lid='3'>
+      <text class="menu-name {{lid==3?'active':''}}">工作地点</text>
+      <text class="iconfont {{lid==3?'icon-sanActive':'icon-san'}} relative"></text>
+    </view>
+  </view>
+  <!-- 热度选项框 -->
+  <view class='redu' style="height:{{redu?'300rpx':'0rpx'}}">
+    <view style='display:flex' bindtap='pickXu' wx:for="{{xus}}" wx:key="{{index}}" data-name='{{item.title}}' data-id="{{item.id}}">
+      <text class='redu-list' style="color:{{item.title == names?'#3388ff':''}}">{{item.title}}</text>
+      <text class="iconfont2 relative icon-dui1" style='top:25rpx;left:-10rpx;' wx:if="{{names == item.title}}"></text>
+    </view>
+  </view>
+  <!-- 行业分类选择框 -->
+  <view style="height:{{teamStore?'700rpx':'0rpx'}}" class='teamJob'>
+    <scroll-view scroll-y>
+      <view class='teamScroll' bindtap='pickTeamJob' wx:for="{{teamJob}}" wx:key="{{index}}" data-id='{{item.id}}' data-name='{{item.title}}' >
+        <text class='redu-list' style="color:{{item.title == teamJobName?'#3388ff':''}}">{{item.title}}</text>
+        <text class="iconfont2 relative icon-dui1" style='top:25rpx;left:0rpx;' wx:if="{{teamJobName == item.title}}"></text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 下拉框 -->
+  <view class="shai" style="height:{{store?'780rpx':'0rpx'}}">
+    <!-- 热度 -->
+    <view style='height:700rpx;' class='scroll' wx:if="{{lid==1}}">
+      <scroll-view class='lei1' scroll-y>
+        
+      </scroll-view>
+    </view>
+    <!-- 技术工种 -->
+    <view style='height:700rpx;' class='scroll' wx:if="{{lid==2}}">
+      <scroll-view class='lei1' scroll-y>
+        <view class="lei-name" wx:for="{{jobList}}" bindtap='selectOne' data-index='{{index}}' wx:key="{{index}}">
+          <text class=" {{currentOne==index?'active':''}}">{{item.work_name}}</text>
+          <text class="iconfont2 relative icon-dui1 {{currentOne==index?'':'op'}}"></text>
+        </view>
+      </scroll-view>
+      <scroll-view class='lei2' scroll-y>
+        <view class='lei-name' wx:for="{{jobZiList}}" bindtap='selectTwo'data-id="{{item.id}}" data-index='{{index}}' wx:key="{{index}}">
+          <text class=" {{currentTwo==index?'active':''}}">{{item.work_name}}</text>
+          <text class="iconfont2 relative icon-dui1 {{currentTwo==index?'':'op'}}"></text>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 地址 -->
+    <view style='height:700rpx;' class='scroll' wx:if="{{lid==3}}">
+      <scroll-view class='lei1' scroll-y>
+        <view class="lei-name" wx:for="{{cityList}}" bindtap='selectCity' data-index='{{index}}' data-id='{{item.id}}' wx:key="{{index}}">
+          <text class=" {{currentOne==index?'active':''}}">{{item.title}}</text>
+          <text class="iconfont2 relative icon-dui1 {{currentOne==index?'':'op'}}"></text>
+        </view>
+      </scroll-view>
+      <scroll-view class='lei2' scroll-y>
+        <view class='lei-name' wx:for="{{erList}}" bindtap='selectErCity' data-index='{{index}}' data-id='{{item.id}}' wx:key="{{index}}">
+          <text class=" {{currentTwo==index?'active':''}}">{{item.title}}</text>
+          <text class="iconfont2 relative icon-dui1 {{currentTwo==index?'':'op'}}"></text>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='btns'>
+      <view class='reset' bindtap='reset'>重置</view>
+      <view class='yes' bindtap="yes">确定</view>
+    </view>
+  </view>
+  <scroll-view scroll-top="{{top}}" scroll-y="true" style="height:{{height}}px;" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+    <project wx:for="{{projectList}}" nature="{{nature}}" type="{{url}}" project="{{item}}" http="{{http}}" wx:key="{{index}}"></project>
+    <view wx:if="{{isMore}}" class='isMore'>没有更多信息了~</view>
+  </scroll-view>
+  
+
+  
+</view>
+<!-- 遮罩 -->
+<view class='hide' wx:if="{{store || redu || teamStore}}" bindtap='guanbi'>
+
+</view>
+<jumpIndex></jumpIndex>

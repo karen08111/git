@@ -1,0 +1,35 @@
+/* components/map/map.wxss */
+.job-location{
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+  width: 690rpx;
+	height: 350rpx;
+	background-color: #fff;
+	border-radius: 10rpx;
+	border: solid 2rpx #e5e5e5;
+}
+
+.map-title{
+  display: flex;
+}
+.map-ico{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 75rpx;
+	letter-spacing: 3rpx;
+	color: #999999;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.map-ico image{
+  width: 27rpx;
+  height: 27rpx;
+  margin-right: 10rpx;
+  /* position: relative;
+  top: 3rpx; */
+}

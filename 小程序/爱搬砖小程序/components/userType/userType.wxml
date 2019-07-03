@@ -1,0 +1,48 @@
+<view class='worke'>
+  <view class='work-head-top'>
+    <view class='head-left' wx:if="{{typeId==3}}">
+      <image src="{{http+userTop.info.avatar}}" wx:if="{{userTop.info.avatar.length>0}}"></image>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543397566517&di=36b7c236ade555237c6c3edddd18531b&imgtype=0&src=http%3A%2F%2Fimage.bitautoimg.com%2Ftaoche%2F2016_pc_usedcar%2Ffail_150_150.png' wx:if="{{userTop.info.avatar.length==0}}"></image>
+    </view>
+    <!-- 工人页面 -->
+    <view class='head-left' wx:if="{{typeId==1}}">
+      <image src="{{http+userTop.info.avatar}}" wx:if="{{userTop.info.avatar.length>0}}"></image>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543397566517&di=36b7c236ade555237c6c3edddd18531b&imgtype=0&src=http%3A%2F%2Fimage.bitautoimg.com%2Ftaoche%2F2016_pc_usedcar%2Ffail_150_150.png' wx:if="{{userTop.info.avatar.length==0}}"></image>
+    </view>
+    <view class='head-center' wx:if="{{typeId==1}}">
+      <view class='user-name'>
+        {{userTop.info.team_name}}
+        <text class='user-store' wx:if="{{userTop.info.status==2}}">在职-考虑机会</text>
+        <text class='user-store' wx:if="{{userTop.info.status==1}}">离职-随时到岗</text>
+        <text class='user-store' wx:if="{{userTop.info.status==3}}">在职-月内到岗</text>
+        <text class='user-ru' bindtap='guanzhu'>关注</text>
+      </view>
+      <!-- <view class='user-gender'>
+        <text class='gender'>性别:男</text>
+        <text>年龄:18</text>
+      </view> -->
+      <view class='user-gender'>
+        <!-- <text class='gender'>职位:技术</text> -->
+      </view>
+    </view>
+
+    <!-- 企业 -->
+    <view class='head-center' wx:if="{{typeId==3}}">
+      <view class='head-title'>{{userTop.info.company_name}}</view>
+      <view class='user-qiye' bindtap='guanzhu'>关注</view>
+    </view>
+    <!-- 二维码 -->
+    <view class='erwei'>
+      <image src="{{http+userTop.info.qr_img}}" bindlongtap="longTap" data-url='{{http+userTop.info.qr_img}}' wx:if="{{userTop.info.qr_img}}" bindtap='yulan'></image>
+      <text class='erwei-name' wx:if="{{userTop.info.qr_img!=null || userTop.info.qr_img!=udefined}}">微信二维码</text>
+    </view>
+  </view>
+  <view class='work-head-bottom' wx:if="{{typeId==3}}">
+    <image src="{{http+userTop.info.avatar}}" wx:if="{{userTop.info.avatar.length>0}}" mode='aspectFill'></image>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543397566517&di=36b7c236ade555237c6c3edddd18531b&imgtype=0&src=http%3A%2F%2Fimage.bitautoimg.com%2Ftaoche%2F2016_pc_usedcar%2Ffail_150_150.png' wx:if="{{userTop.info.avatar.length==0}}"></image>
+  </view>
+  <view class='work-head-bottom' wx:if="{{typeId==1}}">
+    <image src="{{http+userTop.info.avatar}}" wx:if="{{userTop.info.avatar.length>0}}" mode='aspectFill'></image>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543397566517&di=36b7c236ade555237c6c3edddd18531b&imgtype=0&src=http%3A%2F%2Fimage.bitautoimg.com%2Ftaoche%2F2016_pc_usedcar%2Ffail_150_150.png' wx:if="{{userTop.info.avatar.length==0}}"></image>
+  </view>
+</view>

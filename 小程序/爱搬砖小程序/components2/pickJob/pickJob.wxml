@@ -1,0 +1,15 @@
+<view class='li' wx:if="{{!enter}}">
+  <text class='title'><slot></slot></text>
+  <picker mode="multiSelector" bindchange="bindPickerChange" bindcolumnchange="bindMultiPickerColumnChange" class='xiala' value="{{index}}" range="{{array}}" range-key="work_name" >
+    <text class='times' wx:if="{{!pla}}">{{array[0][index[0]].work_name}}-{{array[1][index[1]].work_name}}</text>
+    <text class='times' wx:if="{{pla}}">{{pla}}</text>
+    <text class='jiantou'></text>
+  </picker>
+</view>
+<view class='loginPhone' wx:if="{{enter}}">
+  <!-- <text class='title'><slot></slot></text> -->
+  <picker mode="multiSelector" bindchange="bindPickerChange" bindcolumnchange="bindMultiPickerColumnChange" class='xiala' value="{{index}}" range="{{array}}" range-key="work_name" >
+    <text class='times' wx:if="{{!pla}}">{{array[0][index[0]].work_name}}-{{array[1][index[1]].work_name}}</text>
+    <text class="times {{isColor?'color':'bcolor'}}" wx:if="{{pla}}">{{pla}}</text>
+  </picker>
+</view>

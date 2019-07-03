@@ -1,0 +1,8 @@
+<!--components2/date/date.wxml-->
+<view class='li'>
+  <text class='title'><slot></slot></text>
+  <picker bindchange="bindPickerChange" class='xiala' mode="date" fields="month">
+    <text class='times'>{{value?value:pla}}</text>
+    <text class='jiantou'></text>
+  </picker>
+</view>

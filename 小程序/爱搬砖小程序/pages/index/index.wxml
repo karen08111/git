@@ -1,0 +1,70 @@
+<view class='index'>
+  <!-- <pickCity pla="{{a}}" bind:getCityId="getCityId"></pickCity> -->
+  <!-- <wux-filterbar items="{{ items }}" /> -->
+  <swipers imgUrls="{{imgUrls}}" http="{{http}}"></swipers>
+  <!-- <pickClass objectArray="{{objectArray}}" pla="请选择"></pickClass> -->
+  <!-- <uploadImg></uploadImg> -->
+  <tabList></tabList>
+  <!-- <newProject></newProject> -->
+  <!-- 搜索 -->
+  <view class='recher' bindtap='sou'>
+    <view class='recher-btn'>
+      <image src='/images/fangdajing.png'></image>
+    </view>
+    <input placeholder='搜索关键词' disabled></input>
+    
+  </view>
+	<!-- <button bindtap="yaoqing">邀请工友助力临时跳转按钮</button> -->
+	<!-- <view class="ceshi" bindtap="ceshi">测试</view> -->
+	<!-- <contact-button type="default-light" size="20" session-from="weapp">联系客服按钮</contact-button>
+	<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+	<view class="view01" bindtap="viewClick01">震动</view>
+	<button bindtap="tingl">获取微信号</button> -->
+	<navigator url="/pages/pages2/member/memberIntr/menberIntr">购买会员临时跳转</navigator>
+  <view class='neirong'>
+  
+  
+    <!-- 热门企业 -->
+    <view class='allJob'>
+      <view class='job-title'>热门企业</view>
+      <!-- <view class='tab-list huan iconfont icon-shuaxin'>换一批</view> -->
+    </view>
+    <view class='rong'>
+      <view class='banner'>
+        <swiper style='height:180rpx;' display-multiple-items="3" circular="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{recomendList.company}}" wx:key="{{index}}">
+            <swiper-item style="" data-id="{{item.uid}}" bindtap="enterJump">
+              <view class='enter'>
+                <view class='enter-title'>
+                  <text class='enter-name'>{{item.name}}</text>
+                  <image src="{{item.avatar?http+item.avatar:'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2785720064,1295263788&fm=58&s=5C05F616CD345C0156FCA97E03005073&bpow=121&bpoh=75'}}"></image>
+                </view>
+                <view class='enter-content'>
+                {{item.content}}
+                </view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    
+    <!-- 热门招聘 -->
+    <view class='allJob'>
+      <view class='job-title'>热门招聘</view>
+      <view class='tab-list'>
+        <text class="tab-name margin-right {{newTab==0?'tab-active':''}}" data-current='0' bindtap='qiehuan' >工 人</text>
+        <text class="tab-name {{newTab==1?'tab-active':''}}" data-current='1' bindtap='qiehuan'>团 队</text>
+      </view>
+    </view>
+    <view wx:if="{{newTab==0}}">
+      <newProject wx:for="{{recruitPerson}}" wx:key="{{index}}" project="{{item}}" http="{{http}}" type="/recruitList"></newProject>
+    </view>
+    <view wx:else>
+      <newProject wx:for="{{recruitTeam}}" wx:key="{{index}}" project="{{item}}" http="{{http}}" type="/recruitList"></newProject>
+    </view>
+  
+  
+  </view>
+</view>
+

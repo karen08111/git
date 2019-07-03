@@ -1,0 +1,54 @@
+/* components/location/location.wxss */
+.section{
+  display: flex;
+  height: 130rpx;
+  position: relative;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+}
+.section__title{
+  display: block;
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.picker{
+  height: 100rpx;
+}
+.picker input{
+  line-height: 100rpx;
+  font-size: 28rpx;
+  height: 100%;
+  width: 100%;
+}
+.jiantou{
+  position: absolute;
+  right: 10rpx;
+  top:65rpx;
+  width: 20rpx;  
+  height: 20rpx;  
+  border-left: 1rpx solid #b3b3b3;  
+  border-bottom: 1rpx solid #b3b3b3;  
+  -webkit-transform: translate(0,-50%) rotate(-135deg);  
+  transform: translate(0,-50%) rotate(-135deg);
+}
+.li{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.title{
+  float: left;
+  margin-right: 25rpx;
+}
+.li input{
+  float: left;
+  height: 100%;
+}
+.none{
+  border-bottom:none; 
+}

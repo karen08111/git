@@ -1,0 +1,4 @@
+<!--components2/jumpIndex/jumpIndex.wxml-->
+<view class="jumpIndex" bindtap="jump">回到首页</view>
+<!--index.wxml-->
+

@@ -1,0 +1,87 @@
+<view class="member" wx:if="{{!isSuccess}}">
+	<view class="member-main">
+		<view class="member-top"><image src="/images/jifen.png" mode="aspectFill"></image></view>
+		<view class="intr">
+			<view class="intr-top">
+				<view class="intr-bg"></view>
+				<view class="intr-content">
+					<view class="intr-tops">
+						<text class="title">小砖会员</text>
+						<text>一个月免费查看信息</text>
+					</view>
+					<view class="contents">1.一个月内，不限地区，全国信息免费查看。
+2.服务时间从成功订阅后开始计算。
+3.信息可在PC端、移动端、APP端三方查看。
+4.站内信息版权归摩云爱搬砖所有，禁止赠与、借用、转让、售卖，否则平台有权在未经通知的情况下取消会员服务资格，由此带来的损失由会员自行承担，并追究法律责任。
+5.订阅成功后不支持退款。
+					</view>
+					<view class="pick" bindtap="pickSmall">开通</view>
+				</view>
+			</view>
+			<!-- 大 -->
+			<view class="intr-top" style="margin-top: 25rpx;">
+				<view class="intr-bg"></view>
+				<view class="intr-content">
+					<view class="intr-tops">
+						<text class="title">大砖会员</text>
+						<text>一年之内免费查看信息</text>
+					</view>
+					<view class="contents">1.一个月内，不限地区，全国信息免费查看。
+2.服务时间从成功订阅后开始计算。
+3.信息可在PC端、移动端、APP端三方查看。
+4.站内信息版权归摩云爱搬砖所有，禁止赠与、借用、转让、售卖，否则平台有权在未经通知的情况下取消会员服务资格，由此带来的损失由会员自行承担，并追究法律责任。
+5.订阅成功后不支持退款。
+					</view>
+					<view class="pick" bindtap="pick">开通</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 弹窗 -->
+</view>
+<view class="toast" wx:if="{{show}}" bindtap="hide" ></view>
+<view class="showToast" wx:if="{{show}}">
+	<view class="radio">
+		<view class="radio-title">开通服务:</view>
+		<view class="radio-list">
+			<view class="radio-intr" wx:for="{{money}}" wx:key="{{index}}" data-index="{{index}}" data-money="{{item.money}}" data-month="{{item.month}}" bindtap="check">
+				<text class="wai">
+					<text class="nei" wx:if="{{item.store}}"></text>
+				</text>
+				<text class="radio-name">{{item.title}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="radio">
+		<view class="radio-title">服务介绍:</view>
+		<view class="radio-list">{{content}}</view>
+	</view>
+	<view class="radio">
+		<view class="radio-title">钱包余额:</view>
+		<view class="radio-list">{{balance.balance}}元</view>
+	</view>
+	<view class="radio" wx:if="{{!isPay}}">
+		<view class="radio-title">还需充值:</view>
+		<view class="radio-input">
+			<input type="number" bindinput="xuPay" disabled value="{{difi}}"></input>
+		</view>
+	</view>
+	<view class="radio" wx:if="{{!isPay}}">
+		<view class="radio-title">充值方式:</view>
+		<image src="/images/wx.png" mode="aspectFill"></image>
+	</view>
+	<view class="yes">
+		<view class="pay" bindtap="yuPays" wx:if="{{isPay}}">确认开通</view>
+		<view class="pay" bindtap="pays" wx:else>确认支付</view>
+	</view>
+</view>
+<!-- 成功提示 -->
+<view wx:if="{{isSuccess}}">
+	<view class="paySucess">
+		<image src="../../../../images/huiyes.png" mode="aspectFill"></image>
+		<view class="tiSuccess">恭喜您成功成为{{payMonth == 12? '大砖会员':'小砖会员'}}</view>
+	</view>
+	<view class="abz">
+		<view class="save" bindtap="breaks">确定</view>
+	</view>
+</view>

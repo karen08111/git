@@ -1,0 +1,241 @@
+/* pages/pages2/resume/resumeIndex/resumeIndex.wxss */
+@import "/assets/font.wxss";
+.main{
+  border-top: 1rpx solid #e5e5e5; 
+  background: #fff;
+  padding: 30rpx;
+  padding-bottom:0rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.header{
+  border-bottom: 0.5rpx solid #e5e5e5;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.header-left{
+  float: left;
+  width: 70%;
+} 
+.header-name{
+  font-size: 64rpx;
+	font-weight: 100;
+	letter-spacing: 3rpx;
+	color: #000000;
+}
+.header-job{
+  display: block;
+  height: 50rpx;
+  /* line-height: 50rpx; */
+	border-radius: 25rpx;
+	border: solid 1rpx #f7b336;
+  padding: 0rpx 15rpx 0rpx 15rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #666666;
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+}
+.header-title{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-title image{
+  width: 26rpx;
+  height: 26rpx;
+  position: relative;
+  top: -20rpx;
+  margin-left: 5rpx;
+}
+.list{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 36rpx; */
+	letter-spacing: 2rpx;
+	color: #666666;
+  padding: 0 10rpx 0 10rpx;
+  box-sizing: border-box;
+  /* border-right: 1rpx solid #e5e5e5;  */
+}
+.padding-left{
+  padding-left: 0;
+}
+.border-right{
+  border-right: none;
+}
+.header-phone{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 36px; */
+	letter-spacing: 0rpx;
+	color: #666666;
+  margin-right: 20rpx;
+}
+.relative{
+  position: relative;
+  top:8rpx;
+}
+.header-right{
+  position: relative;
+  float: right;
+}
+.avatar{
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.avatar image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.store{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 44rpx;
+  width: 100%;
+  background: #ffffff;
+  opacity: 0.8;
+  font-size: 22rpx;
+  color: #4d4d4d;
+  line-height: 44rpx;
+  text-align: center;
+}
+.set{
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  margin: auto;
+  margin-top: 25rpx;
+}
+.set image{
+  width: 100%;
+  height: 100%;
+}
+
+.clear{
+  clear: both;
+}
+.job-main{
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.job-list{
+    margin-bottom: 40rpx;
+}
+.job-title{
+  margin-top: 30rpx;
+  font-size: 38rpx;
+  color: #343434;
+  font-weight: 100;
+  /* margin-bottom: 20rpx; */
+  background: #ffffff;
+}
+.job-title-left{
+  /* float: left; */
+}
+.name{
+  font-size: 29rpx;
+  letter-spacing: 2rpx;
+  color: #343434;
+}
+.job-time{
+  font-size: 24rpx;
+  color: #666666;
+  /* margin-left: 15rpx; */
+  float: right;
+}
+.right{
+  float: right;
+  margin-top: 0;
+}
+.clear{
+  clear: both;
+}
+.job-content{
+  font-size: 22rpx;
+  color: #666666;
+  line-height: 36rpx;
+  /* margin-top: 10rpx; */
+  white-space: pre-line;
+}
+
+.add{
+  width: 690rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #ffffff;
+	border-radius: 10rpx;
+	border: solid 1rpx #dddddd;
+  font-size: 28rpx;
+  text-align: center;
+  letter-spacing: 3rpx;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+
+
+.book{
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+}
+.book-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.book-li{
+  width: 330rpx;
+  height: 358rpx;
+  background-color: #fafafa;
+	border-radius: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.book-img{
+  width: 310rpx;
+  height: 220rpx;
+  margin: auto;
+  border-radius: 10rpx;
+}
+.book-img image{
+  width: 100%;
+  height: 100%;
+}
+.book-name{
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  color: #343434;
+  text-align: center;
+  margin-top: 15rpx;
+}
+.book-icon{
+  font-size: 22rpx;
+  width: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  background-color: #ffffff;
+	border-radius: 15rpx;
+	border: solid 1rpx #f7b336;
+  color: #666666;
+  letter-spacing: 1rpx;
+  margin: auto;
+  margin-top: 15rpx;
+
+}
+
+.jieshao{
+
+}

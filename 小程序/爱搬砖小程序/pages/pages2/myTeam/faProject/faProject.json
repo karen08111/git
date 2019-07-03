@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "发布项目",
+  "usingComponents":{
+    "colonne": "/components/colonne/colonne",
+    "pickClass": "/components/pickClass/pickClass",
+    "salary": "/components2/salary/salary",
+    "pickCity": "/components/location/location",
+    "getDate": "/components2/date/date",
+    "common": "/components2/common/common",
+    "pickJob": "/components2/pickJob/pickJob"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "证书管理",
+  "usingComponents":{
+    "uploadImg": "/components/uploadImg/uploadImg",
+    "common": "/components2/common/common"
+  }
+}

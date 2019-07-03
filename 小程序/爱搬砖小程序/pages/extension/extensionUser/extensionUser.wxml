@@ -1,0 +1,10 @@
+<!--pages/extension/extensionUser/extensionUser.wxml-->
+<view class="main">
+	<view class="main-header">工友成员</view>
+	<view class="userList">
+		<view class="user" wx:for="{{userList}}" wx:key="{{index}}">
+			<!-- <image src="../../../images/1.png"></image> -->
+			<text class="userName">{{item.name}}</text>
+		</view>
+	</view>
+</view>

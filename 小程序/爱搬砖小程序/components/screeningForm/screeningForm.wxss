@@ -1,0 +1,185 @@
+/* components/screeningForm/screeningForm.wxss */
+.animation-content{
+  width: 650rpx;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.gundong{
+  padding-bottom: 50rpx;
+  box-sizing: border-box;
+  height: 100%;
+}
+/* 筛选内容样式 */
+.filter-title{
+  font-family: PingFangSC-Regular;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top: 1rpx solid #e5e5e5;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.filter-list{
+  padding: 20rpx;
+  box-sizing: border-box;
+  
+}
+.filter-name{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #999999;
+}
+.filter-eti{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.filter-btn{
+  display: inline-block;
+  margin-right: 10rpx;
+  word-break: break-all;
+  /* width: 180rpx; */
+  height: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  /* padding-top: 10rpx; */
+  /* padding-bottom: 10rpx; */
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 60rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  background-color: #f2f2f2;
+	border-radius: 30rpx;
+  margin-top: 20rpx;
+}
+.mini{
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 10rpx;
+}
+.activeStore{
+  color: #fff;
+  background: #3388FF;
+}
+/* 下拉选项框 */
+.filter-input{
+  width: 219rpx;
+	height: 60rpx;
+	background-color: #f2f2f2;
+	border-radius: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.margin-top{
+  margin-top: 20rpx;
+}
+.heng{
+  width: 29rpx;
+  height: 0;
+  border: 1.5rpx solid #333;
+  margin: 10rpx;
+  margin-top: 30rpx;
+}
+.option{
+  display: inline-block;
+  width: 106rpx;
+	height: 60rpx;
+	background-color: #f2f2f2;
+	border-radius: 30rpx;
+  margin-left: 10rpx;
+  position: relative;
+  text-align: center;
+  line-height: 50rpx;
+}
+.option image{
+  width: 20rpx;
+  height: 27rpx;
+  position: absolute;
+  right: 17rpx;
+  top: 18rpx;
+}
+.option-text{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  margin-right: 10rpx;
+}
+
+.option_box{
+  position: absolute;
+  /* top: 70rpx; */
+  width: 100%;
+  bottom: 60rpx;
+  /* border:1rpx solid #efefef; */
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  z-index: 12;
+}
+.options{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+/* 提交 */
+.btn-area{
+  display: flex;
+  margin-top: 45rpx;
+  padding-left: 180rpx;
+  box-sizing: border-box;
+}
+.btn-chong{
+  width: 200rpx;
+	height: 80rpx;
+  margin-left: 25rpx;
+	background-color: #fdba00;
+	border-radius: 40rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #ffffff;
+  text-align: center;
+  line-height: 80rpx;
+}
+.btn-que{
+  background-color: #3388ff;
+  margin-right: 20rpx;
+}
+
+.width{
+  width: 160rpx;
+}
+xi{
+  border: 0.5rpx solid #333;
+}
+

@@ -1,0 +1,56 @@
+/* components/location/location.wxss */
+.section{
+  display: flex;
+  height: 130rpx;
+  position: relative;
+  border-bottom: 1rpx dashed #e5e5e5;
+}
+.section__title{
+  display: block;
+  width: 150rpx;
+  font-size: 28rpx;
+  line-height: 130rpx;
+}
+.picker{
+  height: 130rpx;
+}
+.picker input{
+  line-height: 130rpx;
+  width: 500rpx;
+  font-size: 28rpx;
+  height: 100%;
+}
+.jiantou{
+  position: absolute;
+  right: 10rpx;
+  top:65rpx;
+  width: 20rpx;  
+  height: 20rpx;  
+  border-left: 1rpx solid #b3b3b3;  
+  border-bottom: 1rpx solid #b3b3b3;  
+  -webkit-transform: translate(0,-50%) rotate(-135deg);  
+  transform: translate(0,-50%) rotate(-135deg);
+}
+.loginPhone {
+	width: 587rpx;
+	height: 88rpx;
+	margin: auto;
+	background-color: #eeeeee;
+	border-radius: 10rpx;
+	display: flex;
+	margin-top: 30rpx;
+}
+.loginPhone picker {
+	line-height: 88rpx;
+}
+.loginPhone input {
+	line-height: 88rpx;
+	height: 100%;
+}
+.lt{
+	font-size: 28rpx;
+	padding-left: 25rpx;
+}
+.color {
+	color: #B3B3B3;
+}

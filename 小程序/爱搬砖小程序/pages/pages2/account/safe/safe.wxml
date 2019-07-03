@@ -1,0 +1,17 @@
+<view class='main'>
+  <navigator class='li' hover-class="none" url="/pages/binPhone/bindPhone">
+    <text>手机绑定</text>
+    <!-- <text class='store'>已认证</text> -->
+    <text class='jiantous top'></text>
+  </navigator>
+  <navigator class='li' hover-class="none" url="/pages/pages2/account/bindEmail/bindEmail">
+    <text>邮箱绑定</text>
+    <!-- <text class='store'>已认证</text> -->
+    <text class='jiantous top'></text>
+  </navigator>
+  <navigator class='li none' hover-class="none" url="/pages/pages2/userSelect/userSelectIndex/userSelectIndex">
+    <text>身份认证</text>
+    <!-- <text class='store'>已认证</text> -->
+    <text class='jiantous top'></text>
+  </navigator>
+</view>

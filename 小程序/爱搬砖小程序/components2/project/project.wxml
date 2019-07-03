@@ -1,0 +1,83 @@
+<!--components2/project/project.wxml-->
+<!-- 找工人 -->
+<navigator class='project' style="{{pad?'padding:0;':''}}" wx:if="{{type=='/resumeList'}}"
+ url="{{flow?'/pages/pages2/information/showPerson/showPerson?url=resume&id='+project.follow_id:'/pages/pages2/information/showPerson/showPerson?url=resume&id='+project.id}}" >
+  <view class='title flex'>
+    <text class='title-name'>{{project.title || project.name}}</text>
+    <text class='title-lar' wx:if="{{project.min_pay!=0 && project.min_pay}}">{{project.min_pay}}元/{{project.quantity_unit}}</text>
+    <text class='title-lar' wx:if="{{project.min_pay==0}}">面议</text>
+  </view>
+  <view class='intr'>
+    <text class='tab-name border padd-left' wx:if="{{project.work_type}}">{{project.work_type}}</text>
+    <!-- <text class='tab-name border'>{{}}人</text> -->
+    <text class="tab-name {{project.region?'border':''}}">{{project.work_time==0 || project.work_time!='undefined'?'工龄:不详':project.work_time+'年'}}</text>
+    <text class='tab-name' wx:if="{{project.region}}">{{project.region[0].title}}-{{project.region[1].title}}</text>
+  </view>
+  <text class='xuxian'></text>
+  <view class='user-intr'>
+    <image src="{{project.avatar?http+project.avatar:'/images/logo.png'}}" ></image>
+    <text class='user-name'>{{project.name}}</text>
+    <text class='jobStore' wx:if="{{project.current_state}}">{{project.current_state}}</text>
+    <text class='time yue' wx:if="{{project.hits}}">{{project.hits}}浏览</text>
+    <text class='time'>{{project.update_time}}</text>
+  </view>
+</navigator>
+<!-- 找团队 -->
+<navigator class='project' style="{{pad?'padding:0;':''}}" wx:if="{{type=='/teamList'}}" 
+url="{{flow?'/pages/pages2/information/showTeam/showTeam?url=team&id='+project.follow_id:'/pages/pages2/information/showTeam/showTeam?url=team&id='+project.id}}">
+  <view class='title'>
+    <text class='title-name'>{{project.team_name}}</text>
+    <!-- <text class='title-lar'>{{project.min_pay}}元/{{project.quantity_unit}}</text> -->
+  </view>
+  <view class='intr'>
+    <text class='tab-name border padd-left' wx:if="{{project.industry_type}}">{{project.industry_type}}</text>
+    <!-- <text class='tab-name border'>{{}}人</text> -->
+    <text class='tab-name border' wx:if="{{project.avg_work_time}}">{{project.avg_work_time}}年</text>
+    <text class="tab-name {{project.region?'border':''}}">{{project.nums}}人</text>
+    <text class='tab-name' wx:if="{{project.region}}">{{project.region[0].title}}-{{project.region[1].title}}</text>
+  </view>
+  <text class='xuxian'></text>
+  <view class='user-intr'>
+    <image src="{{project.avatar?http+project.avatar:'/images/logo.png'}}"></image>
+    <text class='user-name'>{{project.team_name}}</text>
+    <text class='time yue' wx:if="{{project.hits}}">{{project.hits}}浏览</text>
+    <text class='time'>{{project.update_time}}</text>
+  </view>
+</navigator>
+<!-- 工人找活 /团队找活-->
+<navigator class='project' url="{{flow?'/pages/pages2/information/messageDetail/messageDetail?id='+project.follow_id+'&nature='+nature:'/pages/pages2/information/messageDetail/messageDetail?id='+project.id+'&nature='+nature}}" style="{{pad?'padding:0;':''}}" wx:if="{{type=='/recruitList'}}" data-id='{{project.id}}'>
+  <view class='title'>
+    <text class='title-name'>{{project.title}}</text>
+    <!-- <text class='title-lar'>{{project.min_pay}}元/{{project.quantity_unit}}</text> -->
+  </view>
+  <view class='intr'>
+    <text class='tab-name border padd-left'>{{project.work_type}}</text>
+    <text class='tab-name border'>{{project.nums==0?'不限人数':project.nums+'人'}}</text>
+    <text class='tab-name border'>{{project.work_time==0 || project.work_time!= 'undefined'?'不限工龄':'工龄:'+project.work_time+'年'}}</text>
+    <text class='tab-name'>{{project.region[0].title}}-{{project.region[1].title}}</text>
+  </view>
+  <text class='xuxian'></text>
+  <view class='user-intr'>
+    <image src="{{project.avatar?http+project.avatar:'/images/logo.png'}}"></image>
+    <text class='user-name' wx:if="{{project.publisher}}">{{project.publisher}}</text>
+    <text class='time yue' wx:if="{{project.hits}}">{{project.hits}}浏览</text>
+    <text class='time'>{{project.update_time}}</text>
+  </view>
+</navigator>
+<!-- 项目信息 -->
+<navigator class='project' url="{{flow?'/pages/pages2/information/projectDetail/projectDetail?id='+project.follow_id:'/pages/pages2/information/projectDetail/projectDetail?id='+project.id}}" style="{{pad?'padding:0;':''}}" wx:if="{{type=='/project/list'}}" data-id='{{project.id}}'>
+  <view class='title'>
+    <text class='title-name'>{{project.title}}<text class='jobStore' wx:if="{{project.prj_status}}">{{project.prj_status}}</text></text>
+  </view>
+  <view class='intr'>
+    <text class='tab-name border padd-left' wx:if="{{project.project_type}}">{{project.project_type}}</text>
+    <text class='tab-name'>{{project.region[0].title}}-{{project.region[1].title}}</text>
+  </view>
+  <text class='xuxian'></text>
+  <view class='user-intr'>
+    <image src="{{project.avatar?http+project.avatar:'/images/logo.png'}}"></image>
+    <text class='user-name' wx:if="{{project.name}}">{{project.name}}</text>
+    <text class='time yue' wx:if="{{project.hits}}">{{project.hits}}浏览</text>
+    <text class='time'>{{project.update_time}}</text>
+  </view>
+</navigator>

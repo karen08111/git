@@ -1,0 +1,123 @@
+/* components/code/code.wxss */
+@import "/assets/font.wxss";
+
+.slidersBox {
+  width:236px;
+  /* height: 59px; */
+	height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  position: relative;
+  /* overflow: hidden; */
+	top: 14px;
+  z-index: 9;
+  background: #fff;
+	border-radius: 20px;
+}
+.annius image{
+	width: 59px;
+	height: 59px;
+}
+.annius{
+	position: absolute;
+	top: 0;
+	color: #fff;
+}
+.father{
+	position: relative;
+	width: 100%;
+	height: 59px;
+}
+.operationBgBox {
+  /* height: 59px; */
+  width: 100%;
+  /* background-color: #7BBB55; */
+  background: #dfe1e2;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+.bgs{
+  background-color: #1296db;
+  color: #fff
+}
+.operationBox {
+  height: 59px;
+  width: 59px;
+  /* background-color:#EBEBEB; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: -14px;
+}
+
+.operationBox image {
+  width: 59px;
+  height: 59px;
+	border-radius: 50%;
+	position: absolute;
+	
+}
+.gai{
+	height: 30px;
+	border-radius: 20px;
+	position: absolute;
+	left:0;
+	top:0;
+	background:#dfe1e2;
+	width: 55px;
+	overflow: hidden;
+}
+
+.content{
+  position: relative;
+  background: #fff;
+	width: 238px;
+	margin: auto;
+}
+.bg{
+  width: 100%;
+  height: 150px;
+  margin: auto; 
+  background-size: cover 
+}
+.kuai{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.model{
+  /* width: 238px; */
+	width: 255px;
+	height: 265px;
+	background: #FFFFFF;
+	padding-top: 10px;
+	box-sizing: border-box;
+  margin: auto
+}
+.bg2{
+  background: #3388ff;
+  opacity: 0.8
+}
+.shua{
+  position: relative;
+  bottom: 0;
+  left: 10px
+}
+.del{
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}

@@ -1,0 +1,35 @@
+<!--pages/pages2/wallet/bill/bill.wxml-->
+<view class="bill">
+	<view class='header'>
+	  <text class="header-name zuo {{current==1?'active':''}}" data-current='1' bindtap='qiehuan'>充值</text>|
+	  <text class="header-name you {{current==2?'active':''}}"data-current="2" bindtap='qiehuan'>消费</text>
+	</view>
+	<!-- 充值 -->
+	<view class="consum" wx:if="{{current == 1}}">
+		<view class="consum-list" wx:for="{{list}}" wx:key="{{index}}" bindtap="jumps" data-id="{{item.id}}">
+			<view class="consum-left">
+				<view class="consum-title">{{item.genre_text}} --- {{item.merchant}}</view>
+				<view class="consum-time">
+					<text class="days">{{item.create_time}}</text>
+					<text>{{item.status_text}}</text>
+				</view>
+			</view>
+			<view class="consum-money2">+{{item.total_fee}}</view>
+			<view class="sign"></view>
+		</view>
+	</view>
+	<!-- 消费 -->
+	<view class="consum" wx:else>
+		<view class="consum-list" wx:for="{{list}}" wx:key="{{index}}" bindtap="jumps" data-id="{{item.id}}">
+			<view class="consum-left">
+				<view class="consum-title">{{item.genre_text}} --- {{item.merchant}}</view>
+				<view class="consum-time">
+					<text class="days">{{item.create_time}}</text>
+					<text>{{item.status_text}}</text>
+				</view>
+			</view>
+			<view class="consum-money">-{{item.total_fee}}</view>
+			<view class="sign"></view>
+		</view>
+	</view>
+</view>

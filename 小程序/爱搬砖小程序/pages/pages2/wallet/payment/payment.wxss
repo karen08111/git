@@ -1,0 +1,90 @@
+/* pages/pages2/wallet/payment/payment.wxss */
+.payMent {
+	/* position: relative; */
+	padding: 25rpx;
+	box-sizing: border-box;
+}
+.mobile-title {
+	font-size: 24rpx;
+	letter-spacing: 2rpx;
+	color: #CCCCCC;
+	text-align: center;
+	line-height: 50rpx;
+	margin-top: 30rpx;
+}
+.mobile-toast {
+	font-size: 24rpx;
+	color: #343434;
+	text-align: center;
+	line-height: 50rpx;
+}
+.mobile-input {
+	width: 651rpx;
+	height: 110rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+	border: solid 1rpx #e5e5e5;
+	margin: auto;
+	position: relative;
+	margin-top: 50rpx;
+	font-size: 24rpx;
+}
+.mobile-input input {
+	line-height: 110rpx;
+	height: 100%;
+	padding-left: 25rpx;
+	box-sizing: border-box;
+	width: 60%;
+}
+.getCode{
+	display: inline-block;
+	width: 180rpx;
+	height: 60rpx;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	border: solid 1rpx #3388ff;
+	text-align: center;
+	color: #3388ff;
+	line-height: 60rpx;
+	position: absolute;
+	right: 20rpx;
+	top: 25rpx;
+	
+}
+.mobile {
+	display: flex;
+	justify-content: space-between;
+	padding: 25rpx;
+	box-sizing: border-box;
+	margin-top: 30rpx;
+	position: relative;
+}
+.mobile input {
+	width: 90rpx;
+	height: 90rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+	border: solid 1rpx #e5e5e5;
+	text-align: center;
+	line-height: 90rpx;
+}
+.password {
+	/* position: relative; */
+}
+.iptbox {
+	z-index: 9;
+}
+.ipt{ 
+	 width: 100%; 
+	 height: 90rpx;
+	 opacity: 0;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: -1;
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!--pages/pages2/search/search.wxml-->
+<view class='search'>
+  <view class='sou'>
+    <view class='ul' bindtap='pick'>
+      <text class='name'>{{name}}</text>
+      <text class='iconfont icon-xiala xia'></text>
+    </view>
+    <view class='inputs'>
+      <view class='iconfont icon-serch icon' wx:if="{{!search}}"></view>
+      <input placeholder='搜索关键词' bindfocus="getFocus" value="{{value}}" bindinput='searchValue'></input>
+      <view class='iconfont icon-serch icon2' wx:if="{{search}}" bindtap='goSearch'></view>
+    </view>
+    <view class='del' bindtap='quxiao'>取消</view>
+    <view class="hide" wx:if="{{show}}">
+      <view wx:for="{{typeList}}" wx:key="{{index}}" data-type='{{item.id}}' bindtap='qieType' data-name='{{item.title}}'>{{item.title}}</view> 
+    </view>
+  </view>
+  <!--  -->
+
+  <!-- <view class='jack'>
+    <newProject></newProject>
+  </view>  -->
+  
+
+  <!-- <view wx:if="{{project.length==0}}" class='project'>
+    <view class='title'>热门搜索</view>
+    <view class='btnList'>
+      <text class='btn'>泥瓦匠</text>
+      <text class='btn'>泥瓦匠</text>
+      <text class='btn'>泥瓦匠</text>
+    </view>
+  </view> -->
+</view>

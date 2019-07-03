@@ -1,0 +1,124 @@
+{
+  "pages": [
+		"pages/index/index",
+		"pages/pages2/wallet/walletIndex/walletIndex",
+		"pages/pages2/personal/personal",
+		"pages/binPhone/bindPhone",
+		
+		"pages/pages2/wallet/topUp/topUp",
+		"pages/pages2/wallet/billDetail/billDetail",
+		"pages/pages2/wallet/bill/bill",
+		
+		"pages/pages2/wallet/payment/payment",
+    "pages/aboutUs/aboutUs",
+    
+    "pages/pages2/myTeam/faProject/faProject",
+    "pages/extension/extensionLogin/extensionLogin",
+    "pages/extension/myExten/myExten",
+    "pages/extension/extensionIndex/extensionIndex",
+    
+    "pages/extension/extensionUser/extensionUser",
+    "pages/newList/newList",
+    "pages/pages2/myTeam/recruitment/recruitment",
+    "pages/pages2/myTeam/member/member",
+    "pages/enter/enter",
+    "pages/pages2/myTeam/teamResum/teamResumIndex",
+    "pages/pages2/account/book/book",
+    "pages/pages2/enterprise/enterBasic/enterBasic",
+    "pages/pages2/account/bindEmail/bindEmail",
+    "pages/login/login",
+    "pages/pages2/resume/resumeIndex/resumeIndex",
+    "pages/pages2/myTeam/post/post",
+    "pages/pages2/enterprise/enterpriseIndex/enterpriseIndex",
+    "pages/pages2/enterprise/enterPhoto/enterPhoto",
+    "pages/pages2/userSelect/userSelectIndex/userSelectIndex",
+    "pages/pages2/account/ident/ident",
+    "pages/pages2/information/projectList/projectList",
+    "pages/pages2/information/showEnter/showEnter",
+    "pages/pages2/information/projectDetail/projectDetail",
+    "pages/pages2/userSelect/gerenForm/gerenForm",
+    "pages/pages2/resume/book/book",
+    "pages/pages2/enterprise/enterBook/enterBook",
+    "pages/pages2/information/screenList/screentList",
+    "pages/pages2/resume/teamBasic/teamBasic",
+    "pages/pages2/myTeam/teamPerform/teamPerform",
+    "pages/pages2/myTeam/postProject/postProject",
+    "pages/pages2/resume/job/job",
+    "pages/pages2/resume/basic/basic",
+    "pages/pages2/information/showPerson/showPerson",
+    "pages/pages2/information/messageDetail/messageDetail",
+    "pages/pages2/enterprise/enterIntr/enterIntr",
+    "pages/pages2/myTeam/compile/compile",
+    "pages/pages2/myTeam/recruitment2/recruitment2",
+    "pages/pages2/myTeam/teamSelect/teamSelect",
+    "pages/pages2/resume/introduce/introduce",
+    "pages/pages2/account/safe/safe",
+    "pages/pages2/attention/attention",
+    "pages/pages2/message/message",
+    "pages/pages2/account/menu/menu",
+    "pages/pages2/search/search",
+    "pages/canvas/canvas",
+    "pages/avatarUpload/index/index",
+    "pages/personal/personal",
+    "pages/demo/demo",
+    "pages/authen/authen",
+    "pages/chat/chat",
+    "pages/newDetail/newDetail",
+    "pages/yanzheng/yanzheng",
+    "pages/avatarUpload/upload/upload",
+    "pages/pages2/information/showTeam/showTeam",
+    "pages/pages2/resume/resumeList/resumeList",
+    "pages/pages2/account/pickUser/pickUser"
+		
+   
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱搬砖",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": "50"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#3388ff",
+    "font-size": "20rpx",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shou.png",
+        "selectedIconPath": "images/shou1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/pages2/information/projectList/projectList",
+        "iconPath": "images/xiang.png",
+        "selectedIconPath": "images/xiang1.png",
+        "text": "项目"
+      },
+      {
+        "pagePath": "pages/newList/newList",
+        "iconPath": "images/fa.png",
+        "selectedIconPath": "images/fa11.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/enter/enter",
+        "iconPath": "images/ru22.png",
+        "selectedIconPath": "images/ru11.png",
+        "text": "入驻"
+      },
+      {
+        "pagePath": "pages/pages2/personal/personal",
+        "iconPath": "images/wo.png",
+        "selectedIconPath": "images/wo1.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

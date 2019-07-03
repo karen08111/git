@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "swipers":"/components/swiper/swiper",
+    "tabList":"/components/tabList/tabList",
+    "newList":"/components/new-list/new-list",
+    "sliders": "/components/code/code",
+    "newProject":"/components2/project/project",
+		"navbar":"/components2/navbar/navbar"
+  }
+}

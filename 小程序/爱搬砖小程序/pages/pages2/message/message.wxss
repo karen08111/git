@@ -1,0 +1,73 @@
+/* pages/pages2/message/message.wxss */
+.main{
+  padding: 30rpx;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+page{
+  background: #ffffff;
+}
+.xin{
+  /* height: 170rpx; */
+  border-bottom: 1rpx dashed #e5e5e5;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.none{
+  border:none;
+}
+.title{
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  line-height: 50rpx;
+}
+.auther{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+  line-height: 45rpx;
+	color: #cccccc;
+  float: right;
+}
+.neirong{
+  width: 100%;
+  display: flex;
+}
+.content{
+  display: inline-block;
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #555555;
+  padding-right: 15rpx;
+  box-sizing: border-box;
+  transition: all .3s linear;
+}
+
+.over{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.times{
+  float: right;
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+  line-height: 42rpx;
+	color: #cccccc;
+}
+.nones{
+	font-size: 28rpx;
+	text-align: center;
+	margin-top: 25rpx;
+}
+
+

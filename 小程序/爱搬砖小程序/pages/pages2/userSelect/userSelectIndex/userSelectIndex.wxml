@@ -1,0 +1,26 @@
+<view class='main'>
+  <!-- <view class='jump'>跳过</view> -->
+  <view class='clear'></view>
+  <view class='select-title'>选择身份标签</view>
+  <view class='select-intr'>请正确选择您的身份，我们会为您提供更精确的服务。</view>
+  <view class="geren {{current==1?'acti':''}}" data-id='1' bindtap='select'>
+    <view class='zuo'>
+      <view class='select-name'>工人</view>
+      <view class='select-name ying'>Worker</view>
+    </view>
+    <view class='you'>
+      <image src='/images/t1.png'></image>
+    </view>
+  </view>
+  
+  <view class="qiye {{current==2?'acti':''}}" data-id='2' bindtap='select'>
+    <view class='zuo'>
+      <view class='select-name'>企业</view>
+      <view class='select-name ying'>Enterprise</view>
+    </view>
+    <view class='you'>
+      <image src='/images/t2.png'></image>
+    </view>
+  </view>
+  <view class='next' bindtap='next'>下一步</view>
+</view>

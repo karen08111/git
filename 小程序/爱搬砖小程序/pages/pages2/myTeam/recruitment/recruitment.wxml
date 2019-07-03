@@ -1,0 +1,54 @@
+<view class='main'>
+	<view class="scrolls">
+		<view class="li {{item.is_show==1?'':'opacity'}}" style="left:-{{tar==index?x:''}}rpx;transition: all {{mis}} linear;" bindtouchstart="recordStart" bindtouchmove="{{item.store?'recordMove':''}}"
+		 bindtouchend="{{item.store?'recordEnd':''}}"
+		 wx:for="{{list}}" wx:key="{{index}}" data-index='{{index}}' data-id='{{item.id}}' wx:if="{{isFa?item.nature == 1:item.nature}}">
+		  <view class='left' bindtap="{{item.is_show?'jumpDetail':''}}" data-ids="{{item.id}}" data-nature="{{item.nature}}">
+		    <view class='title'>{{item.title}}</view>
+		    <view class='icon'>
+		      <text class='border-right'>{{item.work_type.title}}</text>
+		      <text class='border-right padding-right'>{{item.nums}}</text>
+		      <text class='padding-right'>{{item.region[0].title}}-{{item.region[1].title}}</text>
+		    </view>
+		    <view class='lan'>
+		      <text class='times'>{{item.update_time}}</text>
+		      <text>{{item.hits}}浏览</text>
+		    </view>
+		  </view>
+		  <view class='right zi'>213/天</view>
+		  <view class='manu'>
+		    <text class='yin' bindtap="{{item.is_show==1?'hide':'show'}}" data-id='{{item.id}}' data-index="{{index}}">{{item.is_show==1?'隐藏':'显示'}}</text>
+		    <text class='bian' bindtap='sets' data-id='{{item.id}}'>编辑</text>
+		    <text class='del' data-id='{{item.id}}' bindtap='del'>删除</text>
+		  </view>
+		</view>
+		<!-- <item>
+			<scroll-view class="li {{item.is_show==1?'':'opacity'}}"  scroll-x="true" bindscrolltolower="picks"
+			 wx:for="{{list}}" wx:key="{{index}}" data-index='{{index}}' data-id='{{item.id}}' wx:if="{{isFa?item.nature == 1:item.nature}}" scroll-left="0">
+				 <view class='left' bindtap="{{item.is_show?'jumpDetail':''}}" data-ids="{{item.id}}" data-nature="{{item.nature}}">
+					 <view class='title'>{{item.title}}</view>
+					 <view class='icon'>
+						 <text class='border-right'>{{item.work_type.title}}</text>
+						 <text class='border-right padding-right'>{{item.nums}}</text>
+						 <text class='padding-right'>{{item.region[0].title}}-{{item.region[1].title}}</text>
+					 </view>
+					 <view class='lan'>
+						 <text class='times'>{{item.update_time}}</text>
+						 <text>{{item.hits}}浏览</text>
+					 </view>
+				 </view>
+				 <view class='right zi'>213/天</view>
+				 <view class='manu'>
+					 <text class='yin' bindtap="{{item.is_show==1?'hide':'show'}}" data-id='{{item.id}}'>{{item.is_show==1?'隐藏':'显示'}}</text>
+					 <text class='bian' bindtap='sets' data-id='{{item.id}}'>编辑</text>
+					 <text class='del' data-id='{{item.id}}' bindtap='del'>删除</text>
+				 </view>
+			</scroll-view>
+		</item> -->
+  </view>
+ 
+  
+  <navigator class='addUser' wx:if="{{!isFa}}" url="{{'/pages/pages2/myTeam/post/post?type=add'}}">发布招聘信息</navigator>
+  <navigator class='addUser' wx:if="{{isFa}}" url="{{'/pages/pages2/myTeam/post/post?type=add&isFa=1&tid='+tid}}">发布招聘信息</navigator>
+  <!-- <navigator class='addUser' url="/pages/pages2/myTeam/faProject/faProject?type=add">发布项目信息</navigator> -->
+</view>

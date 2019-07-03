@@ -1,0 +1,147 @@
+pages{
+
+}
+@import "/assets/font.wxss";
+.index{
+  width: 100%;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+page{
+  background: #fafafa;
+}
+/* 搜索 */
+.recher{
+  width: 690rpx;
+	height: 68rpx;
+	background-color: #f2f2f2;
+	border-radius: 30rpx; 
+  position: absolute;
+  top: 24rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content:center;
+  align-items:Center;
+  
+}
+.neirong{
+  background: #fafafa;
+  padding-top: 5rpx;
+  box-sizing: border-box;
+}
+.recher input{
+  width: 600rpx;
+  border-radius: 30rpx;
+  height: 100%;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  margin-right: 6rpx;
+  font-size: 28rpx;
+}
+.recher-btn image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 20rpx;
+  margin-top: 13rpx;
+}
+
+
+.allJob{
+  height: 76rpx;
+  background: #ffffff;
+  padding: 0 30rpx 0 30rpx;
+  box-sizing: border-box;
+  line-height: 76rpx;
+}
+.job-title{
+  font-family: AdobeHeitiStd-Regular;
+	font-size: 34rpx;
+	font-weight: 510;
+	letter-spacing: 2rpx;
+	color: #333333;
+  float: left
+}
+.tab-list{
+  float: right;
+}
+.tab-name {
+  font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* letter-spacing: 20rpx; */
+	color: #333333;
+  border-bottom: 2rpx solid #ffffff;
+  text-align: justify;
+  padding-bottom: 10rpx;
+  /* padding-left: 20rpx; */
+  box-sizing: border-box;
+}
+.margin-right{
+  margin-right: 20rpx;
+}
+.tab-active{
+  border-bottom:6rpx solid #3388ff;
+  font-size: 28rpx;
+}
+.huan{
+  font-size: 22rpx;
+	letter-spacing: 2rpx;
+	color: #cccccc;
+}
+
+.banner{
+  width: 126%;
+  height: 250rpx;
+  background: #ffffff;
+  margin-bottom: 10rpx;
+  /* padding-top: 30rpx; */
+  padding: 30rpx 0rpx 0 0;
+  box-sizing: border-box;
+}
+.rong{
+  width: 100%;
+  overflow: hidden;
+}
+.enter{
+  width: 280rpx;
+  height: 176rpx;
+  border: 1rpx solid #f2f2f2;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.enter-name{
+  font-size: 28rpx;
+	color: #343434;
+  display: inline-block;
+  width: 200rpx;
+  overflow: hidden;
+  line-height: 30rpx;
+}
+.enter-content{
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  line-height: 29rpx;
+	color: #666666;
+   overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.enter-title image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  top: 5rpx;
+}
+
+
+
+
+

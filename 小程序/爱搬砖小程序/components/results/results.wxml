@@ -1,0 +1,12 @@
+<view class='project-model'>
+  <view class='project-title'>{{objValue.ach_name}}</view>
+  <view class='projec-bar'>
+    <text class='barName'>{{objValue.job_type}}</text>
+   
+  </view>
+  <view class='imgList'>
+    <view wx:for="{{objValue.imgs}}" wx:key="{{index}}">
+      <image src="{{http+item.path}}"></image>
+    </view>
+  </view>
+</view>

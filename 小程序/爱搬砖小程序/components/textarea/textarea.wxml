@@ -1,0 +1,5 @@
+<view class='text'>
+  <text class='input-title'>{{names}}:</text>
+  <input placeholder='{{pla}}' value='{{value}}' disabled ></input>
+  <text class='jiantou'></text>
+</view>

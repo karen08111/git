@@ -1,0 +1,26 @@
+<view class="authen {{title?'opacity':''}}">
+  <view class='user'>
+    <view class='user-head'>
+      <image src='/images/t1.png'></image>
+    </view>
+    <view class="user-btn {{current==0?'on':''}}" data-id='0' data-userId='1' bindtap='click'>个人认证</view>
+    <text class='user-intr'>工程机械、个人劳务求职</text>
+  </view>
+  
+  <view class='user'>
+    <view class='user-head'>
+      <image src='/images/t2.png'></image>
+    </view>
+    <view class="user-btn {{current==1?'on':''}}" data-id='1' data-userId='2' bindtap='click'>团队认证</view>
+    <text class='user-intr'>工程机械、个人劳务求职</text>
+  </view>
+
+  <view class='user'>
+    <view class='user-head'>
+      <image src='/images/t3.png'></image>
+    </view>
+    <view class="user-btn {{current==2?'on':''}}" data-id='2' data-userId='3' bindtap='click'>企业认证</view>
+    <text class='user-intr'>工程机械、个人劳务求职</text>
+  </view>
+ 
+</view>

@@ -1,0 +1,66 @@
+<view class='main' wx:if="{{isShou}}">
+  <view class='user-intr'>
+    <view class='head'>
+      <!-- <image src='{{http+avatarImg}}' wx:if="{{avatarImg}}"></image> -->
+      <image src='{{avatar?http+avatar:headImg}}'></image>
+    </view>
+    <view class='user-content'>
+      <view class='user-name'>{{user.name}}</view>
+      <view class='user-count'>
+        <view class='user-one'>
+          <view class='user-title'>我的关注</view>
+          <view class='count'>{{numCount.followNum}}</view>
+        </view>
+        <view class='user-one'>
+          <view class='user-title'>我发布的消息</view>
+          <view class='count'>{{numCount.releaseNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='user-intr wrap'>
+    <view class='userList' bindtap='jump' data-id='{{typeId}}' wx:if="{{typeId==1}}">
+      <image src='/images/1.png'></image>
+      <text class='userTitle'>个人主页</text>
+    </view>
+    <view class='userList' bindtap='jump' data-id='{{typeId}}' wx:if="{{typeId==2}}">
+      <image src='/images/1.png'></image>
+
+      <text class='userTitle'>团队主页</text>
+
+    </view>
+    <view class='userList' bindtap='jump' data-id='{{typeId}}' wx:if="{{typeId==3}}">
+      <image src='/images/1.png'></image>
+      <text class='userTitle' wx:if="{{typeId==3}}">企业主页</text>
+    </view>
+    <view class='userList' bindtap='jump' data-id='{{typeId}}' wx:if="{{typeId==0}}">
+      <image src='/images/1.png'></image>
+      <text class='userTitle'>未认证</text>
+    </view>
+
+
+
+    <view class='userList' bindtap='mezhang'>
+      <image src='/images/2.png'></image>
+      <text class='userTitle'>账号安全</text>
+    </view>
+    <view class='userList' bindtap='meIdent'>
+      <image src='/images/3.png'></image>
+      <text class='userTitle'>身份管理</text>
+    </view>
+    <view class='userList'>
+      <image src='/images/4.png' bindtap='meFabu'></image>
+      <text class='userTitle'>我的发布</text>
+    </view>
+    <navigator url='/pages/follow/follow' class='userList'>
+      <image src='/images/5.png'></image>
+      <text class='userTitle'>我的关注</text>
+    </navigator>
+    <view class='userList'>
+      <image src='/images/6.png' bindtap='meSet'></image>
+      <text class='userTitle'>设置</text>
+    </view>
+  </view>
+</view>
+

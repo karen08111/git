@@ -1,0 +1,15 @@
+<view class="section" wx:if="{{!enter}}">
+  <view class="section__title"><slot></slot></view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range-key="title" range="{{objectMultiArray}}" value='{{multiIndex}}' data-id='{{objectMultiArray[1][multiIndex[1]].id}}'>
+    <view class="picker">
+      <input value='{{value}}' disabled placeholder='{{pla}}'></input>
+    </view>
+    <text class='jiantou'></text>
+  </picker>
+</view>
+<view class="loginPhone" wx:if="{{enter}}">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range-key="title" range="{{objectMultiArray}}" value='{{multiIndex}}' data-id='{{objectMultiArray[1][multiIndex[1]].id}}'>
+      <!-- <input value='{{value}}' disabled placeholder='{{pla}}'></input> -->
+			<text class="lt {{value?'':'color'}}">{{value?value:pla}}</text>
+  </picker>
+</view>

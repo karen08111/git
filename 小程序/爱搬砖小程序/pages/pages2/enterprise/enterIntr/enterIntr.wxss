@@ -1,0 +1,15 @@
+/* pages/pages2/enterprise/enterIntr/enterIntr.wxss */
+.main textarea{
+  width: 690rpx;
+	height: 460rpx;
+	background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(44, 133, 255, 0.15);
+	border-radius: 20rpx;
+  margin: auto;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  margin-bottom: 180rpx;
+}

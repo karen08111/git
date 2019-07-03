@@ -1,0 +1,37 @@
+<view class='main'>
+  <view class='forms'>
+    <view class='li'>
+      <text class='title'>招聘标题</text>
+      <input bindinput='getName' value='{{title}}' placeholder='请填写招聘标题'></input>
+    </view>
+    <view class='li'>
+      <text class='title'>联系电话</text>
+      <input bindinput='getPhone' value='{{phone}}' type="number" placeholder='请填写联系电话'></input>
+    </view>
+    <common array="{{obj}}" wx:if="{{!isFa}}" title="title" bind:getBing="getBing" ids="{{typeId}}" pla="请选择招聘对象">招聘对象</common>
+    <pickJob wx:if="{{typeId == 1}}" pla="请选择招聘岗位" bind:jobId="jobId" bind:jobOne="jobOne" ids="{{job}}">招聘职位</pickJob>
+    <common wx:if="{{typeId == 2 }}" array="{{teamJobList}}" title="title" bind:getBing="getTeamJob" ids="{{job}}" pla="请选择招聘岗位">招聘岗位</common>
+    <view class='li'>
+      <text class='title'>所需人数</text>
+      <input type='number' bindinput='getNumber' placeholder='请填写招聘人数' value='{{renNumber}}'></input>
+    </view>
+    <salary bind:getValue="getValue" bind:getId="getId" ids="{{salaryId}}" values="{{salary}}"></salary>
+    <getDate value="{{dates}}" pla="请选择开工时间" bind:getDates="getDates">开工时间</getDate>
+    <view class='li'>
+      <text class='title'>工期(天)</text>
+      <input bindinput='getGongQi' type='number' value='{{gongQi}}' placeholder='请填写工期时间'></input>
+    </view>
+    <view class='li'>
+      <text class='title'>工龄要求</text>
+      <input type='number' bindinput='getGong' placeholder='请输入工龄要求' value='{{gong}}'></input>
+    </view>
+    <pickCity bind:getCityId="getCityId" pla="{{pla}}" value="{{cityId}}">工作城市</pickCity>
+    
+    <view class='border text'>
+        <text class='titles'>招聘描述</text>
+        <textarea name="job-content" placeholder='请填写招聘描述' value='{{content}}' bindinput='getContent' maxlength='500'></textarea>
+    </view>
+    
+  </view>
+  <view class='save' bindtap="{{store=='set'?'setSave':'save'}}">保存</view>
+</view>

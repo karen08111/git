@@ -1,0 +1,138 @@
+/* components/userType/userType.wxss */
+page{
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  padding: 17rpx 30rpx 17rpx 30rpx;
+  box-sizing: border-box;
+}
+.worke{
+  width: 100%;
+  height: 525rpx;
+	background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(51, 136, 255, 0.2);
+	border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.head-left{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 35rpx 35rpx 0 20rpx;
+}
+.work-head-top{
+  height: 190rpx;
+  display: flex;
+  position: relative
+}
+.work-head-bottom{
+  width: 100%;
+  height: 335rpx;
+}
+.work-head-bottom image{
+  width: 100%;
+  height: 100%;
+}
+.user-name{
+  font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 90px; */
+	letter-spacing: 3rpx;
+	color: #333333;
+  position: relative;
+}
+.user-store{
+  font-family: PingFangSC-Regular;
+	font-size: 16rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 90px; */
+	letter-spacing: 2rpx;
+	color: #999999;
+}
+.user-ru{
+  display: inline-block;
+  width: 100rpx;
+	height: 40rpx;
+	background-color: #ff5400;
+  /* margin-left: 70rpx; */
+  position: absolute;
+  /* left: 0; */
+  right: 0;
+	border-radius: 20rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  text-align: center;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 2rpx;
+	color: #ffffff;
+}
+.user-qiye{
+  display: inline-block;
+  width: 100rpx;
+	height: 40rpx;
+	background-color: #ff5400;
+  /* margin-left: 70rpx; */
+	border-radius: 20rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  text-align: center;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 2rpx;
+	color: #ffffff;
+  margin-top: 20rpx;
+}
+.user-gender{
+  font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 90px; */
+	letter-spacing: 2rpx;
+	color: #999999;
+  line-height: 40rpx;
+}
+.gender{
+  margin-right: 28rpx;
+}
+.head-center{
+  margin-top: 30rpx;
+  width: 49%;
+}
+.erwei{
+  width: 130rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.erwei image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.erwei-name{
+  font-family: PingFangSC-Regular;
+	font-size: 16rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #000000;
+  
+  position: relative;
+  top: -20rpx;
+}
+.head-title{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+}

@@ -1,0 +1,49 @@
+.email-main{
+	width: 650rpx;
+	margin: auto;
+	margin-top: 100rpx;
+	/* position: relative; */
+}
+.code {
+	position: relative;
+}
+.email input{
+	height: 110rpx;
+	border-radius: 20rpx;
+	border: solid 1rpx #e5e5e5;
+	font-size: 24rpx;
+	/* color: #CCCCCC; */
+	padding-left: 20rpx;
+	padding-right: 20rpx;
+	box-sizing: border-box;
+	margin-top: 40rpx;
+}
+.codes{
+	position: absolute;
+	right: 20rpx;
+	width: 180rpx;
+	height: 60rpx;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	border: solid 1rpx #3388ff;
+	text-align: center;
+	color: #3388ff;
+	line-height: 60rpx;
+	top: 25rpx;
+	font-size: 24rpx;
+	z-index: 9;
+}
+.postEmail{
+	width: 580rpx;
+	height: 100rpx;
+	background-color: #3388ff;
+	border-radius: 50rpx;
+	margin: auto;
+	margin-top: 100rpx;
+	opacity: 0.9;
+	font-size: 34rpx;
+	line-height: 100rpx;
+	letter-spacing: 3rpx;
+	color: #FFFFFF;
+	text-align: center;
+}

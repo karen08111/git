@@ -1,0 +1,20 @@
+/* pages/pages2/myTeam/faProject/faProject.wxss */
+.main{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.forms{
+  background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(44, 133, 255, 0.15);
+	border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.bb {
+	border-bottom: 1rpx dashed #e5e5e5;
+}
+

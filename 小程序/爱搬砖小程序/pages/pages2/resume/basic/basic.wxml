@@ -1,0 +1,35 @@
+<!--pages/pages2/resume/basic/basic.wxml-->
+<view class='main'>
+  <form bindsubmit="formSubmit">
+    <view class='forms'>
+      <view class='li'>
+        <text class='title'>头像</text>
+        <view class='right avatar' bindtap="upload">
+          <image src='{{http+avatar}}' wx:if="{{avatar}}" mode='scaleToFill'></image>
+        </view>
+				<text class="right" wx:if="{{!avatar}}" bindtap="upload">上传头像</text>
+        <text class='jiantou' wx:if="{{!avatar}}" bindtap="upload"></text>
+      </view>
+      <pickJob ids="{{jobId}}" bind:jobId="jobId" bind:jobOne="jobOne">工种</pickJob>
+      <common array="{{isJob}}" ids="{{jobSto}}" bind:getBing="getJobStroge" title="title" pla="请选择您的工作状态">工作状态</common>
+      <common array="{{jobStore}}" ids="{{bingId+1}}" bind:getBing="getBing" title="title">有无重大病史</common>
+      <view class='li'>
+        <text class='title'>微信号</text>
+        <input bindinput='getWx' value='{{wxCode}}'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>联系方式</text>
+        <input bindinput='getPhone' value='{{phone}}' type="number"></input>
+      </view>
+      <getDate bind:getDates="getDates" value="{{dates}}" pla="请选择您参加工作时间">参加工作时间</getDate>
+      <pickCity bind:getCityId="getCityId" pla="{{locationString?locationString:'请选择您的工作地点'}}">工作地点</pickCity>
+      <salary bind:getValue="getSalary" ids="{{larayId}}" values="{{laray}}" bind:getId="getSalaryId"></salary>
+    </view>
+    <button class='save' form-type="submit">保存</button>
+  </form>
+  
+</view>
+
+
+
+

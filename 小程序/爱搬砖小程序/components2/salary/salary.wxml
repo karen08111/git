@@ -1,0 +1,9 @@
+<!--components2/salary/salary.wxml-->
+<view class='li border'>
+  <text class='title'>薪资</text>
+  <picker bindchange="bindPickerChange" class='xiala' range="{{array}}" range-key="unit">
+    <text class='target'>元/{{array[ids-1].unit}}</text>
+    <text class='small icon-xiala'></text>
+  </picker>
+  <input class='pick' placeholder='请输入薪资(不填为面议)' type='number' value='{{values}}' bindinput='getValue'></input>
+</view>

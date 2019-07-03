@@ -1,0 +1,19 @@
+<!--components/tabList/tabList.wxml-->
+<view class='tabList'>
+  <navigator class='tabBar' hover-class="none" url='/pages/pages2/information/screenList/screentList?type=/resumeList'>
+    <image src='/images/navbar1.png'></image>
+    <view>找工人</view>
+  </navigator>
+  <navigator class='tabBar' hover-class="none" url='/pages/pages2/information/screenList/screentList?type=/teamList'>
+    <image src='/images/navbar2.png'></image>
+    <view>找团队</view>
+  </navigator>
+  <navigator class='tabBar' hover-class="none" url='/pages/pages2/information/screenList/screentList?type=/recruitList&nature=1' >
+    <image src='/images/navbar3.png'></image>
+    <view>工人找活</view>
+  </navigator>
+  <navigator class='tabBar' hover-class="none" url='/pages/pages2/information/screenList/screentList?type=/recruitList&nature=2'>
+    <image src='/images/navbar4.png'></image>
+    <view>团队找活</view>
+  </navigator>
+</view>

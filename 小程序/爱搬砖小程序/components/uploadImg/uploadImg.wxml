@@ -1,0 +1,13 @@
+<!--components/uploadImg/uploadImg.wxml-->
+<view class='img'>
+  <view class='title'><slot></slot></view>
+  <view class='list'>
+    <view class='imgList' wx:for="{{imgUrl}}" wx:key="{{index}}" >
+      <image src="{{item}}" wx:if="{{item}}" bindtap='yuLan' data-index="{{index}}"></image>
+    </view>
+    <view class='tianjia auto' bindtap='add' wx:if="{{imgUrl.length<9}}" >
+      <text class='jia'>+</text>
+    </view>
+  </view>
+  <!-- <view bindtap='sav'>保存</view> -->
+</view>

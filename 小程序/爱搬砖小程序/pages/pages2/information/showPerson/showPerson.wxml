@@ -1,0 +1,91 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-left'>
+      <view class='header-title'>
+        <text class='header-name'>{{user.info.name}}</text>
+        <text class='iconfont genter' wx:if="{{user.info.sex == 0}}"></text>
+        <text class='iconfont nans' wx:if="{{user.info.sex == 1}}"></text>
+        <!-- <image src='/images/1.png'></image> -->
+        <text class='header-job' wx:if="{{user.info.work_type}}">{{user.info.work_type}}</text>
+      </view>
+      <view class=''>
+        <text class='list padding-left'>{{user.info.has_bad_medical_history}}病史</text>
+        <text class='list' wx:if="{{user.info.birth.length>0}}">{{user.info.birth}}</text>
+        <text class='list'>{{user.info.work_time?user.info.work_time:'未知'}}</text>
+        <text class='list' wx:if="{{user.info.region}}">{{user.info.region[0].title}}-{{user.info.region[1].title}}</text>
+        <text class='list border-right'>{{user.info.update_time}}</text>
+      </view>
+      <!-- <view>
+        <text class='iconfont icon-phone relative'></text>
+        <text class='header-phone'>{{user.info.region[0].title}}-{{user.info.region[1].title}}</text>
+        <text class='iconfont icon-wx relative'></text>
+        <text class='header-phone'>110</text>
+      </view> -->
+    </view>
+    <view class='header-right'>
+    <view class='job-date' wx:if="{{user.info.min_pay!=0}}">{{user.info.min_pay}}元/{{user.info.quantity_unit}}</view>
+        <view class='job-date' wx:else>面议</view>
+      <view class='avatar'>
+        
+        <image src="{{user.info.avatar?http+user.info.avatar:''}}"></image>
+        <text class='store'>{{user.info.current_state}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 工作经历 -->
+  <view class='job-main' wx:if="{{user.job_case.length>0}}">
+    <view class='job-title'>工作经历</view>
+    <!-- 循环 -->
+    <view class='job-list' wx:for="{{user.job_case}}" wx:key="{{index}}">
+      <view>
+        <view class='job-title-left'>
+          <text class='name'>{{item.ach_name}}</text>
+          <text class='job-time'>{{item.start_time}}-{{item.end_time}}</text>
+        </view>
+
+      </view>
+      <view class='clear'></view>
+      <view>
+        <text class='list padding-left'>{{item.job_type.Sub.title}}</text>
+        <text class='list  border-right'>{{item.region[0].title}}-{{item.region[1].title}}</text>
+      </view>
+      <view class='job-content'>{{item.content}}</view>
+    </view>
+    
+  </view>
+  <!-- 资质证书 -->
+  <view class='book' wx:if="{{user.info.senioritys.length>0}}">
+    <text class='job-title'>资质证书</text>
+    <view class='book-list'>
+      <view class='book-li' wx:for="{{2}}" wx:key="{{index}}">
+        <view class='book-img'>
+          <image src='/images/1.png'></image>
+        </view>
+        <view class='book-name'>名字</view>
+        <view class='book-icon'>初级</view>
+      </view>
+    </view>
+  </view>
+	
+  <!-- 个人介绍 -->
+  <view class='' wx:if="{{user.info.content}}">
+    <text class='job-title'>个人介绍</text>
+    <view class='job-content' wx:if="{{user.info.content}}">{{user.info.content}}</view>
+  </view>
+  <!-- 推荐个人 -->
+  <view class='job-title'>推荐个人</view>
+  
+  
+
+  <!-- 关注 -->
+  <view class='guanzhu'>
+    <view class='guan' data-id='{{user.info.id}}' bindtap='quxiao' wx:if="{{reset==1}}">取消关注</view>
+    <view class='guan' data-id='{{user.info.id}}' bindtap='guanzhu' wx:if="{{reset==0}}">关注</view>
+    <view class='lianxi' data-id='{{user.info.id}}' bindtap='lianxi'>立即联系</view>
+  </view>
+</view>
+<view style='padding-bottom:70rpx;box-sizing:border-box'>
+  <project wx:for="{{user.push}}" wx:key="{{index}}" http="{{http}}" project="{{item}}" type="/resumeList"></project>
+</view>
+<jumpIndex></jumpIndex>

@@ -1,0 +1,49 @@
+/* pages/pages2/wallet/walletIndex/walletIndex.wxss */
+.wall-header {
+	width: 690rpx;
+	height: 278rpx;
+	padding: 25rpx;
+	box-sizing: border-box;
+	margin: auto;
+	background-color: #c8ddfb;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(44, 133, 255, 0.15);
+	border-radius: 20rpx;
+	margin-top: 30rpx;
+}
+.set {
+	text-align: center;
+	font-size: 24rpx;
+	color: #CCCCCC;
+	letter-spacing: 1rpx;
+	margin-top: 25rpx;
+}
+.wall-title {
+	height: 60rpx;
+}
+.myMoney {
+	float: left;
+	color: #FFFFFF;
+	font-size: 34rpx;
+	letter-spacing: 2rpx;
+}
+.pays {
+	float: right;
+	font-size: 24rpx;
+	color: #FFFFFF;
+	letter-spacing: 1rpx;
+}
+
+.money {
+	font-size: 52rpx;
+	letter-spacing: 3rpx;
+	color: #ff0037;
+}
+.zis {
+	font-size: 36rpx;
+	letter-spacing: 2rpx;
+	color: #ff0037;
+}
+
+
+

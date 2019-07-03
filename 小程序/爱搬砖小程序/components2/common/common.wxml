@@ -1,0 +1,16 @@
+<!--components2/common/common.wxml-->
+<view class='li' wx:if="{{!enter}}">
+  <text class='title'><slot></slot></text>
+  <picker bindchange="bindPickerChange" class='xiala' range="{{array}}" range-key="{{title}}" >
+    <text class='times' wx:if="{{ids}}">{{array[ids-1][title]}}</text>
+    <text class='times op' wx:if="{{pla && !ids}}">{{pla}}</text>
+    <text class='jiantou'></text>
+  </picker>
+</view>
+<view class='loginPhone' wx:if="{{enter}}">
+  <text class='title'><slot></slot></text>
+  <picker bindchange="bindPickerChange" class='' range="{{array}}" range-key="{{title}}" >
+    <text class="times {{isColor?'color':''}}" wx:if="{{ids}}">{{array[ids-1][title]}}</text>
+    <text class="times op {{isColor?'color':''}}" wx:if="{{pla && !ids}}">{{pla}}</text>
+  </picker>
+</view>

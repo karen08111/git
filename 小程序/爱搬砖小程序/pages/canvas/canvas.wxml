@@ -1,0 +1,4 @@
+<!--pages/canvas/canvas.wxml-->
+<view>
+  <sliders  bindmyevent="myEventListener" imgs="{{imgs}}" abzId="{{abzId}}" store="true"></sliders>
+</view>

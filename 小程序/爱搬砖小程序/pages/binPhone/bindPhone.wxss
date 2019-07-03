@@ -1,0 +1,248 @@
+/* pages/setPhone/setThree/setThree.wxss */
+page{
+  /* padding: 30rpx; */
+  /* box-sizing: border-box; */
+  border-top: 1rpx solid #e5e5e5; 
+  /* z-index: -1 */
+}
+.main{
+  /* height: 215rpx; */
+	background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(44, 133, 255, 0.3);
+	border-radius: 20rpx;
+  padding: 17rpx;
+  box-sizing: border-box;
+}
+.sav{
+  width: 580rpx;
+	height: 100rpx;
+	background-color: #3388ff;
+	border-radius: 50rpx;
+	/* opacity: 0.9; */
+  font-family: PingFangSC-Regular;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 100rpx;
+	letter-spacing: 3rpx;
+	color: #ffffff;
+  text-align: center;
+  margin: auto;
+  margin-top: 100rpx;
+}
+
+.phone{
+  display: flex;
+  border-bottom: 1rpx solid #e5e5e5;
+  height: 95rpx;
+  line-height: 95rpx;
+}
+.border{
+  border-style:none; 
+}
+.yuan{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+}
+.phone input{
+  /* width: 70%; */
+  /* background: red; */
+  margin-top: 23rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #000000;
+}
+.input{
+  width: 50%;
+  /* border-right: 4rpx solid #3388ff; */
+}
+.getCode{
+  display: inline-block;
+  width: 150rpx;
+  text-align: center;
+  height: 27rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+  padding-left: 15rpx;
+  line-height: 27rpx;
+  border-left: 4rpx solid #3388ff;
+  margin-top: 36rpx;
+}
+.block{
+  display: inline-block;
+  width: 210rpx;
+}
+.tuImg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200rpx;
+  height: 100%;
+  background-position: center center
+}
+.phone image{
+  width: 250rpx;
+}
+
+.phone image{
+  width: 250rpx;
+  height: 100%;
+}
+
+
+.main-bg{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.form{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+	box-shadow: 0rpx 0rpx 18rpx 0rpx 
+		rgba(62, 67, 73, 0.14);
+	border-radius: 20rpx 20rpx 0rpx 0rpx;
+  margin-top: 200rpx;
+  box-sizing: border-box;
+  padding: 100rpx;
+}
+.title-img{
+  width: 229rpx;
+  height: 32rpx;
+  margin: auto;
+}
+.title-img image{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: 1rpx solid #ddd;
+  margin-top: 50rpx;
+  display: flex;
+}
+.list input{
+  width: 100%;
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+  height: 100%;
+  z-index: 0;
+}
+.getCodes{
+  width: 250rpx;
+	height: 100%;
+	font-family: MicrosoftYaHei;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #666666;
+  text-align: center;
+}
+.liji{
+  width: 531rpx;
+	height: 100rpx;
+	background-color: #3388ff;
+	border-radius: 50rpx;
+  line-height: 100rpx;
+	/* opacity: 0.3; */
+  font-family: AdobeHeitiStd-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #ffffff;
+  text-align: center;
+  margin-top: 129rpx;
+  z-index: -1;
+}
+.yin{
+  position: fixed;
+  top: 200rpx;
+  left: 20%;
+  z-index: 9999;
+  background: #ffffff;
+}
+.zhao{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #303133a6;
+  opacity: 1;
+  padding-top: 50%;
+  box-sizing: border-box;
+}
+.targetPhone{
+	font-size: 24rpx;
+	color: #cccccc;
+	letter-spacing: 2rpx;
+	text-align: center;
+}
+.tar{
+	font-size: 38rpx;
+	letter-spacing: 4rpx;
+	color: #343434;
+	text-align: center;
+}
+.newPhone{
+	margin-top: 60rpx;
+	margin-bottom: 60rpx;
+}
+
+.oldPhone {
+	width: 651rpx;
+	height: 110rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+	border: solid 1rpx #e5e5e5;
+	margin: auto;
+	margin-bottom: 220rpx;
+	position: relative;
+}
+.oldPhone input {
+	height: 100%;
+	line-height: 110rpx;
+	font-size: 24rpx;
+	padding-left: 20rpx;
+}
+.oldCode {
+	position: absolute;
+	right: 15rpx;
+	top:25rpx ;
+	display: block;
+	width: 180rpx;
+	height: 60rpx;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	border: solid 1rpx #3388ff;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 24rpx;
+	color: #3388ff;
+	z-index: 9;
+}
+
+
+
+

@@ -1,0 +1,28 @@
+<!--pages/pages2/resume/job/job.wxml-->
+<view class='main'>
+
+  <form bindsubmit="{{id?'formSubmitSet':'formSubmit'}}">
+    <view class='forms'>
+      <view class='li'>
+        <text class='title'>工作单位</text>
+        <input name="job-name" bindinput='getNames' value='{{names}}' placeholder='请填写单位名称'></input>
+      </view>
+      <pickJob bind:jobId="jobId" pla="{{job}}" wx:if="{{typeId==1}}">职位</pickJob>
+      <common array="{{jobList}}" bind:getBing="getBing" wx:if="{{typeId==2}}" ids="{{jobIds}}" pla="请选择职位" title="title">职位</common>
+      <!-- <view class='li'>
+        <text class='title'>职位</text>
+        <input bindinput='getJob' value='{{job}}' placeholder='请填写职位'></input>
+      </view> -->
+      <getDate bind:getDates="getDates1" value="{{startTime?startTime:'请选择开始时间'}}">开始时间</getDate>
+      <getDate bind:getDates="getDates2" value="{{endTime?endTime:'请选择结束时间(不选为至今)'}}">结束时间</getDate>
+      <pickCity bind:getCityId="getCityId" pla="{{cityPla?cityPla:'请选择工作地点'}}">工作地点</pickCity>
+      <view class='border text'>
+        <text class='titles'>经历说明</text>
+        <textarea bindinput='getContent' value='{{content}}' placeholder='请填写经历说明' maxlength='500'></textarea>
+      </view>
+      
+    </view>
+    <button class='save' form-type="submit">保存</button>
+    <view class='delet' bindtap='delet' wx:if="{{id}}">删除</view>
+  </form>
+</view>

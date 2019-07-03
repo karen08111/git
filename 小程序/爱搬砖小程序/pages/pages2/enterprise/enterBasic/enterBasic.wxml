@@ -1,0 +1,38 @@
+<view class='main'>
+  <view class='forms'>
+    <view class='li' bindtap="upload">
+      <text class='title'>头像</text>
+      <view class='right avatar'>
+        <image src="{{avatar?http+avatar:''}}" mode='scaleToFill'></image>
+      </view>
+      <view class='jiantous' wx:if="{{!avatar}}"></view>
+    </view>
+    <view class='li'>
+      <text class='title'>公司邮箱</text>
+      <input bindinput='getEmail' value='{{qiyeEmail}}' placeholder='请输入企业邮箱'></input>
+    </view>
+    <view class='li'>
+      <text class='title'>传真号码</text>
+      <input bindinput='getCode' value='{{qiyeCode}}' placeholder='请输入传真号码'></input>
+    </view>
+    <view class='li'>
+      <text class='title'>联系方式</text>
+      <input bindinput='getPhone' value='{{qiyePhone}}' placeholder='请输入企业联系方式'></input>
+    </view>
+    <view class='li'>
+      <text class='title'>企业网址</text>
+      <input bindinput='getInter' value='{{qiyeInter}}' placeholder='请输入企业网址'></input>
+    </view>
+    <!-- <pickCity pla="请选择企业所在地" bind:getCityId="getCityId">企业地址</pickCity> -->
+    <view class=' picka' bindtap='onChangeAddress'>
+      <text class='title'>企业地址</text>
+      <text class='choose-address'>{{chooseAddress?chooseAddress:'请选取企业详细地址'}}</text>
+			<!-- <text class="pickMapTitle">{{chooseAddress?chooseAddress:'请选取企业详细地址'}}</text> -->
+    </view>
+		<!-- <view class='li'>
+		  <text class='title'>详细地址</text>
+		  <input bindinput='getInter' placeholder='企业地址补充'></input>
+		</view> -->
+  </view>
+  <view class='save' bindtap='save'>保存</view>
+</view>

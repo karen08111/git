@@ -1,0 +1,53 @@
+/* components/results/results.wxss */
+.project-model{
+  height: 309rpx;
+  background-color: #f2f2f2;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+}
+.project-title{
+  font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 28rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  overflow: hidden
+}
+.projec-bar{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.barName{
+  /* width: 140rpx; */
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+	height: 40rpx;
+	background-color: #ffffff;
+	border-radius: 6rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 28rpx; */
+	letter-spacing: 2rpx;
+	color: #333333;
+  text-align: center;
+  line-height: 40rpx;
+}
+.imgList{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  height: 160rpx;
+}
+.imgList image{
+  width: 210rpx;
+  height: 160rpx;
+  margin-right: 10rpx;
+}

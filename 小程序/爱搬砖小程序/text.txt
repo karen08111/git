@@ -1,0 +1,90 @@
+"pages/publier/publier",   发布信息表单
+"pages/index/index",    主页
+"pages/recher/recher",  搜索筛选页
+"pages/workePage/workePage",  工人详情/企业详情
+"pages/faireDetail/faireDetail", 工程信息详情
+"pages/proclamer/proclamer"     发布选择
+"pages/classList/classList"   工作类型分类
+pages/identification/identification  身份认证
+"pages/authen/authen",              身份认证选择页面
+"pages/personal/personal"   个人中心
+"pages/personalHomePage/personalHomePage"  个人主页
+"pages/follow/follow"    个人主页关注信息
+"pages/meRelease/meRelease"      我的发布
+pages/enterpriseIndex/enterpriseIndex   企业主页
+"pages/edit/edit"    编辑
+
+
+团队
+"pages/pages2/myTeam/teamResum/teamResumIndex"  //团队简历
+"pages/pages2/resume/teamBasic/teamBasic" //团队基本信息表单
+pages/pages2/myTeam/teamPerform/teamPerform  //工程业绩
+pages/pages2/myTeam/member/member //成员管理列表
+pages/pages2/myTeam/compile/compile //编辑-添加成员
+pages/pages2/myTeam/recruitment/recruitment //招聘管理
+pages/pages2/myTeam/post/post //发布招聘
+"pages/pages2/myTeam/postProject/postProject"//发布项目
+
+pages/pages2/resume/basic/basic   个人资料表单
+"pages/pages2/resume/book/book",  修改证书显示状态
+ "pages/pages2/search/search",   搜索页面
+ "pages/pages2/resume/job/job",  添加工作经历表单
+ "pages/pages2/resume/introduce/introduce", 修改个人介绍
+ "pages/pages2/attention/attention",我的关注列表
+ "pages/pages2/account/safe/safe",账户管理列表  （手机绑定 邮箱绑定  身份认证）
+
+简历
+"pages/pages2/resume/resumeIndex/resumeIndex",简历主页
+
+ 证书
+ "pages/pages2/account/book/book",添加资质证书
+ "pages/pages2/account/menu/menu", 列表（账户安全、资质证书）
+ "pages/pages2/account/ident/ident", 认证表单
+
+ 列表
+ "pages/pages2/myTeam/teamSelect/teamSelect",  （成员管理  团队简历  招聘管理）
+
+ "pages/pages2/personal/personal",个人中心
+
+
+ "pages/pages2/message/message",站内信
+
+项目管理
+"pages/pages2/myTeam/recruitment/recruitment",招聘列表
+"pages/pages2/myTeam/recruitment2/recruitment2" 项目列表
+"pages/pages2/myTeam/faProject/faProject"  发布项目信息表单
+
+
+企业
+"pages/pages2/enterprise/enterpriseIndex/enterpriseIndex"  企业主页
+"pages/pages2/enterprise/enterBasic/enterBasic"  企业基本信息
+"pages/pages2/enterprise/enterIntr/enterIntr"  企业介绍
+"pages/pages2/enterprise/enterPhoto/enterPhoto"  企业图集
+"pages/pages2/enterprise/enterBook/enterBook"   企业资质证书
+
+角色认证
+"pages/pages2/userSelect/userSelectIndex/userSelectIndex" 角色选择
+"pages/pages2/userSelect/gerenForm/gerenForm"  个人认证表单
+
+前台
+"pages/pages2/information/screenList/screentList" 筛选
+"pages/pages2/information/showPerson/showPerson",前台个人主页
+"pages/pages2/information/showTeam/showTeam"  团队主页
+"pages/pages2/information/showEnter/showEnter" 企业主页
+"pages/pages2/information/messageDetail/messageDetail" 信息详情
+"pages/pages2/information/projectDetail/projectDetail" 项目详情
+"pages/pages2/information/projectList/projectList"  项目列表
+
+
+钱包
+"pages/pages2/wallet/walletIndex/walletIndex",  钱包主页
+"pages/pages2/wallet/bill/bill", 账单
+"pages/pages2/wallet/billDetail/billDetail", 账单详情
+"pages/pages2/wallet/payment/payment", 设置支付密码
+"pages/pages2/wallet/topUp/topUp" 充值页面
+
+会员
+"pages/pages2/member/memberIntr/menberIntr"  会员开通
+
+
+

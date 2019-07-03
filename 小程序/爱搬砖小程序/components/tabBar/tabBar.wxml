@@ -1,0 +1,11 @@
+<view class='nav-tab'>
+  <view class="tab-li  {{index==0?'as':''}} {{index==2?'as-right':''}} {{index==1?'border':''}}" wx:for="{{tabNames}}" wx:key="{{index}}">
+    <text class="tab-text {{current==index?'active':''}}" data-current='{{index}}' bindtap='btnClick'>{{item}}</text>
+  </view>
+  <!-- <view class='tab-li border'>
+    <text class="tab-text {{current==1?'active':''}}" data-current='1' bindtap='btnClick'>找活信息</text>
+  </view>
+  <view class='tab-li as-right'>
+    <text class="tab-text {{current==2?'active':''}}" data-current='2' bindtap='btnClick'>项目信息</text>
+  </view> -->
+</view>

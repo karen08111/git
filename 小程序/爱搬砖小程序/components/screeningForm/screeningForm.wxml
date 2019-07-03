@@ -1,0 +1,106 @@
+<!--components/screeningForm/screeningForm.wxml-->
+
+
+
+<form class='animation-content' bindsubmit="formSubmit" bindreset="formReset">
+<scroll-view scroll-y="true" class='gundong'>
+    <view class='filter-title'>筛选</view>
+    <view class='filter-list'>
+      <view class='filter-name'>类型</view>
+      <view class='filter-eti'>
+        <text class="filter-btn {{item.store==true?'activeStore':''}}" wx:for="{{btnList}}" wx:key="{{index}}" data-father='{{btnList}}' data-index='{{index}}' data-id='{{item.id}}' bindtap='targetBtn'>{{item.name}}</text>
+      </view>
+    </view>
+    <view class='filter-list'>
+      <view class='filter-name'>分类</view>
+      <view class='filter-eti'>
+        <text class="filter-btn {{item.store==true?'activeStore':''}}" wx:for="{{btnListTwo}}" wx:key="{{index}}" data-father='{{btnListTwo}}' data-index='{{index}}'  data-id='{{item.id}}' bindtap='targetBtnTwo'>{{item.name}}</text>
+      </view>
+    </view>
+    <!-- 技术工种 -->
+    <view class='filter-list' wx:if="{{id2}}">
+      <view class='filter-name'>二级分类</view>
+      <view class='filter-eti' wx:if="{{id2==1}}">
+        <text class="filter-btn {{item.store==true?'activeStore':''}}" wx:for="{{fenlei[0]}}" wx:key="{{index}}" data-father='{{fenlei[0]}}' data-index='{{index}}'  data-id='{{item.id}}' bindtap='targetBtn1'>{{item.work_name}}</text>
+      </view>
+
+      <view class='filter-eti' wx:if="{{id2==2}}">
+        <text class="filter-btn {{item.store==true?'activeStore':''}}" wx:for="{{fenlei[1]}}" wx:key="{{index}}" data-father='{{fenlei[1]}}' data-index='{{index}}'  data-id='{{item.id}}' bindtap='targetBtn2'>{{item.work_name}}</text>
+      </view>
+    </view>
+    
+
+    <!-- <view class='filter-list' wx:if="{{id2==2}}">
+      <view class='filter-name'>多选</view>
+      <view class='filter-eti'>
+        <text class="filter-btn {{item.store==true?'activeStore':''}}" wx:for="{{twoBtnList}}" wx:key="{{index}}" data-father='{{twoBtnList}}' data-index='{{index}}' bindtap='duo'>{{item.name}}</text>
+      </view>
+    </view> -->
+    <!-- 省份 -->
+    <!-- <view class='filter-list'>
+      <view class='filter-name'>省份</view>
+      <view class='filter-eti'>
+        <text class="filter-btn mini {{item.store==true?'activeStore':''}}" wx:for="{{cityList}}" wx:key="{{index}}" data-father='{{cityList}}' data-index='{{index}}'  data-id='{{item.id}}' bindtap='city1'>{{item.title}}</text>
+      </view>
+
+    </view> -->
+    <!-- 市 -->
+    <!-- <view class='filter-list' wx:if="{{cityList2.length>0}}">
+      <view class='filter-name'>二级</view>
+      <view class='filter-eti'>
+        <text class="filter-btn mini {{item.store==true?'activeStore':''}}" wx:for="{{cityList2}}" wx:key="{{index}}" data-father='{{cityList2}}' data-index='{{index}}'  data-id='{{item.id}}' bindtap='city2'>{{item.title}}</text>
+      </view>
+    </view> -->
+    <view class='filter-list'>
+      <view class='filter-name'>省份</view>
+      <view class='filter-eti margin-top'>
+        <picker class='filter-input width' bindchange="bindPickerChange" value="{{index}}" range="{{shengList}}">
+          <input class='filter-input width' placeholder='省' disabled='true' value='{{shengList[indexCity]}}'></input>
+        </picker>
+        <view class='heng xi'></view>
+        <picker class='filter-input width' bindchange="bindShi" value="{{shiIndex}}" range="{{shiList}}">
+          <input class='filter-input width' placeholder='市' disabled='true' value='{{shiList[shiIndex]}}'></input>
+        </picker>
+        <view class='heng xi'></view>
+        <picker class='filter-input width' bindchange="bindXian" value="{{index}}" range="{{xianList}}">
+          <input class='filter-input width' placeholder='区/县' disabled='true' value="{{xianList[xianIndex]}}"></input>
+        </picker>
+      </view>
+
+    </view>
+
+
+    <!-- 薪资 -->
+    <view class='filter-list'>
+      <view class='filter-name'>薪资区间</view>
+      <view class='filter-eti margin-top'>
+        <picker class='filter-input width' bindchange="getMin" value="{{index}}" range="{{lare}}">
+          <input class='filter-input width' placeholder='最低薪资' disabled='true' value="{{lare[minIndex]}}{{lare[minIndex]>=1?'K':''}}"></input>
+        </picker>
+        <view class='heng xi'></view>
+        <picker class='filter-input width' bindchange="getMax" value="{{index}}" range="{{max}}">
+          <input class='filter-input width' placeholder='最高薪资' disabled='true' value="{{max[maxIndex]}}{{max[maxIndex]>=1?'K':''}}"></input>
+        </picker>
+        <!-- <input class='filter-input' placeholder='最低薪资'></input>
+        <view class='heng'></view>
+        <input class='filter-input' placeholder='最高薪资'></input> -->
+        <!-- <view class='option'  catchtap='selectTap'>
+          <text class='option-text'>{{selectData[index]}}</text>
+          <image src='/images/shangxia.png'></image> -->
+          <!-- 选项 -->
+          <!-- <view class='option_box'  style="height:{{shows?(selectData.length>5?300:selectData.length*60):0}}rpx;border:{{shows?'1rpx solid #efefef':''}}">
+              <text class='options' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view> -->
+        
+      </view>
+    </view>
+    <!-- 提交 -->
+    <view class="btn-area">
+      <button formType="reset" class='btn-chong'>重置</button>
+      <button formType="submit" class='btn-chong btn-que'>确定</button>
+    </view>
+    
+  </scroll-view>
+  </form>
+

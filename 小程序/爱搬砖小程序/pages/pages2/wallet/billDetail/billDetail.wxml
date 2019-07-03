@@ -1,0 +1,20 @@
+<view class="bill">
+	<view class="cons">
+		<text class="bill-title">{{dan.genre_text}}</text>:<text class="bills">{{dan.total_fee}}</text>
+	</view>
+	<view class="cons">
+		<text class="bill-title">当前状态</text>:<text class="bills">{{dan.status_text}}</text>
+	</view>
+	<view class="cons">
+		<text class="bill-title">商家名称</text>:<text class="bills">{{dan.merchant}}</text>
+	</view>
+	<view class="cons">
+		<text class="bill-title">交易单号</text>:<text class="bills">{{dan.id}}</text>
+	</view>
+	<view class="cons">
+		<text class="bill-title">消费时间</text>:<text class="bills">{{dan.create_time}}</text>
+	</view>
+	
+	
+	
+</view>

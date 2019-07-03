@@ -1,0 +1,14 @@
+<view class='tui-project' data-id='{{project.id}}' bindtap='jump'>
+  <view class='project-image'>
+    <image src='{{http+project.imgs.path}}'></image>
+  </view>
+  <view class='title'>{{project.title}}</view>
+  <view class='subTitles'>{{project.company_name}}</view>
+  <view class='job-list'>
+    <!-- <text class='anniu'>{{project.}}</text> -->
+  </view>
+  <view class='times'>
+    <image src='/images/time.png'></image>
+    <text class='timesValue'>{{project.update_time}}</text>
+  </view>
+</view>

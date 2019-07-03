@@ -1,0 +1,33 @@
+/* pages/aboutUs/aboutUs.wxss */
+page {
+	background: #FFFFFF;
+}
+.aboutUs {
+	padding: 25rpx;
+	box-sizing: border-box;
+}
+.aboutUs-title {
+	font-weight: 600;
+	font-size: 32rpx;
+	position: relative;
+	padding-left: 20rpx;
+}
+.aboutUs-title:after{
+	content: "";
+    display: block;
+    width: 4rpx;
+    height: 25rpx;
+    background-color: #38f;
+    margin-right: 14rpx;
+	position: absolute;
+	left: 0;
+	top: 25%;
+}
+.about-content {
+	font-size: 26rpx;
+	margin-top: 20rpx;
+}
+.tops{
+	margin-top: 40rpx;
+}
+

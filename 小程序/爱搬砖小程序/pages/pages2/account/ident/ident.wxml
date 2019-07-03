@@ -1,0 +1,55 @@
+<!--pages/pages2/account/ident/ident.wxml-->
+<view class='main'>
+  <form bindsubmit="formSubmit">
+    <view class='forms'>
+      <view class='lis'>
+        <text class='titles'>您的职位</text>
+        <view class='check'>
+          <view class="check-li {{index%2==0?'margin':''}}" wx:for="{{checkList}}" wx:key="{{index}}" data-index='{{index}}' bindtap='qiehuan'>
+            <text class='wai'>
+              <text class="nei {{item.store?'nei-active':''}}"></text>
+            </text>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='li' wx:if="{{store ==1}}">
+        <text class='title'>公司职位</text>
+        <input name="enterJob" placeholder='请输入您在公司的职位'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>企业名称</text>
+        <input name="enterName" placeholder='请输入企业全称'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>企业统一信用代码</text>
+        <input name="enterNum" placeholder='请输入企业信用代码'></input>
+      </view>
+      <view class="yingye {{store==2?'none':''}}">
+        <text class='biao'>营业执照</text>
+        <view class='tianjias' wx:if="{{yingye}}">
+          <image src="{{yingye}}" mode="aspectFill"></image>
+        </view>
+        <view class='tianjia auto' bindtap='add' >
+          <text class='jia'>+</text>
+        </view>
+      </view>
+      <view class="yingye none" wx:if="{{store==1}}">
+        <text class='biao'>企业授权书</text>
+        <view class='tianjias' wx:if="{{bookImg}}">
+          <image src="{{bookImg}}" mode='aspectFill'></image>
+        </view>
+        <view class='tianjia auto' bindtap='addBookImg' >
+          <text class='jia'>+</text>
+        </view>
+      </view>
+    </view>
+    <view class='content'>1.请提供有效年检内的《企业法人营业执照》副本
+      2.请确保营业执照公司名称与公司全称一致
+      3.请保证所有信息清晰完整
+      4.不接受电子版执照
+      5.支持JPG、PNG格式，大小在2M以内
+    </view>
+    <button class='save' form-type="submit">提交认证</button>
+  </form>
+</view>

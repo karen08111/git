@@ -1,0 +1,5 @@
+<!--components/colonne/colonne.wxml-->
+<view class='title'>
+  <text class='title-this'></text>
+  <text class='title-name'>{{title}}</text>
+</view>

@@ -1,0 +1,86 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-left'>
+      <view class='header-title'>
+        <text class='header-name'>{{userDetail.detail.name?userDetail.detail.name:userDetail.detail.wechat_number}}</text>
+        <!-- <image src='/images/1.png'></image> -->
+        <text class='header-job' wx:if="{{userDetail.detail.work_type}}">{{userDetail.detail.work_type.title}}</text>
+      </view>
+      <view class=''>
+        <text class='list padding-left'>{{userDetail.detail.has_bad_medical_history==1?'有病史':'无病史'}}</text>
+        <text class='list' wx:if="{{userDetail.detail.work_time}}">{{userDetail.detail.work_time[0]}}年</text>
+        <text class='list' wx:if="{{userDetail.detail.work_time}}">{{userDetail.detail.work_time[1]}}</text>
+        <text class='list border-right' wx:if="{{userDetail.detail.region}}">{{userDetail.detail.region[0].title}}-{{userDetail.detail.region[1].title}}</text>
+      </view>
+      <view>
+        <text class='iconfont icon-phone relative'></text>
+        <text class='header-phone'>{{userDetail.detail.mobile}}</text>
+        <text class='iconfont icon-wx relative'></text>
+        <text class='header-phone'>{{userDetail.detail.wechat_number}}</text>
+      </view>
+    </view>
+    <view class='header-right'>
+      <view class='avatar'>
+        <image src='{{http+userDetail.detail.avatar}}' wx:if="{{userDetail.detail.avatar}}"></image>
+        <text class='store' wx:if="{{userDetail.detail.current_state==1}}">空闲中</text>
+        <text class='store' wx:if="{{userDetail.detail.current_state==2}}">在职中</text>
+      </view>
+      <view class='set' bindtap='setDetail'>
+        <image src='/images/set3.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 工作经历 -->
+  <view class='job-main'>
+    <view class='job-title'>工作经历</view>
+    <!-- 循环 -->
+    <view class='job-list' wx:for="{{projectList}}" wx:key="{{index}}">
+      <view>
+        <view class='job-title-left'>
+          <text class='name'>{{item.ach_name}}</text>
+          <text class='job-time'>{{item.start_time}}--{{item.end_time}}</text>
+        </view>
+        <navigator class='set right' url="/pages/pages2/resume/job/job?id={{item.id}}&typeId=1" >
+          <image src='/images/set3.png'></image>
+        </navigator>
+      </view>
+      <view class='clear'></view>
+      <!-- <view>
+        <text class='list padding-left'>无病史</text>
+        <text class='list  border-right'>无病史</text>
+      </view> -->
+      <view class='job-content'>{{item.content}}</view>
+    </view>
+    
+    <view class='add' bindtap='setJob'>添加工作经历</view>
+  </view>
+  <!-- 资质证书 -->
+  <view class='book'>
+    <text class='job-title'>资质证书</text>
+    <view class='set right relative' bindtap='setBook'>
+      <image src='/images/set3.png'></image>
+    </view>
+    <view class='book-list'>
+      <view class='book-li' wx:for="{{userDetail.detail.senioritys}}" wx:key="{{index}}">
+        <view class='book-img'>
+          <image src="{{http+item.img_path}}" data-index='{{index}}' bindtap='prew'></image>
+        </view>
+        <view class='book-name'>{{item.seniority_name}}</view>
+        <view class='book-icon'>{{item.credential_level_type.title}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 个人介绍 -->
+  <view class=''>
+    <text class='job-title'>个人介绍</text>
+    <view class='set right relative' bindtap='setIntr'>
+      <image src='/images/set3.png'></image>
+    </view>
+    <view class='job-content' wx:if="{{userDetail.detail.content}}">{{userDetail.detail.content}}</view>
+  </view>
+
+
+
+</view>

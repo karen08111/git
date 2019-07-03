@@ -1,0 +1,44 @@
+.text{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  display: flex;
+  position: relative;
+}
+.jiantou{
+  position: absolute;
+  right: 0;
+  top:50rpx;
+  width: 18rpx;  
+  height: 18rpx;  
+  border-left: 1rpx solid #b3b3b3;  
+  border-bottom: 1rpx solid #b3b3b3;  
+  -webkit-transform: translate(0,-50%) rotate(-135deg);  
+  transform: translate(0,-50%) rotate(-135deg);
+}
+.input-title{
+  line-height: 95rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+  display: inline-block;
+  width: 130rpx;
+}
+.text input{
+  width: 84%;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #000;
+  margin-top: 25rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

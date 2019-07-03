@@ -1,0 +1,19 @@
+/* components/colonne/colonne.wxss */
+.title{
+  display: flex;
+}
+.title-this{
+  width: 10rpx;
+	height: 30rpx;
+	background-color: #3388ff;
+  margin-right: 20rpx;
+}
+.title-name{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+}

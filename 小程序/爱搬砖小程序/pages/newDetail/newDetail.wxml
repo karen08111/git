@@ -1,0 +1,15 @@
+<!--pages/newDetail/newDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='main'>
+  <view class='title'>{{news.title}}</view>
+  <view class='time'>
+    <text class='author'>{{news.publisher}}</text>
+    <text>{{news.create_time}}</text>
+  </view>
+  <view class='img'>
+    <image src='{{http+news.img_path}}' mode='aspectFill' wx:if="{{news.img_path}}"></image>
+  </view>
+  <view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>

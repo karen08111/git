@@ -1,0 +1,30 @@
+/* components2/salary/salary.wxss */
+@import "/assets/font.wxss";
+.pick{
+  text-align: right;
+  float: right;
+}
+.xiala{
+  float: right;
+  margin-left: 30rpx;
+}
+.li{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.li input{
+  height: 100%;
+  font-size: 30rpx;
+}
+.title{
+  float: left;
+  margin-right: 25rpx;
+  letter-spacing: 2rpx;
+}
+.target{
+  letter-spacing: 3rpx;
+}

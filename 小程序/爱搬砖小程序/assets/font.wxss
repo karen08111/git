@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 801641 */
+  src: url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.eot');
+  src: url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.woff') format('woff'),
+  url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_801641_1ax0xlnjg21.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 50rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-hh:before {content:"\e613"}
+.icon-shuaxin:before {content:'\e626'}
+.icon-del:before {content:'\e674'}
+.icon-serch:before {content: '\e65a'}
+.icon-xiala:before {content: '\e602';font-size: 45rpx;}
+.icon-nan:before {content: '\e607'}
+.icon-phone:before{
+  content: '\e66c';
+  /* font-size: 40rpx; */
+}
+.icon-phones:before{
+  font-size: 40rpx;
+  content: '\e66c';
+}
+.icon-dels:before{
+	content: '\e615';
+}
+.icon-san:before{
+  font-size: 28rpx;
+  content: "\e631";
+}
+.icon-sanActive:before{
+  font-size: 28rpx;
+  color: #3388ff;
+  content: "\e7ba";
+}
+.icon-dui:before{
+  font-size: 28rpx;
+  content: "\e627"
+}
+.iconfont2 {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-dui1:before{
+  font-size: 28rpx;
+  color: #3388ff;
+  content: "\e627"
+}
+.icon-email:before{
+  content: '\e6a1'
+}
+.icon-intel:before{
+  content:'\e62b'
+}
+.icon-loca:before{
+  content: '\e61c';
+  font-size: 35rpx;
+}
+.small{
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-wx:before{
+  content: '\e654';
+  /* font-size: 35rpx; */
+}
+.genter:before{
+  content: '\e63a';
+  position: relative;
+  top: -30rpx;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+  color: #d4237a;
+  opacity: 0.7
+}
+.mans:before{
+  content:'\e616';
+  position: relative;
+  top: -30rpx;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+  color: #1296db;
+}
+
+
+
+
+
+

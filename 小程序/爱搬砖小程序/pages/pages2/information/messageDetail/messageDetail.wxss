@@ -1,0 +1,158 @@
+/* pages/pages2/information/messageDetail/messageDetail.wxss */
+page{
+  /* padding-bottom: 80rpx;
+  box-sizing: border-box */
+}
+.main{
+  padding: 30rpx 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.header{
+  background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(51, 136, 255, 0.1);
+	border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.header-title{
+  border-bottom: 1rpx dashed #e5e5e5;
+  /* height:170rpx; */
+  display: flex
+}
+.header-right{
+  line-height: 55rpx;
+  float: left;
+  width: 500rpx;
+}
+.clear{
+  clear: both;
+}
+.user-title{
+  display: flex;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 550;
+}
+.user-intr-list{
+  font-size: 22rpx;
+  color: #666666;
+  letter-spacing: 2rpx;
+}
+.border-right{
+  border-right: 1rpx solid #e5e5e5;
+}
+.padding-r{
+  padding-right: 15rpx;
+}
+.padding-l{
+  padding-left: 15rpx;
+}
+.user-date{
+  letter-spacing: 1rpx;
+  color: #666666;
+  font-size: 22rpx;
+}
+.user-time{
+  margin-right: 25rpx;
+}
+.job-date{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #ff7856;
+  text-align: center;
+}
+.header-left{
+  /* width: 180rpx; */
+  float: right;
+  text-align: right;
+}
+
+.user-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+.user-avatar image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.user-content{
+  margin-top: 15rpx;
+  line-height: 40rpx;
+  
+}
+.content-title{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 90px; */
+	letter-spacing: 2rpx;
+	color: #666666;
+}
+.content-main{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #666666;
+}
+
+.miao-title{
+  display: flex;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.miao-name{
+  font-size: 32rpx;
+  font-weight: 550;
+	letter-spacing: 0rpx;
+	color: #343434;
+}
+.miao-yuan{
+  position: relative;
+  top: 20rpx;
+  width: 12rpx;
+  height: 12rpx;
+  margin-right: 15rpx;
+  border-radius: 50%;
+  background-color: #3388ff;
+}
+.misoshu-content{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 34rpx;
+	letter-spacing: 2rpx;
+	color: #666666;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+  white-space: pre-line;
+}
+
+.project-title{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #343434;
+  background: #ffffff;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+
+.zhao-list{
+  margin-bottom: 80rpx;
+}
+.guans{
+  padding: 30rpx;
+  background: #ffffff;
+}

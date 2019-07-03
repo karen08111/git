@@ -1,0 +1,108 @@
+/* components2/project/project.wxss */
+.project{
+  /* height: 212rpx; */
+  background: #ffffff;
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+  /* margin-top: 20rpx; */
+}
+.title{
+  /* display: flex; */
+  width: 100%;
+  line-height: 30rpx;
+}
+.title-name{
+  display: inline-block;
+  color: #333333;
+  font-size: 28rpx;
+  letter-spacing: 3rpx;
+  /* line-height: 36rpx; */
+  width: 75%;
+  overflow: hidden;
+}
+.title-lar{
+  display: inline-block;
+  float: right;
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 36rpx; */
+	letter-spacing: 3rpx;
+	color: #ff7856;
+  text-align: right;
+  width: 40%;
+}
+.tab-name{
+  font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 36rpx; */
+	letter-spacing: 2rpx;
+	color: #999999;
+  padding: 0 10rpx 0 10rpx;
+}
+.border{
+  border-right:1rpx solid #999999; 
+}
+.xuxian{
+  display: block;
+  width: 100%;
+  border-top: 1rpx dashed #cccccc;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.user-intr{
+  /* display: flex; */
+  /* padding-top: 10rpx; */
+  box-sizing: border-box;
+}
+.user-intr image{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+  position: relative;
+  top: 5rpx;
+}
+.user-name{
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 36px; */
+	letter-spacing: 2rpx;
+	color: #999999;
+}
+.padd-left{
+  padding-left: 0;
+}
+.time{
+  display: inline-block;
+  font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #cccccc;
+  line-height: 50rpx;
+  text-align: right;
+  float: right;
+
+}
+.yue{
+  margin-left: 15rpx;
+}
+.jobStore{
+  margin-left: 10rpx;
+  border: solid 1rpx #3388ff;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+	color: #3388ff;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+}
+.flex{
+  display: flex;
+}
+
+
+

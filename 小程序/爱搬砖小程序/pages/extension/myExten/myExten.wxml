@@ -1,0 +1,76 @@
+<!--pages/extension/extensionIndex/extensionIndex.wxml-->
+<view class='main'>
+	<view class="header">
+		<image src="http://resource.aibanzhuan.cn/activity/invite/header.png" mode="aspectFill"></image>
+	</view>
+	<!-- 提示 -->
+	<view class="showZhao" wx:if="{{isShow}}" catchtouchstart='test'>
+		<view class="showName">
+			<image src="http://resource.aibanzhuan.cn/activity/invite/first_join.png"></image>
+			<text  class="iconfont icon-dels dels" catchtouchstart="del"></text>
+			<view class="showContent">
+				<view>成功加入</view>
+				<view>{{name}}的工友团</view>
+			</view>
+		</view>
+	</view>
+	
+	<view class="messages">
+		<view class="tiao">
+			<view class="start" style="width: {{userInfo.invitationCount==0?0.5:userInfo.invitationCount/2}}%;"></view>
+			<view class="twoHand">
+				<text class="numbers">100元</text>
+				<image src="{{yStore[0].finish?'/images/ovalActive.png':'/images/oval.png'}}" mode="aspectFill"></image>
+				<text class="numbers2">50人</text>
+			</view>
+			<view class="fiveHand">
+				<text class="numbers">300元</text>
+				<image src="{{yStore[0].finish?'/images/ovalActive.png':'/images/oval.png'}}" mode="aspectFill"></image>
+				<text class="numbers2">100人</text>
+			</view>
+			<view class="endHand">
+				<text class="numbers">600元</text>
+				<image src="{{yStore[0].finish?'/images/ovalActive.png':'/images/oval.png'}}" mode="aspectFill"></image>
+				<text class="numbers2">200人</text>
+			</view>
+		</view>
+		<view class="triangle" style="left:{{userInfo.invitationCount/2}}%">
+			<image src="/images/triangle.png" mode="aspectFill"></image>
+			<view class="acNumber">已邀请<text class="acText">{{userInfo.invitationCount}}</text>人</view>
+		</view>
+	</view>
+	<!-- 邀请按钮 -->
+	<view class="Invitation">
+		<view class="pickInvi" bindtap="meto">我也要组建工友团</view>
+	</view>
+	<!-- 我的工友团 -->
+	<view class="myFriend">
+		<view class="xian"></view>
+		<view class="friendTitle">
+			<view class="myName">{{name}}的工友团</view>
+			<text class="frendShow">{{name}}已成功邀请{{userInfo.invitationCount}}位工友</text>
+		</view>
+		<view class="xian"></view>
+	</view>
+	<!-- 成员列表 -->
+	<view class="frendList">
+		<view class="user" wx:for="{{userList}}" wx:key="{{index}}">
+			<!-- <image src="../../../images/1.png"></image> -->
+			<text class="userName">{{item.name}}</text>
+		</view>
+		
+		<!-- <view class="userName" wx:if="{{userList.length==0}}">暂无邀请成员~</view> -->
+	</view>
+	<navigator class="more" url="/pages/extension/extensionUser/extensionUser" wx:if="{{userList.length>8}}">查看全部工友</navigator>
+	<!-- 活动规则 -->
+	<view class="rule">
+		<view class="rule-title">
+			<image src="/images/tit_icon.png" mode="aspectFill"></image>
+			<view class="rule-name">活动规则</view>
+			<image src="/images/tit_icon.png" mode="aspectFill"></image>
+		</view>
+		<image src="http://resource.aibanzhuan.cn/activity/invite/rule.png" mode="aspectFill"></image>
+	</view>
+	<!-- 底部 -->
+	<view class="bottomMa">	</view>
+</view>

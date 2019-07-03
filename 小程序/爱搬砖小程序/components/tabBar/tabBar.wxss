@@ -1,0 +1,39 @@
+.nav-tab{
+  display: flex;
+  margin-top: 40rpx;
+  /* margin: auto; */
+  
+}
+
+.tab-li{
+  width: 33.33%;
+  height: 40rpx;
+  font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #bababa;
+  text-align: center;
+  line-height: 40rpx;
+}
+.tab-text{
+  display: inline-block;
+  padding-bottom: 10rpx;
+  color: #bababa;
+  border-bottom-style: none; 
+}
+.border{
+  border-left: 1rpx solid #bababa;
+  border-right: 1rpx solid #bababa;
+}
+.as{
+  text-align: left
+}
+.as-right{
+  text-align: right
+}
+.active{
+  border-bottom: 4rpx solid #3388FF;
+  color: #3388FF;
+}

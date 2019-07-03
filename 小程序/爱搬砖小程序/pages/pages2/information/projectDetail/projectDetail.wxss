@@ -1,0 +1,241 @@
+/* pages/pages2/information/projectDetail/projectDetail.wxss */
+page{
+  /* padding-bottom: 200rpx; */
+  box-sizing: border-box
+}
+.main{
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.header{
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 25rpx;
+  box-sizing: border-box;
+}
+.left{
+  float: left
+}
+.right{
+  float: right
+}
+.project-name{
+  font-size: 28rpx;
+
+	letter-spacing: 3rpx;
+	color: #333333;
+}
+.project-icon{
+  display: inline-block;
+  height: 28rpx;
+  line-height: 24rpx;
+  color: #3388ff;
+  padding: 0 10rpx 0 10rpx;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+	border: solid 1rpx #3388ff;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.project-lare{
+  font-size: 32rpx;
+	letter-spacing: 0rpx;
+	color: #ff7856;
+}
+.header-list{
+  font-size: 22rpx;
+	letter-spacing: 2rpx;
+	color: #555555;
+}
+.li-ri{
+  border-right: 1rpx solid #e5e5e5;
+  padding-right:15rpx; 
+}
+.padd{
+  padding-left: 15rpx;
+}
+.project-content{
+  border-top: 1rpx dashed #e5e5e5;
+  margin-top: 15rpx;
+  padding-top: 15rpx;
+  box-sizing: border-box;
+}
+.project-title{
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #555555;
+}
+.project-title image{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 7rpx;
+  margin-right: 15rpx;
+}
+.project-intr{
+  font-size: 22rpx;
+  letter-spacing: 1rpx;
+  color: #555555;
+  padding-left: 45rpx;
+  box-sizing: border-box;
+  margin-top: 5rpx;
+}
+.project-bottom{
+  float: right;
+  color: #999999;
+  font-size: 20rpx;
+
+}
+.times{
+  margin-right: 20rpx;
+}
+
+.miao-title{
+  display: flex;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.miao-name{
+  font-size: 32rpx;
+  font-weight: 550;
+	letter-spacing: 0rpx;
+	color: #343434;
+  position: relative;
+  width: 100%;
+}
+.miao-yuan{
+  position: relative;
+  top: 20rpx;
+  width: 12rpx;
+  height: 12rpx;
+  margin-right: 15rpx;
+  border-radius: 50%;
+  background-color: #3388ff;
+}
+.message{
+  margin-bottom: 30rpx;
+}
+.hao{
+  font-size: 22rpx;
+  line-height: 48rpx;
+}
+.icon-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-li{
+  display: inline-block;
+	height: 50rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	border: solid 1rpx #cccccc;
+  font-size: 28rpx;
+  color: #555555;
+  line-height: 50rpx;
+  padding: 0 10rpx 0 10rpx;
+  margin-right: 25rpx;
+  margin-bottom: 15rpx;
+}
+.message-content{
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  line-height: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #555555;
+}
+
+
+
+.maps{
+  /* height: 380rpx; */
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+  
+}
+.location-name{
+  height: 60rpx;
+  line-height: 56rpx;
+  font-size: 24rpx;
+  color: #666666;
+  letter-spacing: 2rpx;
+  padding-left: 15rpx;
+  box-shadow: 0px -2rpx 4rpx 0px 
+		rgba(68, 68, 68, 0.1);
+  box-sizing: border-box;
+}
+.map-main{
+  height: 320rpx;
+}
+.map-main map{
+  width: 100%;
+  height: 100%;
+}
+.guanzhus{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.book-intr{
+  display: flex;
+}
+.book-name text{
+  display: block;
+  width: 250rpx;
+  text-align: right;
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 2rpx;
+	color: #555555;
+}
+.book-value text{
+  display: block;
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 2rpx;
+	color: #555555;
+}
+.project-book{
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+}
+
+.project-title{
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #343434;
+  background: #ffffff;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+
+.zhao-list{
+  /* margin-bottom: 80rpx; */
+  padding-bottom: 80rpx;
+  box-sizing: border-box;
+}
+.guans{
+  padding: 30rpx;
+  background: #ffffff;
+}
+
+

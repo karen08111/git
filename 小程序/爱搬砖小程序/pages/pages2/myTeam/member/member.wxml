@@ -1,0 +1,48 @@
+<view class='main'>
+  <view class='header'>
+    <text class="border">姓名</text>
+    <text class='border'>手机号码</text>
+    <text class=''>团队负责人</text>
+    <!-- <text>操作</text> -->
+  </view>
+  <!-- <scroll-view class='scrolls' scroll-top="{{top}}" scroll-y="true" style="height:{{height}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll"> -->
+  <view class="scrolls">
+	<!-- <view class="scrolls" style="height:{{height}}px;"> -->
+    <view class='list' style="left:-{{tar==index?x:''}}rpx; transition: all {{mis}} linear;" bindtouchstart="recordStart" bindtouchmove="{{item.store?'recordMove':''}}" 
+		bindtouchend="{{item.store?'recordEnd':''}}" wx:for="{{userList}}" data-index='{{index}}' wx:key="{{index}}" >
+			<text class="textss">{{item.user_name}}</text>
+			<text class='textss'>{{item.mobile}}</text>
+			<text class='textss'>{{item.is_leader==1?'是':'否'}}</text>
+			<view class='xuanze'>
+				<navigator class='set' url="/pages/pages2/myTeam/compile/compile?id={{item.id}}&tid={{tid}}">编辑</navigator>
+				<view class='del' bindtap='dels' data-id='{{item.id}}'>删除</view>
+			</view>
+		</view>
+				<!-- <scroll-view class="lists" wx:for="{{userList}}" data-index='{{index}}' wx:key="{{index}}" scroll-x="true" scroll-left="{{item.left}}" scroll-with-animation="true" bindscrolltolower="picks" >
+					<view class='list'  style="left:-{{tar==index?x:''}}rpx; transition: all {{mis}} linear;" >
+						<text class="textss">{{item.user_name}}</text>
+						<text class='textss'>{{item.mobile}}</text>
+						<text class='textss'>{{item.is_leader==1?'是':'否'}}</text>
+						<view class='xuanze'>
+							<navigator class='set' url="/pages/pages2/myTeam/compile/compile?id={{item.id}}&tid={{tid}}">编辑</navigator>
+							<view class='del' bindtap='dels' data-id='{{item.id}}'>删除</view>
+						</view>
+					</view> 
+				</scroll-view> -->
+				<!-- <scroll-view scroll-x="true">
+					<view class='list' style="left:-{{tar==index?x:''}}rpx; transition: all {{mis}} linear;" wx:for="{{userList}}" data-index='{{index}}' wx:key="{{index}}" >
+						<text class="textss">{{item.user_name}}</text>
+						<text class='textss'>{{item.mobile}}</text>
+						<text class='textss'>{{item.is_leader==1?'是':'否'}}</text>
+						<view class='xuanze'>
+							<navigator class='set' url="/pages/pages2/myTeam/compile/compile?id={{item.id}}&tid={{tid}}">编辑</navigator>
+							<view class='del' bindtap='dels' data-id='{{item.id}}'>删除</view>
+						</view>
+					</view>
+				</scroll-view> -->
+				
+  </view>
+  
+
+  <view class='addUser' bindtap='sets'>添加成员</view>
+</view>

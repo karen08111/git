@@ -1,0 +1,22 @@
+/* components2/jumpIndex/jumpIndex.wxss */
+.jumpIndex{
+	position: fixed;
+	bottom: 150rpx;
+	right: 50rpx;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	background: #3388ff;
+	color: #FFFFFF;
+	font-size: 24rpx;
+	padding-left: 5rpx;
+	padding-top: 13rpx;
+	box-sizing: border-box;
+	letter-spacing: 3rpx;
+	text-align: center;
+	line-height: 30rpx;
+	z-index: 9999;
+}
+
+
+

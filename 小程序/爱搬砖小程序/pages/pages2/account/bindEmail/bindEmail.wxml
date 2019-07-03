@@ -1,0 +1,10 @@
+<view class="email-main">
+	<view class="email">
+		<input placeholder="请输入邮箱账号" bindinput="emails" ></input>
+	</view>
+	<!-- <view class="email code">
+		<input placeholder="请输入验证码"></input>
+		<view class="codes" bindtap="{{isCode?'gets':''}}">{{title}}</view>
+	</view> -->
+	<view class="postEmail" bindtap="save">确认绑定邮箱</view>
+</view>

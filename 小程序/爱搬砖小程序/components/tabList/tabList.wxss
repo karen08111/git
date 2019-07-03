@@ -1,0 +1,34 @@
+/* components/tabList/tabList.wxss */
+.tabList{
+  width: 690rpx;
+  margin: 38rpx auto;
+  height: 150rpx;
+  background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(51, 136, 255, 0.3);
+	border-radius: 20rpx;
+  display: flex;
+}
+.tabBar{
+  width: 25%;
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #808080;
+  /* display: table-cell;
+  vertical-align: middle;
+  text-align: center; */
+  /* display: flex;
+   justify-content:center;
+    align-items:Center; */
+    /* display: table-cell;
+    vertical-align: middle; */
+    text-align: center; 
+    margin-top: 25rpx;
+}
+.tabBar image{
+  width: 48rpx;
+  height: 48rpx;
+}

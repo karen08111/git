@@ -1,0 +1,63 @@
+/* pages/newList/newList.wxss */
+page{
+	padding: 30rpx 0 30rpx 0;
+	background: #FFFFFF;
+	box-sizing: border-box;
+}
+.newList{
+	width: 690rpx;
+	height: 240rpx;
+	margin: auto;
+	margin-bottom: 30rpx;
+	border-radius: 20rpx;
+	background-color: #fafafd;
+	padding: 25rpx;
+	box-sizing: border-box;
+	display: flex;
+	
+}
+.newLeft{
+	width: 313rpx;
+	height: 177rpdx;
+	overflow: hidden;
+}
+.title{
+	font-size: 30rpx;
+	letter-spacing: 2rpx;
+	color: #333333;
+	height: 66rpx;
+	overflow: hidden;
+	line-height: 32rpx;
+	display: -webkit-box;
+}
+.content{
+	font-size: 22rpx;
+	color: #999999;
+	height: 90rpx;
+	overflow: hidden;
+	line-height: 32rpx;
+	margin-top: 15rpx;
+}
+/* .content:after{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '查看更多';
+	color: #3388ff;
+} */
+.more{
+	color: #3388ff;
+	margin-left: 10rpx;
+}
+.newRight{
+	width: 314rpx;
+	height: 177rpx;
+	overflow: hidden;
+	margin-left: 22rpx;
+}
+.newRight image{
+	width: 100%;
+	height: 100%;
+}
+
+

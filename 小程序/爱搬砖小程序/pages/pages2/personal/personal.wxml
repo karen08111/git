@@ -1,0 +1,47 @@
+<view class='main' wx:if="{{isLogin == 2}}">
+  <view class='header'>
+    <view class='avatar'>
+      <image src="{{avatar?avatar:''}}"></image>
+    </view>
+    <view class='header-name'>{{user.nick}}</view>
+    <!-- <view class='header-job' wx:for="{{menuList}}" wx:key="{{index}}" wx:if="{{item.title == '企业主页' }}">我的主页</view> -->
+		<navigator class='menuIndex' wx:for="{{menuList}}" wx:key="{{index}}" wx:if="{{item.title == '企业主页' }}" url="{{item.route}}">我的主页</navigator>
+    <navigator class='btns' wx:for="{{menuList}}" wx:key="{{index}}" wx:if="{{item.title == '个人简历'}}" url="{{item.route}}">
+      <text class='header-title'>我的简历</text>
+      <text class='jiantou'></text>
+    </navigator>
+  </view>
+  <!-- 列表 -->
+
+  <view class='list'>
+		<navigator url='{{item.route}}' class='li border' wx:for="{{menuList}}" wx:key="{{index}}" wx:if="{{item.ico}}">
+		  <view class='icon'>
+		    <image src='/images/{{item.ico}}.png'></image>
+		  </view>
+		  <text class='li-name'>{{item.title}}</text>
+		  <text class='tou'></text>
+		</navigator>
+		<navigator url='/pages/aboutUs/aboutUs' class='li border'>
+		  <view class='icon'>
+		    <image src='/images/AboutUs.png'></image>
+		  </view>
+		  <text class='li-name'>关于</text>
+		  <text class='tou'></text>
+		</navigator>
+  </view>
+</view>
+<view wx:if="{{isLogin == 1}}">
+    <view class='headers'>
+        <image src='/images/logo.png'></image>
+        <view class='ai'>爱搬砖</view>
+    </view>
+    
+    <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+ 
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+</view>

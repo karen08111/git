@@ -1,0 +1,35 @@
+
+
+<view class='model' wx:if="{{store}}">
+  <view class='content'>
+    <view class="bg" style='background:url({{imgs}});background-repeat:no-repeat;'>
+    </view>
+    <view class='kuai' style='background:url({{imgs}});background-position:{{left}} -150px;background-repeat:no-repeat;'>
+    
+    </view>
+    <view class='iconfont icon-shuaxin shua' bindtap='load'></view>
+    <view class='del iconfont icon-del' bindtap='hide'></view>
+  </view>
+  <view class="slidersBox" wx:if="{{show}}">
+    <!-- <text>{{ hint }}</text>
+    <view class='operationBgBox' style='left: {{ -(w + 2) }}px; transform: {{ cssAnimation }}'>
+      <text>{{ succeedMsg }}</text>
+      <view class='operationBox ' catchtouchmove='moveFun' catchtouchend='endFun'>
+        <image src='/images/anniu.png'></image>
+      </view>
+    </view> -->
+		<text>{{ hint }}</text>
+		<view class="gai" style="width: {{zhe}};"></view>
+		<view class='operationBgBox'>
+		  <text>{{ succeedMsg }}</text>
+		  <view class='operationBox ' catchtouchmove='moveFun'  catchtouchend='endFun'>
+		    <image src='/images/anniu.png' style='left: {{ -(w + 2) }}px; transform: {{ cssAnimation }}'></image>
+		  </view>
+		</view>
+  </view>
+  <view class='slidersBox bgs' wx:if="{{!show}}">
+    验证成功！
+  </view>
+</view>
+
+

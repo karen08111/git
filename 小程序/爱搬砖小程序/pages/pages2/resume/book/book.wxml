@@ -1,0 +1,33 @@
+<!--pages/pages2/resume/book/book.wxml-->
+<view class='main'>
+ 
+    <view class='book-list'>
+      <view class='liebiao'>
+          <view class='book-li' wx:for="{{bookList}}" data-index='{{index}}' data-id='{{item.id}}' wx:key="{{index}}" bindtap="{{item.status!=0?'select':''}}">
+						<view class='shenhe' wx:if="{{item.status == 0}}">
+							<text>审核中</text>
+						</view>
+						<text class='wai' wx:if="{{item.status !=0}}">
+							<text class="nei {{item.isuse?'nei-active':''}}"></text>
+						</text>
+						<view class='book-img'>
+							<image src="{{item.img_path?http+item.img_path:''}}" mode='aspectFill'></image>
+						</view>
+						<view class='book-name'>{{item.seniority_name}}</view>
+						<view class='book-icon'>{{item.credential_level_type.title}}</view>
+					</view>
+      </view>
+      
+      <!-- <view class='save top'>保存</view> -->
+      <navigator class='add-name' url='/pages/pages2/account/book/book?store=2'>添加资质证书</navigator>
+    </view>
+    
+  
+  
+
+  <view class='menuList' style="bottom:{{isShow?0:''}}">
+    <text class='show' bindtap='show'>保存</text>
+    <!-- <text class='hide'>隐藏</text> -->
+    <text class='del' bindtap='dels'>删除</text>
+  </view>
+</view>

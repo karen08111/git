@@ -1,0 +1,32 @@
+<view class='main'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='forms'>
+      <view class='li'>
+        <text class='title left'>姓名</text>
+        <input placeholder='请输入姓名' name="userName"></input>
+      </view>
+      <common array="{{cardList}}" title="title" pla="请选择证件类型" bind:getBing="getBing">证件类型</common>
+      <view class='li'>
+        <text class='title left'>证件号码</text>
+        <input name="idcard" type='idcard' placeholder='请输入身份号码'></input>
+      </view>
+      <view class='ident-img'>
+        <text class='title'>证件正面照片</text>
+        <view class='ident-main' bindtap='addZheng'>
+          <image src='{{zheng}}' wx:if="{{zheng}}"></image>
+        </view>
+        
+        <view class='intr'>*请上传证件正面拍摄图片或者扫描文件</view>
+      </view>
+      <view class='ident-img none'>
+        <text class='title'>证件反面照片</text>
+        <view class='ident-main' bindtap='addFan'>
+          <image src='{{fan}}' wx:if="{{fan}}"></image>
+        </view>
+        
+        <view class='intr'>*请上传证件反面拍摄图片或者扫描文件</view>
+      </view>
+    </view>
+    <button class='save'  form-type="submit">{{typeId==1?'提交认证':'下一步'}}</button>
+  </form>
+</view>

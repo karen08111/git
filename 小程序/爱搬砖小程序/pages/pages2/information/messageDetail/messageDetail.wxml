@@ -1,0 +1,52 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-title'>
+      <view class='header-right'>
+        <view class='user-title'>{{user.info.title}}</view>
+        <view class='user-intr-list'>
+          <text class='user-intr-li border-right padding-r'>{{user.info.work_type}}</text>
+          <text class='user-intr-li border-right padding-r padding-l'>招聘人数:{{user.info.nums==0?'不限':user.info.nums+'人'}}</text>
+           <text class='user-intr-li padding-r padding-l'>工期:{{user.info.construction_period==0?'不限':user.info.construction_period+'天'}}</text>
+        </view>
+        <view class='user-date'>
+          <text class='user-time'>开始工期:{{user.info.start_time}}</text>
+          <text class=''>发布日期:{{user.info.update_time}}</text>
+        </view>
+      </view>
+      <view class='clear'></view>
+      <view class='header-left'>
+        <view class='job-date' wx:if="{{user.info.min_pay!=0}}">{{user.info.min_pay}}元/{{user.info.quantity_unit}}</view>
+        <view class='job-date' wx:else>面议</view>
+        <view class='user-avatar'>
+          <image src="{{user.info.avatar?http+user.info.avatar:''}}"></image>
+          
+        </view>
+      </view>
+    </view>
+    <view class='user-content'>
+      <view class='content-title' wx:if="{{user.info.publisher}}">{{user.info.publisher}}</view>
+      <view class='content-main'></view>
+    </view>
+  </view>
+
+  <!-- 招聘描述 -->
+  <view class='miao-title'>
+    <view class='miao-yuan'></view>
+    <view class='miao-name'>招聘描述</view>
+  </view>
+  <view class='misoshu-content'>
+  {{user.info.content}}
+  </view>
+</view>
+<view class='project-title'>推荐招聘工人信息</view>
+<view class='zhao-list'>
+  <project wx:for="{{user.push}}" project="{{item}}" http="{{http}}" type="/recruitList" wx:key="{{index}}"></project>
+</view>
+
+<view class='guanzhu'>
+  <view class='guan' bindtap='quxiao' wx:if="{{reset==1}}">取消关注</view>
+  <view class='guan' bindtap='guanzhu' wx:if="{{reset==0}}">关注</view>
+  <view class='lianxi' bindtap='lianxi' data-id='{{user.info.id}}'>联系方式</view>
+</view>
+
+<jumpIndex></jumpIndex>

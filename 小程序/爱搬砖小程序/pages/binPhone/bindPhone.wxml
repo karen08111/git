@@ -1,0 +1,51 @@
+<view class='main-bg' wx:if="{{isBind}}">
+  <view class='form'>
+    <view class='title-img'>
+      <image src='/images/pla.png'></image>
+    </view>
+    <view class='list'>
+      <input type='phone' placeholder='请输入手机号' bindinput='getPhone'></input>
+    </view>
+    <view class='list'>
+      <input placeholder='请输入手机验证码' bindinput='getPhoneCode'></input>
+      <view class='getCodes' bindtap='getCode' wx:if="{{code==60 || code==0}}">获取验证码</view>
+      <view class='getCodes' wx:if="{{code<60 && code!=0}}">{{code}}</view>
+    </view>
+    <view class='liji' bindtap='next'>立即绑定</view>
+  </view>
+
+  <!-- <view class='yin'>
+    
+  </view> -->
+  <view class='zhao' wx:if="{{showCode}}">
+    <sliders  bindmyevent="myEventListener" mobile="{{phone}}" imgs="{{imgs}}" abzId="{{abzId}}" store="true"></sliders>
+  </view>
+</view>
+<view class='main-bg' wx:if="{{!isBind}}">
+	<view wx:if="{{newPhone}}">
+		<view class="newPhone">
+			<view class="targetPhone">当前绑定手机号</view>
+			<view class="tar">{{moT}}</view>
+		</view>
+		<view class="oldPhone"> 
+			<input type="number" maxlength="6" placeholder="请输入原手机号验证码" bindinput="getOldPhone"></input>
+			<view class="oldCode" bindtap="{{oldCodeTitle<=60?'':'huoqu'}}" >{{oldCodeTitle}}</view>
+		</view>
+		<view class='liji' style="margin: auto;" bindtap='jumpNew'>下一步</view>
+	</view>
+	<!-- 绑定新手机 -->
+		<view wx:if="{{!newPhone}}">
+			<view class="newPhone">
+				<view class="targetPhone">绑定新手机号</view>
+			</view>
+			<view class="oldPhone" style="margin-bottom: 30rpx;">
+				<input placeholder="请输入新手机号" type="number" maxlength="11" bindinput="getNewMobile"></input>
+			</view>
+			<view class="oldPhone"> 
+				<input type="number" maxlength="6" placeholder="请输入原手机号验证码" bindinput="getNewPhone"></input>
+				<view class="oldCode" bindtap="{{newCodeTitle<=60?'':'newHuoqu'}}" >{{newCodeTitle}}</view>
+			</view>
+			<view class='liji' style="margin: auto;" bindtap='endyes'>确定</view>
+		</view>
+</view>
+

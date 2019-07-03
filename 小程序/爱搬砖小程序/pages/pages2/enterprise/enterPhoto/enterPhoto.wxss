@@ -1,0 +1,132 @@
+/* pages/pages2/enterprise/enterPhoto/enterPhoto.wxss */
+.photo{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+page{
+  background: #ffffff;
+}
+.main{
+  padding: 30rpx;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.img-list{
+  width: 224rpx;
+	height: 170rpx;
+	background-color: #ffffff;
+	border-radius: 4rpx;
+  position: relative;
+  margin-right: 5rpx;
+  margin-bottom: 10rpx;
+}
+.img-list image{
+  width: 100%;
+  height: 100%;
+  
+}
+.yuan{
+  display: block;
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background: #fcfcff;
+  border-radius: 50%;
+}
+.yuan-none{
+  position: relative;
+  display: block;
+  width: 18rpx;
+  height: 18rpx;
+  top: 6rpx;
+  left: 6rpx;
+  background: #999999;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+.yuan-active{
+  background: #3388ff;
+}
+
+.bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fafafa;
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+.adds{
+  background: #ebebeb;
+  position: relative;
+}
+.heng{
+  display: block;
+  width: 10rpx;
+	height: 120rpx;
+	background-color: #ffffff;
+	border-radius: 5rpx;
+}
+.su{
+  display: block;
+  width: 120rpx;
+	height: 10rpx;
+	background-color: #ffffff;
+	border-radius: 5rpx;
+  
+}
+.zhongxin{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.left{
+  float: left;
+
+}
+.right{
+  float: right;
+}
+.del{
+ 
+
+  width: 120rpx;
+	height: 60rpx;
+	background-color: #3388ff;
+	border-radius: 14rpx;
+  line-height: 60rpx;
+  color: #ffffff;
+  letter-spacing: 3rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.guanli{
+  width: 580rpx;
+	height: 100rpx;
+	background-color: #ffffff;
+	border-radius: 50rpx;
+	border: solid 1rpx #cccccc;
+	opacity: 0.9;
+  font-size: 34rpx;
+  letter-spacing: 3rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: absolute;
+  bottom: 200rpx;
+  left: 90rpx;
+  color: #999999;
+}
+
+

@@ -1,0 +1,39 @@
+<!--pages/pages2/myTeam/compile/compile.wxml-->
+<view class='main'>
+  <form bindsubmit="{{id?'sets':'formSubmit'}}">
+    <view class='list'>
+      <view class='li'>
+        <text class='title'>姓名</text>
+        <input bindinput='getName' value='{{userName}}' placeholder='请输入姓名'></input>
+      </view>
+      <common title="title" array="{{userArray}}" bind:getBing="getBing" ids="{{identType}}" pla="请选择证件类型">证件类型</common>
+      <view class='li'>
+        <text class='title'>证件号码</text>
+        <input bindinput='getIdent' type='idcard' value='{{identCode}}' placeholder='请输入证件号码'></input>
+      </view> 
+      <view class='li'>
+        <text class='title'>手机号码</text>
+        <input type='number' bindinput='getPhone' value='{{phone}}' placeholder='请输入手机号码'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>年龄</text>
+        <input type='number' bindinput='getOld' value='{{old}}' placeholder='请输入年龄'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>工龄</text>
+        <input type='number' bindinput='getJob' value="{{jobOld}}" placeholder='请输入工龄'></input>
+      </view>
+      <!-- <view class='li'>
+        <text class='title'>团队负责人</text>
+        <input bindinput='getBoss' value='{{bossName}}'></input>
+      </view> -->
+      <common array="{{lader}}" title="title" bind:getBing="getLader" pla="是否为团队负责人" ids="{{bossName+1}}">团队负责人</common>
+      <view class='li nones'>
+        <text class='title'>邮箱</text>
+        <input bindinput='getEmail' value='{{email}}' placeholder='请输入邮箱'></input>
+      </view>
+    </view>
+    <button class='save' wx:if="{{!id}}" form-type="submit">保存</button>
+    <button class='save' wx:if="{{id}}" form-type="submit">保存</button>
+  </form>
+</view>

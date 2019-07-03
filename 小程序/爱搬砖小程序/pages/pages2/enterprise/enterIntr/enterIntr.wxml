@@ -1,0 +1,6 @@
+<view class='main'>
+  <textarea placeholder='请输入企业介绍' bindinput='{{values}}' value="{{values}}" bindinput='getContent'>
+  
+  </textarea>
+  <view class='save' bindtap='save'>保存</view>
+</view>

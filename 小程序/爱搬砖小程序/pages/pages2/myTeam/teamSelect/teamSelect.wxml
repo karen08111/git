@@ -1,0 +1,15 @@
+<view class='main'>
+  <navigator class='li' url="/pages/pages2/myTeam/member/member">
+    <text>成员管理</text>
+    <text class='jiantous top'></text>
+  </navigator>
+  <navigator class='li' url="/pages/pages2/myTeam/teamResum/teamResumIndex">
+    <text>团队简历</text>
+    <text class='jiantous top'></text>
+  </navigator>
+  <navigator class='li none' url="/pages/pages2/myTeam/recruitment/recruitment?store=1">
+    <text>招聘管理</text>
+    <text class='jiantous top'></text>
+  </navigator>
+
+</view>

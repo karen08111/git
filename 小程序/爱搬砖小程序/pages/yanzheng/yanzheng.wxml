@@ -1,0 +1,9 @@
+<view>
+  <movable-area class="content" style="width:{{area_width}}%">
+    <movable-view class='box' style='width:{{box_width}}rpx' friction="{{100}}" direction="horizontal" x="{{x}}" damping="{{500}}" bindchange="drag" bindtouchend="dragOver">
+    </movable-view>
+  </movable-area>
+  <canvas class='myCanvas' canvas-id="myCanvas" bindtouchstart='EventHandleStart' bindtouchend='EventHandle' binderror="canvasIdErrorCallback" disable_scroll/>
+
+
+</view>

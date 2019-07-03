@@ -1,0 +1,36 @@
+<!--pages/pages2/resume/basic/basic.wxml-->
+<view class='main'>
+  <form bindsubmit="formSubmit">
+    <view class='forms'>
+      <view class='li'  bindtap="upload">
+        <text class='title'>头像</text>
+        <view class='right avatar'>
+          <image src='{{avatar}}' wx:if="{{avatar}}" mode='aspectFill'></image>
+        </view>
+        <text class='jiantous' wx:if="{{!avatar}}"></text>
+      </view>
+      <view class='li'>
+        <text class='title'>团队名称</text>
+        <input bindinput='getteam_name' value='{{team_name}}' placeholder='请输入团队名称'></input>
+      </view>
+      <common array="{{jobList}}" ids="{{industry_type}}" bind:getBing="getBing" pla="请选择擅长行业" title="title">擅长行业</common>
+      <view class='li'>
+        <text class='title'>微信号</text>
+        <input bindinput='getwechat_number' value='{{wechat_number}}' placeholder='请输入团队微信号'></input>
+      </view>
+      <view class='li'>
+        <text class='title'>联系号码</text>
+        <input bindinput='getmobile' value='{{mobile}}' type="number" placeholder='请输入团队联系方式'></input>
+      </view>
+      <getDate bind:getDates="getteam_create_time" value="{{team_create_time}}" pla="请选择团队创建时间">团队创建时间</getDate>
+      <pickCity bind:getCityId="getCityId" pla="{{locationString}}">所在地区</pickCity>
+      
+    </view>
+    <button class='save' form-type="submit">保存</button>
+  </form>
+  
+</view>
+
+
+
+

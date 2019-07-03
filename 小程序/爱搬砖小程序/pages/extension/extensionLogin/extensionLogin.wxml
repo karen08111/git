@@ -1,0 +1,87 @@
+<!--pages/extension/extensionLogin/extensionLogin.wxml-->
+<view class="main">
+	<view class="header">
+		<image src="http://resource.aibanzhuan.cn/activity/invite/header.png" mode="aspectFill"></image>
+	</view>
+	<view class="login-title">
+		<view class="login-border"></view>
+		<view class="login-module">
+			<image src="/images/push.png"></image>
+			<text class="login-name">加入{{fatherName}}工友团</text>
+			<image src="/images/push.png"></image>
+		</view>
+		<view class="login-border"></view>
+	</view>
+<!-- 	<view class="rule-title" wx:if="{{store == 0}}">
+		<image src="/images/tit_icon.png" mode="aspectFill"></image>
+		<view class="rule-name">请先登录</view>
+		<image src="/images/tit_icon.png" mode="aspectFill"></image>
+	</view> -->
+	<!-- 授权 -->
+	<view class="login-bg" wx:if="{{store == 0}}">
+		<button class="pickInvi" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录为工友助力</button>
+	</view>
+	<!-- login表单 -->
+	<view class="login-bg" wx:if="{{store == 1}}">
+		<view class="loginForm">
+			<view class="form-title">成为爱搬砖的用户</view>
+			<view class="loginPhone">
+				<image src="/images/tel.png"></image>
+				<input placeholder="请输入手机号" type="number" bindinput="getPhone"></input>
+			</view>
+			<view class="loginCode">
+				<view class="code">
+					<image src="/images/code.png"></image>
+					<input placeholder="请输入验证码" bindinput="inputCode"></input>
+				</view>
+				<view class="getCode" bindtap="{{start?'':'getCode'}}">{{times}}</view>
+			</view>
+			<view class="submit" bindtap="nexts">下一步</view>
+		</view>
+	</view>
+	<!-- 第二步 -->
+	<view wx:if="{{store == 2}}" class="bg-two">
+		<view class="login-two">
+			<view class="form-title">填写基本信息</view>
+			<view class="loginPhone">
+				<input placeholder="请输入真实姓名" placeholder-class="phClass" bindinput="getName"></input>
+			</view>
+			<common pla="请选择性别" array="{{gender}}" title="title" enter="true" bind:getBing="getBing"></common>
+			<view class="loginPhone">
+				<input placeholder="请输入真实年龄" placeholder-class="phClass" bindinput="getOld"></input>
+			</view>
+			<pickJob pla="请选择擅长工种" enter="true" bind:jobId="jobId"></pickJob>
+			<pickCity pla="请选择期望的工作区域" enter="true" bind:getCityId="getCityId"></pickCity>
+			<view class="ident">
+				<view class="ident-title">
+					<text class="ident-head">请上传身份证图片</text>
+					<text class="ident-intr">(要求:大小要求5M以内,清晰无遮挡)</text>
+				</view>
+				<view class="ident-yes" bindtap="upImg">
+					<view class="ident-none" wx:if="{{!upZheng}}">
+						<image src="/images/idennoe.png"></image>
+						<view class="ident-name">上传正面</view>
+					</view>
+					<image src="{{https+upZheng}}" wx:else mode="aspectFill"></image>
+				</view>
+				<view class="ident-yes" bindtap="fanImg">
+					<view class="ident-none" wx:if="{{!upFan}}">
+						<image src="/images/idennoe.png"></image>
+						<view class="ident-name">上传反面</view>
+					</view>
+					<image src="{{https+upFan}}" wx:else mode="aspectFill"></image>
+				</view>
+			</view>
+			<view class="submit" bindtap="{{clicks?'submit':''}}">我要加入</view>
+		</view>
+	</view>
+	
+	<!-- 底部 -->
+	<view class="bottomMa">	</view>
+</view>
+<view class="zhao" wx:if="{{showCode}}" catchtouchstart='test'>
+	<view class="codes">
+		<sliders bindhide="hide" bindmyevent="myEventListener" mobile="{{phone}}" imgs="{{imgs}}" abzId="{{abzId}}" store="true"></sliders>
+	</view>
+</view>
+

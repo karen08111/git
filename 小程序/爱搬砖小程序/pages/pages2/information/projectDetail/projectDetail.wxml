@@ -1,0 +1,104 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-title'>
+      <text class='project-name left'>{{project.info.title}}</text>
+      <text class='project-icon left'>{{project.info.prj_size}}</text>
+      <text class='project-lare right'></text>
+    </view>
+    <view class='clear'></view>
+    <view class='header-list'>
+      <text class='li-ri'>{{project.info.project_type}}</text>
+      <text class='padd'>{{project.info.function_num}}</text>
+    </view>
+    <view class='project-content'>
+      <view class='project-title'>
+        <image src="{{project.info.avatar?http+project.info.avatar:''}}"></image>
+        <text wx:if="{{project.info.name}}">{{project.info.name}}</text>
+      </view>
+      <!-- <view class='project-intr'>美菜网是国内ToB生鲜行业飞速发展的电商独角兽，我们通过产品和服务，为消费者、商家提供更快、更优质、更准确的服务，让餐厅的生意更好做，让用户吃上放心菜。</view> -->
+      <view class='project-bottom'>
+        <text class='times'>{{project.info.update_time}}</text>
+        <text>{{project.info.hits}}浏览</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+  </view>
+  <view class='message'>
+    <view class='miao-title'>
+      <view class='miao-yuan'></view>
+      <view class='miao-name'>
+        <text>项目信息</text>
+        <text class='right hao'>立顶文号:{{project.info.approval_num}}</text>
+      </view>
+    </view>
+    <view class='icon-list'>
+      <text class='icon-li'>{{project.info.invest}}万元</text>
+      <text class='icon-li'>{{project.info.approval_level_num}}</text>
+      <!-- <text class='icon-li'>{{project.info.prj_size}}</text> -->
+      <text class='icon-li'>{{project.info.building_area}}平方米</text>
+      <text class='icon-li'>{{project.info.building_length}}米</text>
+    </view>
+    <view class='message-content' wx:if="{{project.info.content}}">
+      {{project.info.content}}
+    </view>
+  </view>
+  <!-- ditu  -->
+  <view class='maps'>
+    <view class='location-name'>
+      <text class='iconfont icon-loca'></text>
+      <text>{{project.info.address}}</text>
+    </view>
+    <view class='map-main'>
+      <map markers='{{markers}}'  latitude="{{project.info.lat}}" scale="14" longitude="{{project.info.lng}}" ></map>
+    </view>
+  </view>
+  <!-- 项目许可证 -->
+  <view class='project-book'>
+    <view class='miao-title'>
+      <view class='miao-yuan'></view>
+      <view class='miao-name'>
+        <text>项目施工许可证</text>
+      </view>
+    </view>
+    <view class='book-intr'>
+      <view class='book-name'>
+        <text>项目编号:</text>
+        <text>施工许可证编号:</text>
+      </view>
+      <view class='book-value'>
+        <text>{{project.info.builder_licenseNum}}</text>
+        <text>{{project.info.prj_name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 总承包单位 -->
+  <view class='project-book'>
+    <view class='miao-title'>
+      <view class='miao-yuan'></view>
+      <view class='miao-name'>
+        <text>总承包单位信息</text>
+      </view>
+    </view>
+    <view class='book-intr'>
+      <view class='book-name'>
+        <text>总承包单位:</text>
+        <text>统一社会信用代码:</text>
+      </view>
+      <view class='book-value'>
+        <text>{{project.info.contractor_corp_name}}</text>
+        <text>{{project.info.contractor_corp_code}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='project-title'>推荐招聘工人信息</view>
+<view class='zhao-list'>
+  <project wx:for="{{project.push}}" project="{{item}}" http="{{http}}" type="/project/list" wx:key="{{index}}"></project>
+</view>
+
+<view class='guanzhu'>
+  <view class='guan' wx:if="{{reset==0}}" bindtap='guanzhu'>关注</view>
+   <view class='guan' wx:if="{{reset==1}}" bindtap='quxiao'>取消关注</view>
+  <view class='lianxi' bindtap='lianxi'>联系方式</view>
+</view>
+<jumpIndex></jumpIndex>

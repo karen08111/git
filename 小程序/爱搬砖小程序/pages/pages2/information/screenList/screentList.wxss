@@ -1,0 +1,157 @@
+/* pages/pages2/information/screenList/screentList.wxss */
+@import "/assets/font.wxss";
+.main{
+  padding-top: 97rpx;
+}
+.hide{
+  background: #000000;
+  opacity: 0.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.menu{
+  display: flex;
+  height: 96rpx;
+  line-height: 32rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  background: #ffffff;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.menu-name{
+  font-size: 28rpx;
+  color: #343434;
+  letter-spacing: 1rpx;
+}
+.relative{
+  position: relative;
+  left: 5rpx;
+  top: 2rpx;
+}
+.menu-li{
+  width: 33%;
+  height: 40rpx;
+  text-align: center;
+}
+.b-right{
+  border-right: 1rpx solid #e5e5e5;
+}
+
+
+
+.shai{
+  background: #ffffff;
+  height: 0;
+  position: fixed;
+  top: 97rpx;
+  width: 100%;
+  z-index: 90;
+  transition: all .3s linear;
+  overflow: hidden;
+  text-align: center;
+}
+.height{
+  height: 780rpx;
+}
+.btns{
+  display: flex;
+  border-top: 1rpx solid #e2e2e2;
+  border-bottom: 1rpx solid #e2e2e2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+.reset{
+  width: 50%;
+  height: 80rpx;
+  color: #555555;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.yes{
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  background: #3388ff;
+
+}
+.scroll{
+  display: flex;
+  width: 100%;
+}
+.lei1{
+  width: 50%;
+  float: left;
+
+}
+.lei2{
+  width: 50%;
+  float: right;
+}
+.lei-name{
+  color: #555555;
+  letter-spacing: 1rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+
+
+
+
+.active{
+  color: #3388ff;
+}
+.op{
+  opacity: 0;
+}
+.redu{
+  background: #ffffff;
+  height: 0;
+  position: fixed;
+  top: 97rpx;
+  width: 33%;
+  z-index: 90;
+  transition: all .3s linear;
+  overflow: hidden;
+  text-align: center;
+}
+
+.redu-list{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 100rpx;
+}
+
+.teamJob{
+  background: #ffffff;
+  /* height: 0; */
+ 
+  position: fixed;
+  top: 97rpx;
+  left: 33%;
+  z-index: 90;
+  transition: all .3s linear;
+  text-align: center;
+  overflow-y: auto;
+}
+.teamScroll{
+  display: flex;
+   padding: 0 30rpx 0 30rpx;
+  box-sizing:border-box;
+}

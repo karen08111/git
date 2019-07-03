@@ -1,0 +1,91 @@
+/* pages/pages2/wallet/bill/bill.wxss */
+.bill{
+	background: #FFFFFF;
+}
+.header{
+  height: 110rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #bababa;
+  background: #ffffff;
+}
+.header-name{
+  font-weight: 600;
+  /* border-bottom: 5rpx solid #ffffff; */
+  padding-bottom: 29rpx;
+  letter-spacing: 5rpx;
+}
+.active{
+  color: #3388ff;
+  border-bottom: 4rpx solid #3388ff;
+}
+.you{
+  margin-left: 150rpx;
+}
+.zuo {
+  margin-right: 150rpx;
+}
+
+.consum {
+	padding: 25rpx;
+	box-sizing: border-box;
+}
+.consum-list {
+	height: 130rpx;
+	position: relative;
+	line-height: 45rpx;
+	padding: 25rpx;
+	box-sizing: border-box;
+	border-bottom: 1rpx dashed #e5e5e5;
+}
+.days {
+	margin-right: 15rpx;
+}
+.consum-left {
+	float: left;
+	width: 65%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.consum-title {
+	font-size: 24rpx;
+	color: #343434;
+}
+.consum-time {
+	font-size: 18rpx;
+	color: #CCCCCC;
+}
+.consum-money {
+	float: right;
+	font-size: 26rpx;
+	color: #38c285;
+	line-height: 80rpx;
+	margin-right: 10rpx;
+	font-weight: 600;
+}
+.consum-money2 {
+	float: right;
+	font-size: 26rpx;
+	color: #ff7b0e;
+	line-height: 80rpx;
+	margin-right: 10rpx;
+	font-weight: 600;
+}
+.sign{
+	position: absolute;
+	right: 10rpx;
+	top:62rpx;
+	width: 13rpx;  
+	height: 13rpx;  
+	border-left: 1rpx solid #b3b3b3;  
+	border-bottom: 1rpx solid #b3b3b3;  
+	-webkit-transform: translate(0,-50%) rotate(-135deg);  
+	transform: translate(0,-50%) rotate(-135deg);
+}
+
+
+
+

@@ -1,0 +1,54 @@
+/* pages/authen/authen.wxss */
+page{
+
+}
+.opacity{
+  opacity: 0.5
+}
+.authen{
+  width: 250rpx;
+  margin: auto;
+  padding-top: 60rpx;
+  box-sizing: border-box;
+}
+.user{
+  width: 100%;
+  height: 346rpx;
+  /* background: #fff; */
+  margin-bottom: 25rpx;
+}
+.user-head{
+  width: 220rpx;
+  height: 220rpx;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff
+}
+.user-head image{
+  width: 100%;
+  height: 100%;
+}
+.user-btn{
+  width: 219rpx;
+	height: 62rpx;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	border: solid 1rpx #fff;
+  text-align: center;
+  line-height: 62rpx;
+  margin: auto;
+  margin-top: 25rpx;
+}
+.user-intr{
+  font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #666666;
+  text-align: center;
+}
+.on{
+  border: solid 1px #3388ff;
+}

@@ -1,0 +1,20 @@
+/* pages/pages2/wallet/billDetail/billDetail.wxss */
+.bill{
+	padding: 25rpx;
+	box-sizing: border-box;
+}
+.cons {
+	font-size: 22rpx;
+	color: #999999;
+	margin-top: 10rpx;
+	letter-spacing: 2rpx;
+}
+.bill-title {
+	margin-right: 7rpx;
+}
+.bills{
+	margin-left: 7rpx;
+}
+
+
+

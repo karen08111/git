@@ -1,0 +1,41 @@
+<view class='infor'>
+  <basOrd names="工程名称" pla="请输入3-20个字符" bind:basOrd="names"></basOrd>
+  <!-- <basFond names="担任职位"></basFond> -->
+  <view class="section input-model">
+    <view class="input-title">担任职位</view>
+    <picker class='input-picker' mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="input-title-two">
+        {{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}}
+      </view>
+      <text class='jiantou'></text>
+    </picker>
+  </view>
+  <basDate names="工程时间"></basDate>
+  <basLocation names="工作地点" pla="请选择您住的地址"></basLocation>
+  <!-- <basFond names="图片介绍" pla="上传格式为png png不超过1M"></basFond> -->
+  <view class='addImg'>
+    <text class='addImgName'>图片介绍:</text>
+    <view class='addList'>
+      <view class='addListImg' wx:if="{{imgList.length>0}}" wx:for="{{imgList}}" wx:key="{{item}}">
+        <image src="{{item}}" data-url='{{index}}' bindtap='lanImg'></image>
+      </view>
+      <view class='tianjia' bindtap='upImg' wx:if="{{imgList.length<9}}">
+          <text class='jia'>+</text>
+          <text class='tianTitle'>上传图片</text>
+      </view>
+      <!-- <view class='tianjia' bindtap='upImg' wx:if="{{imgList.length>=9}}">
+          <text class='jia'>-</text>
+          <text class='tianTitle'>重新上传</text>
+      </view> -->
+    </view>
+  </view>
+  <view class='project-intr'>
+    <text class='project-name'>业绩说明:</text>
+    <textarea bindinput='textarea' placeholder='描述您的工程业绩，向企业展示您的工作能力。不超过300个字符' maxlength='300'></textarea>
+  </view>  
+</view>
+<!-- <view class='sav' bindtap='sav'>保存</view> -->
+<view class='savs'>
+  <text class='one' bindtap='sav'>确认</text>
+  <text class='two' bindtap='reset'>取消</text>
+</view>

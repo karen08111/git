@@ -1,0 +1,52 @@
+<view class='main'>
+  <view class='addBook' wx:if="{{store==1}}">
+		<view class="showBook">
+			<view class='book-li' wx:for="{{bookList}}" data-index='{{index}}' data-id='{{item.id}}' wx:key="{{index}}" bindtap="select">
+				<view class='shenhe' wx:if="{{item.status == 0}}">
+					<text>审核中</text>
+				</view>
+				<text class='wai'>
+					<text class="nei {{item.isuse?'nei-active':''}}"></text>
+				</text>
+				<view class='book-img'>
+					<image src="{{item.img_path?http+item.img_path:''}}" mode='aspectFill'></image>
+				</view>
+				<view class='book-name'>{{item.seniority_name}}</view>
+				<view class='book-icon'>{{item.credential_level_type.title}}</view>
+			</view>
+		</view>
+		<view class="titlesBook">
+			<text class="" bindtap='qiehuan'>添加资质证书</text>
+			<!-- <text class='jiantou'></text> -->
+		</view>
+  </view>
+  <form bindsubmit="formSubmit" wx:if="{{store==2}}">
+    <view class='forms'>
+      <view class='li'>
+        <text class='title'>证书名称</text>
+        <input name="bookName" placeholder='请输出证书名称'></input>
+      </view>
+     
+      <common array="{{la}}" title="title" bind:getBing="getBing" pla="证书等级">证书等级</common>
+      <!-- <uploadImg>证书图片</uploadImg> -->
+      <view class='img'>
+        <view class='titles'>证书图片</view>
+        <view class='list'>
+          <view class='imgList' wx:if="{{imgUrl}}" >
+            <image src='{{imgUrl}}' mode='aspectFill'></image>
+          </view>
+          <view class='tianjia auto' bindtap='add' wx:if="{{!imgUrl}}" >
+            <text class='jia'>+</text>
+          </view>
+        </view>
+        <!-- <view bindtap='sav'>保存</view> -->
+      </view>
+    </view>
+    <button form-type='submit' class='save'>保存</button>
+  </form>
+	<view class='menuList' wx:if="{{bookList.length>0}}">
+	  <!-- <text class='show' bindtap='show'>保存</text> -->
+	  <!-- <text class='hide'>隐藏</text> -->
+	  <text class='del' bindtap='dels'>删除</text>
+	</view>
+</view>

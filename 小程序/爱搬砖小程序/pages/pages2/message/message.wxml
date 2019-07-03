@@ -1,0 +1,17 @@
+<!--pages/pages2/message/message.wxml-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+	<view class='main'>
+			 <view class='xin' wx:for="{{messageList}}" bindtap='detail' data-index='{{index}}' wx:key="{{index}}">
+				<view>
+					<text class='title'>{{item.title}}</text>
+					<text class='auther'>{{item.type}}</text>
+				</view>
+				<view class='neirong'>
+					<text class="content {{current==index?'':'over'}}">{{item.content}}</text>
+					<text class='times'>{{item.create_time}}</text>
+				</view>
+				<view class='clear'></view>
+			</view>
+			<view class="nones" wx:if="{{messageList.length == 0}}">暂无消息~</view>
+	</view>
+</scroll-view>

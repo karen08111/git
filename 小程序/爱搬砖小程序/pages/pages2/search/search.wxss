@@ -1,0 +1,125 @@
+/* pages/pages2/search/search.wxss */
+@import "/assets/font.wxss";
+.search{
+  border-top: 1rpx solid #e5e5e5;
+  
+}
+.ul{
+  /* height:286rpx; */
+  width: 22%;
+  display: flex;
+}
+.xuanxiang{
+  height: 286rpx;
+  background: #ffffff;
+}
+.name{
+  line-height: 64rpx;
+  font-size: 26rpx;
+  letter-spacing: 1rpx;
+}
+.xia{
+  position: relative;
+  top: -10rpx;
+}
+.sou{
+  height: 102rpx;
+  display: flex;
+  background: #ffffff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.hide{
+  position: absolute;
+  top: 103rpx;
+  width: 140rpx;
+  left: 0;
+  background: #ffffff;
+  /* height: 300rpx; */
+  font-size: 26rpx;
+  line-height: 64rpx;
+  color: #999999;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  letter-spacing: 1rpx;
+  overflow: hidden;
+  transition: all .5s linear ;
+}
+.height{
+  height: 0;
+  transition: all .5s linear ;
+}
+.del{
+  /* width: 7%; */
+  line-height: 64rpx;
+  /* padding-left: 10rpx; */
+  margin-left: 10rpx;
+  font-size: 26rpx;
+}
+.inputs{
+  width: 65%;
+  display: flex;
+  background-color: #f2f2f2;
+	border-radius: 31rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  box-sizing:border-box;
+  
+  /* margin-left: 10rpx; */
+}
+.inputs input{
+  height: 100%;
+  width: 90%;
+  font-size: 26rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+}
+.icon{
+  position: relative;
+  top: -8rpx;
+}
+.icon2{
+  position: relative;
+  top: -8rpx;
+}
+.project{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.title{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #343434;
+}
+
+.btnList{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.btn{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #666666; 
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx 0 20rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+	border-radius: 30rpx;
+	border: solid 1rpx #f6f7fa;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.jack{
+  margin-top: 10rpx;
+}
+
+

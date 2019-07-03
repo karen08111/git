@@ -1,0 +1,33 @@
+<!--components/new-List/new-list.wxml-->
+<view class='new-main'>
+  <view class='new-li' wx:for="{{newList}}" wx:key="{{index}}" wx:if="{{index<2}}" data-id="{{item.id}}" bindtap="detail">
+    <view class="{{index%2==0?'left':'right'}}">
+      <image src='{{http+item.img_path}}' wx:if="{{item.img_path}}" mode='aspectFill'></image>
+    </view>
+    <view class="new-content {{index%2==0?'left':'right'}}">
+      <view class='new-title'>{{item.title}}</view>
+      <view class='new-intr'>
+        {{item.abstract}}
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class='new-li'>
+   
+    <view class='new-content'>
+      <view class='new-title'>5555555555555555555555555</view>
+      <view class='new-intr'>
+        11111111111111111111111111111111overflow: hidden;
+        text-overflow:ellipsis;//文本溢出显示省略号
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      </view>
+    </view>
+    <view>
+      <image src='http://pic33.photophoto.cn/20141022/0019032438899352_b.jpg'></image>
+    </view>
+  </view> -->
+
+
+</view>

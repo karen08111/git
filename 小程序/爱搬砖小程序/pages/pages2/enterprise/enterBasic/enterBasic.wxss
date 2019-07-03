@@ -1,0 +1,65 @@
+/* pages/pages2/enterprise/enterBasic/enterBasic.wxss */
+.main{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.li{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.li input{
+  height: 100%;
+  font-size: 30rpx;
+}
+.title{
+  float: left;
+  margin-right: 25rpx;
+  letter-spacing: 2rpx;
+}
+.forms{
+  background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 15rpx 0rpx 
+		rgba(44, 133, 255, 0.15);
+	border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.right{
+  float: right;
+}
+.avatar{
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 20rpx;
+}
+.avatar image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.address{
+  height: 130rpx;
+  /* border-bottom: 1rpx dashed #e5e5e5; */
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.address input{
+  height: 100%;
+}
+.pickMap{
+	padding-top: 30rpx;
+	box-sizing: border-box;
+	font-size: 30rpx;
+	color: #555555;
+	position: relative;
+	line-height: 100rpx;
+}
+

@@ -1,0 +1,19 @@
+<view class='main'>
+  <view class='photo'>
+    <view class='img-list' wx:for="{{imgs}}"  bindtap="{{store?'pick':''}}" wx:key="{{index}}"  data-index='{{index}}'>
+      <image src="{{http+item.path}}"  mode='aspectFill' ></image>
+      <text class='yuan' wx:if="{{store}}">
+        <text class="yuan-none {{item.store?'yuan-active':''}} "></text>
+      </text>
+    </view>
+    <view class='img-list adds' bindtap='add' wx:if="{{!store}}">
+      <text class='heng zhongxin'></text>
+      <text class='su zhongxin'></text>
+    </view>
+  </view>
+  <view class='guanli' bindtap='ruSet' wx:if="{{!store}}">管理</view>
+</view>
+<view class='bottom' wx:if="{{store}}">
+  <text class='all left' bindtap="{{isAll?'noPick':'allPick'}}">{{isAll?'取消全选':'全选'}}</text>
+  <text class='del right' bindtap='dels'>删除</text>
+</view>

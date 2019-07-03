@@ -1,0 +1,19 @@
+/* pages/yanzheng/yanzheng.wxss */
+.content{
+  margin: 0 auto;
+  margin-top: 200rpx;
+  height: 80rpx;
+  border: 1rpx solid #ddd;
+}
+.box{
+  /* width: 120rpx; */
+  height: 80rpx;
+  background-color: orange;
+}
+.myCanvas{
+  border: 1px solid;
+}
+
+
+
+

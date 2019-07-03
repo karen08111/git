@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "project": "/components2/project/project",
+    "locations":"/components/map/map",
+		"jumpIndex":"/components2/jumpIndex/jumpIndex"
+  }
+}

@@ -1,0 +1,79 @@
+/* pages/pages2/wallet/topUp/topUp.wxss */
+.topUp {
+	padding: 25rpx;
+	box-sizing: border-box;
+}
+.money {
+	width: 690rpx;
+	/* height: 199rpx; */
+	background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 20rpx 0rpx 
+		rgba(44, 133, 255, 0.15);
+	border-radius: 20rpx;
+	margin: auto;
+	padding: 20rpx;
+	box-sizing: border-box;
+}
+.topMoney {
+	height: 95rpx;
+	line-height: 95rpx;
+	border-bottom: 1rpx dashed #E5E5E5;
+	display: flex;
+}
+.topMoney image {
+	width: 33rpx;
+	height: 27rpx;
+	position: relative;
+	top: 35rpx;
+	margin-left: 15rpx;
+	
+}
+.title {
+	font-size: 30rpx;
+	color: #555555;
+}
+.topMoney input {
+	height: 100%;
+	line-height: 95rpx;
+	padding-left: 15rpx;
+	box-sizing: border-box;
+	font-size: 24rpx;
+}
+.bornone{
+	border-bottom: none;
+}
+
+.toast {
+	margin: auto;
+	width: 230rpx;
+	margin-top: 80rpx;
+}
+.toast image{
+	width: 220rpx;
+	height: 200rpx;
+}
+.success {
+	font-family: MicrosoftYaHei;
+	font-size: 54rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #eb2d4d;
+	text-align: center;
+	margin-left: 10rpx;
+}
+.yes {
+	width: 580rpx;
+	height: 120rpx;
+	background-color: #ffffff;
+	border-radius: 60rpx;
+	border: solid 1rpx #999999;
+	margin: auto;
+	text-align: center;
+	line-height: 120rpx;
+	color: #999999;
+	letter-spacing: 3rpx;
+	font-size: 34rpx;
+}
+
+

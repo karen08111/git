@@ -1,0 +1,28 @@
+<view class='main'>
+  <view class='forms'>
+    <view class='li'>
+      <text class='title'>招聘标题</text>
+      <input bindinput='getName' value='{{title}}' placeholder='请填写招聘标题'></input>
+    </view>
+    <pickJob pla="请选择招聘岗位" bind:jobId="jobId">招聘职位</pickJob>
+    <view class='li'>
+      <text class='title'>所需人数</text>
+      <input type='number' bindinput='getNumber' placeholder='请填写招聘人数' value='{{renNumber}}'></input>
+    </view>
+    <salary bind:getValue="getValue" bind:getId="getId"></salary>
+    <getDate value="请选择开工时间" bind:getDatas="getDates">开工时间</getDate>
+    <getDate value="请选择项目结束时间" bind:getDatas="getEndDates">结束时间</getDate>
+    <view class='li'>
+      <text class='title'>工龄要求</text>
+      <input type='number' bindinput='getGong' placeholder='请输入工龄要求' value='{{gong}}'></input>
+    </view>
+    <pickCity bind:getCityId="getCityId">工作城市</pickCity>
+    
+    <view class='border text'>
+        <text class='titles'>招聘描述</text>
+        <textarea name="job-content" placeholder='请填写招聘描述' bindinput='getContent' maxlength='500'></textarea>
+    </view>
+    
+  </view>
+  <view class='save'>保存</view>
+</view>

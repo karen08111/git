@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "项目信息",
+  "usingComponents": {
+    "project": "/components2/project/project",
+		"jumpIndex":"/components2/jumpIndex/jumpIndex"
+  }
+}

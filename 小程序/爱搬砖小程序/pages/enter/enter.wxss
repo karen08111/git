@@ -1,0 +1,84 @@
+page{
+	/* background: url('http://resource.aibanzhuan.cn/enter/bg.jpg') repeat; */
+}
+.main {
+	position: relative;
+}
+
+.one{
+	text-align: center;
+	margin-top: 25rpx;
+}
+.tops{
+	width: 100%;
+	/* height: 100%; */
+	position: relative;
+	/* background: url('http://resource.aibanzhuan.cn/ingenuity/rz_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%; */
+}
+.tops image{
+	width: 100%;
+	height: 100%;
+}
+.enter{
+	width: 100%;
+	height: 880rpx;
+	padding: 20rpx;
+	box-sizing: border-box;
+	/* float: left;
+	margin-top: -990rpx; */
+	position: absolute;
+	bottom: 0;
+}
+.fors{
+	width:654rpx;
+	background: url('http://resource.aibanzhuan.cn/ingenuity/rz_form_bg.png') no-repeat;
+	background-size: 100%;
+	height: 880rpx;
+	/* padding: 20rpx; */
+	box-sizing: border-box;
+	margin-left: -327rpx;
+	/* margin-top: 30rpx; */
+	/* margin-top: -880rpx; */
+	position: absolute;
+	left: 50%;
+	bottom: 120rpx;
+	z-index: 99;
+}
+.biao{
+	margin: auto;
+	margin-top: 270rpx;
+	width: 541rpx;
+}
+.fors input {
+	width: 541rpx;
+	height: 75rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	border: solid 2rpx #ffffff;
+	margin-top: 55rpx;
+	font-size: 28rpx;
+	/* color: #FFFFFF; */
+	letter-spacing: 3rpx;
+	padding-left: 30rpx;
+	box-sizing: border-box;
+}
+.tis{
+	width: 541rpx;
+	height: 75rpx;
+	border-radius: 10rpx;
+	font-size: 32rpx;
+	text-align: center;
+	line-height: 75rpx;
+	color:#FFFFFF ;
+	letter-spacing: 3rpx;
+	margin-top: 135rpx;
+	background: url('http://resource.aibanzhuan.cn/ingenuity/rz_btn.png');
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+}
+.phClass {
+   /* color:#FFFFFF; */
+}

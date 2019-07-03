@@ -1,0 +1,44 @@
+<view class="wux-class wux-filterbar">
+    <wux-backdrop id="wux-backdrop" data-index="{{ index }}" data-item="{{ items[index] }}" bind:click="onClose" />
+     <view class="">
+        <block wx:for="{{ items }}" wx:key="{{index}}">
+            <view class=" {{ item.checked ? 'wux-filterbar__item--checked' : '' }}" bindtap="onClick" data-index="{{ index }}">
+                <text class="wux-filterbar__text">{{ item.label }}</text>
+                <text class="wux-filterbar__icon {{ 'wux-filterbar__icon--' + item.type }} {{ item.sort === 1 ? 'wux-filterbar__icon--sort-asc' : item.sort === -1 ? 'wux-filterbar__icon--sort-desc' : '' }}" wx:if="{{ item.type === 'radio' || item.type === 'checkbox' || item.type === 'sort' || item.type === 'filter' }}"></text>
+            </view>
+        </block>
+    </view>
+    <block wx:for="{{ items }}" wx:key="">
+        
+        <wux-animation-group wux-class="wux-filterbar__pop" in="{{ item.visible }}" class-names="wux-animate--slideInRight" bind:enter="onEnter" bind:exit="onExit" wx:if="{{ item.type === 'filter' }}">
+            <scroll-view class="wux-filterbar__scroll-view" scroll-y bindscroll="onScroll">
+                <block wx:for="{{ item.children }}" wx:for-item="p" wx:for-index="pIndex" wx:key="">
+                    <view class="wux-filterbar__panel">
+                        这是自定义内容
+                    </view>
+                </block>
+            </scroll-view>
+            <div class="wux-filterbar__btns">
+                <view class="wux-filterbar__btn" data-index="{{ index }}" data-item="{{ item }}" bindtap="onReset">重置</view>
+                <view class="wux-filterbar__btn wux-filterbar__btn--danger" data-index="{{ index }}" bindtap="onConfirm">确定</view>
+            </div>
+        </wux-animation-group>
+        
+       
+    </block>
+</view>
+
+<wxs module="common">
+    module.exports = {
+        getRadioValue: function(array) {
+            var result = array.filter(function(n) { return n.checked })[0]
+            if (result) {
+                return result.value
+            }
+            return ''
+        },
+        getCheckboxValue: function(array) {
+            return array.filter(function(n) { return n.checked }).map(function(n) { return n.value })
+        },
+    }
+</wxs>

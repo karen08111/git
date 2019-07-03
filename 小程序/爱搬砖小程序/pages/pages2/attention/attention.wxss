@@ -1,0 +1,89 @@
+/* pages/pages2/attention/attention.wxss */
+page{
+  border-top: 1rpx solid #e5e5e5;
+}
+.main{
+  
+}
+.header{
+  height: 95rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  line-height: 95rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #555555;
+  background: #ffffff;
+}
+.header-name{
+  font-weight: 600;
+  /* border-bottom: 5rpx solid #ffffff; */
+  padding-bottom: 29rpx;
+  letter-spacing: 5rpx;
+}
+.active{
+  color: #3388ff;
+  border-bottom: 5rpx solid #3388ff;
+}
+.you{
+  margin-left: 50rpx;
+}
+.zuo {
+  margin-right: 50rpx;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+
+.enter{
+  width: 335rpx;
+  height: 176rpx;
+  border: 1rpx solid #f2f2f2;
+  border-radius: 10rpx;
+  /* margin-left: 30rpx; */
+  padding: 15rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.enter-name{
+  font-size: 28rpx;
+	color: #343434;
+  display: inline-block;
+  width: 200rpx;
+  overflow: hidden;
+  line-height: 30rpx;
+}
+.enter-content{
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  line-height: 29rpx;
+	color: #666666;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+ 
+}
+.enter-title image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  top: 5rpx;
+}
+.isMore{
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999;
+  background: #ffffff
+}
+

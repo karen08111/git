@@ -1,0 +1,21 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#ffffff"
+   indicator-active-color="#3f7be9" circular="true" display-multiple-items="1">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{http+item.path}}" wx:if="{{item.path}}" class="slide-image" bindtap="{{item.link?'jump':''}}"  mode='aspectFill' width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <wxs module="m1">
+	var filters = function(arr,http) {
+		for(var i=0;i<arr.length;i++) {
+			console.log(arr[i])
+			if(arr[i].path.substr(0,7).toLowerCase() != "http://" || arr[i].path.substr(0,7).toLowerCase() != "https:/"){
+				arr[i].path = http+arr[i].path
+			}
+		}
+		return arr;
+	}
+	 module.exports.filters=filters
+</wxs> -->

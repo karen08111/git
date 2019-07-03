@@ -1,0 +1,92 @@
+.tui-project{
+  width:333rpx;
+  height:495rpx;
+  background-color:#f5f6f8;
+  border-radius:10rpx;
+  padding-top:10rpx;
+  box-sizing:border-box;
+  margin-top:18rpx;
+
+}
+.project-image{
+  padding:0;
+  width:320rpx;
+  height:280rpx;
+  margin-bottom:15rpx;
+  margin:auto;
+  position:relative;
+}
+.project-image image{
+  border-radius:10rpx;
+  width:100%;
+  height:100%;
+
+}
+.title{
+  font-family:MicrosoftYaHei;
+  font-size:30rpx;
+  font-weight:normal;
+  font-stretch:normal;
+  line-height:40rpx;
+  letter-spacing:0rpx;
+  color:#333333;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding-left:10rpx;
+  margin-top:10rpx;
+  overflow: hidden;
+  padding-right: 10rpx;
+}
+.subTitles{
+  font-family: MicrosoftYaHei;
+	font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30px;
+	letter-spacing: 0rpx;
+	color: #b3b3b3;
+  padding-left:10rpx;
+}
+.job-list{
+  display: flex;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+.anniu{
+  display: inline-block;
+  height: 30rpx;
+  font-family: MicrosoftYaHei;
+	font-size: 18rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	/* line-height: 30rpx; */
+	letter-spacing: 1rpx;
+	color: #3388ff;
+  background-color: #ffffff;
+	border-radius: 15rpx;
+	border: solid 1rpx #3388ff;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.times{
+  display: flex;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.times image{
+  width: 20rpx;
+  height: 20rpx;
+  position: relative;
+  top:5rpx;
+}
+.timesValue{
+  font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #b3b3b3;
+  margin-left: 10rpx;
+}

@@ -1,0 +1,48 @@
+/* components2/date/date.wxss */
+@import "/assets/font.wxss";
+.pick{
+  text-align: right;
+  float: right;
+}
+.xiala{
+  float: right;
+  margin-left: 30rpx;
+}
+.li{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.li input{
+  height: 100%;
+  font-size: 30rpx;
+}
+.title{
+  float: left;
+  /* margin-right: 25rpx; */
+  letter-spacing: 2rpx;
+}
+.xiala{
+  float: left;
+  height: 100%;
+}
+.times{
+  display: inline-block;
+  width: 100%;
+}
+.jiantou{
+  position: absolute;
+  right: 10rpx;
+  top:65rpx;
+  width: 20rpx;  
+  height: 20rpx;  
+  border-left: 1rpx solid #b3b3b3;  
+  border-bottom: 1rpx solid #b3b3b3;  
+  -webkit-transform: translate(0,-50%) rotate(-135deg);  
+  transform: translate(0,-50%) rotate(-135deg);
+}
+
+

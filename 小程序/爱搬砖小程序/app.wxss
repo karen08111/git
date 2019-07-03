@@ -1,0 +1,196 @@
+
+page{
+  border-top: 1rpx solid #e5e5e5;
+}
+.navigator-hover {
+  color: none;
+  background: none;
+}
+.save{
+  width: 580rpx;
+	height: 100rpx;
+	background-color: #3388ff;
+	border-radius: 50rpx;
+  line-height: 100rpx;
+	opacity: 0.9;
+  font-size: 34rpx;
+  color: #ffffff;
+  letter-spacing: 8rpx;
+  text-align: center;
+  margin: auto;
+  margin-top: 30rpx;
+}
+.abz {
+	position: absolute;
+	bottom: 200rpx;
+	left: 50%;
+	margin-left: -290rpx;
+}
+.delet{
+  width: 580rpx;
+	height: 100rpx;
+	background-color: #ffffff;
+	border-radius: 50rpx;
+  line-height: 100rpx;
+	opacity: 0.9;
+  font-size: 34rpx;
+  color: #f54646;
+  letter-spacing: 8rpx;
+  text-align: center;
+  margin: auto;
+  margin-top: 30rpx;
+  border: solid 1rpx #f54646;
+}
+.jiantous{
+  position: absolute;
+  right: 10rpx;
+  top:65rpx;
+  width: 20rpx;  
+  height: 20rpx;  
+  border-left: 1rpx solid #b3b3b3;  
+  border-bottom: 1rpx solid #b3b3b3;  
+  -webkit-transform: translate(0,-50%) rotate(-135deg);  
+  transform: translate(0,-50%) rotate(-135deg);
+}
+.addUser{
+  height: 99rpx;
+  width: 100%;
+	background-color: #3388ff;
+	border-radius: 10rpx 10rpx 0rpx 0rpx;
+  line-height: 99rpx;
+  text-align: center;
+  letter-spacing: 3rpx;
+	color: #ffffff;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 0;
+	z-index: 999;
+}
+@import 'assets/styles/weui.wxss';
+@import 'assets/styles/skyvow.wxss';
+
+.lis{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.lis input{
+  height: 100%;
+  font-size: 30rpx;
+}
+.title2{
+  float: left;
+  margin-right: 25rpx;
+  letter-spacing: 2rpx;
+}
+.borders{
+  border-bottom: none;
+}
+.texts{
+  font-size: 30rpx;
+  color: #555555;
+  box-sizing: border-box;
+  margin-top: 45rpx;
+}
+.texts textarea{
+  border: 1rpx solid #e5e5e5;
+  width:100%;
+  height: 300rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  margin-top: 40rpx;
+  
+}
+.title3{
+  margin-right: 25rpx;
+  letter-spacing: 2rpx;
+}
+.clear{
+  clear: both;
+}
+.next{
+  width: 632rpx;
+	height: 100rpx;
+  margin: auto;
+  margin-top: 50rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+	border: solid 1rpx #3388ff;
+  letter-spacing: 2rpx;
+	color: #3388ff;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.address{
+  height: 130rpx;
+  border-bottom: 1rpx dashed #e5e5e5;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #555555;
+  position: relative;
+}
+.address input{
+  height: 100%;
+}
+
+
+.guanzhu{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  background: #ffffff;
+  padding: 0rpx 30rpx 0 30rpx ;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  line-height: 80rpx;
+  text-align: center;
+  z-index: 9999
+}
+.guan{
+  width: 230rpx;
+	height: 80rpx;
+	background-color: #d6e7ff;
+	border-radius: 10rpx;
+	border: solid 1rpx #3388ff;
+  color: #3388ff;
+  
+}
+.lianxi{
+  width: 440rpx;
+	height: 80rpx;
+	background-color: #3388ff;
+	border-radius: 10rpx;
+  color: #ffffff;
+  margin-left: 20rpx;
+}
+.isMore{
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999;
+}
+.picka{
+	line-height: 130rpx;
+	font-size: 30rpx;
+	color: #555555;
+	position: relative;
+}
+
+.loginPhone {
+	width: 587rpx;
+	height: 88rpx;
+	margin: auto;
+	background-color: #eeeeee;
+	border-radius: 10rpx;
+	display: flex;
+	margin-top: 30rpx;
+}

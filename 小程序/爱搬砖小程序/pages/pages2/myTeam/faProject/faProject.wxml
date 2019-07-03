@@ -1,0 +1,73 @@
+<!--pages/pages2/myTeam/faProject/faProject.wxml-->
+<view class='main'>
+  <form>
+    <colonne title="项目信息"></colonne>
+    <view class='forms'>
+      <view class='lis'>
+        <text class='title2'>招聘标题</text>
+        <input bindinput='getName' value='{{title}}' placeholder='请填写招聘标题'></input>
+      </view>
+      <common array="{{xiangmuList}}" bind:getBing="getBing" title="title" pla="请选择项目分类" ids="{{project_type}}">项目分类</common>
+      <common array="{{yongtu}}" bind:getBing="getFunction_num" title="title" pla="请选择工程用途" ids="{{function_num}}">工程用途</common>
+      <common array="{{guimo}}" bind:getBing="getPrj_size" title="title" pla="请选择建设规模" ids="{{prj_size}}">建设规模</common>
+      <common array="{{projectStore}}" bind:getBing="getPrj_status" title="title" pla="请选择项目状态" ids="{{prj_status}}">项目状态</common>
+      <pickCity bind:getCityId="getCityId" pla="{{locationString}}">工作地区</pickCity>
+     <view class='lis'>
+        <text class='title2'>工程名称</text>
+        <input bindinput='getPrj_name' value='{{prj_name}}' placeholder='请填写工程名称'></input>
+      </view>
+      <view class='lis'>
+        <text class='title2'>总投资(万)</text>
+        <input bindinput='getInvest' type='number' value='{{invest}}' placeholder='请填写总投资金额(/万元)'></input>
+      </view>
+      <view class='lis'>
+        <text class='title2'>立顶文号</text>
+        <input bindinput='getApproval_num' value='{{approval_num}}' placeholder='请填写立顶文号'></input>
+      </view>
+      <common array="{{jibie}}" bind:getBing="getapproval_level_num" title="title" ids="{{approval_level_num}}" pla="请选择立顶级别">立顶级别</common>
+      
+      <view class='lis'>
+        <text class='title2'>总面积(平方米)</text>
+        <input bindinput='getbuilding_area' type='number' value='{{building_area}}' placeholder='请填写面积'></input>
+      </view>
+      <view class='lis'>
+        <text class='title2'>总长度(米)</text>
+        <input bindinput='getbuilding_length' type='number' value='{{building_length}}' placeholder='请填写总长度'></input>
+      </view>
+      <!-- <pickCity bind:getCityId="getCityId" pla="{{locationString}}">项目地址</pickCity> -->
+      <view class='picka bb'>
+        <text class='title2'>项目地址</text>
+        <text class='choose-address'  bindtap='onChangeAddress' value='{{address}}'>{{address?address:'请选取项目详细地址'}}</text>
+				<!-- <button class='choose-address' open-type="onChangeAddress">{{address?address:'请选取项目详细地址'}}</button> -->
+      </view>
+      <view class='borders texts'>
+        <text class='title3'>项目介绍</text>
+        <textarea bindinput='getContent' value='{{content}}' placeholder='请填写项目介绍' maxlength='500'></textarea>
+      </view>
+    </view>
+    <colonne title="项目施工许可证"></colonne>
+    <view class='forms'>
+      <!-- <view class='lis'>
+        <text class='title2'>项目编号</text>
+        <input bindinput='' value='{{}}' placeholder=''></input>
+      </view> -->
+      <view class='lis'>
+        <text class='title2'>施工许可证编号</text>
+        <input bindinput='getBuilder_licenseNum' value='{{builder_licenseNum}}' placeholder='请填写许可证编号'></input>
+      </view>
+    </view>
+    <colonne title="总承包单位信息"></colonne>
+    <view class='forms'>
+      <view class='lis'>
+        <text class='title2'>总承包单位名称</text>
+        <input bindinput='getContractor_corp_name' value='{{contractor_corp_name}}' placeholder='请填写承包单位'></input>
+      </view>
+      <view class='lis'>
+        <text class='title2'>总承包单位统一社会信用代码</text>
+        <input bindinput='getContractor_corp_code' value='{{contractor_corp_code}}' placeholder='社会信用代码'></input>
+      </view>
+    </view>
+    <view class='save' bindtap="{{isSave?'addSave':''}}" wx:if="{{!id}}">保存</view>
+    <view class='save' bindtap="{{isSave?'addSet':''}}" wx:if="{{id}}">保存</view>
+  </form>
+</view>

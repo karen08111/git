@@ -1,0 +1,10 @@
+<!--components/recomend-project/recomend-project.wxml-->
+<view class='recomend-project' bindtap='jumps' data-uid='{{project.uid}}'>
+  <view class='project-img'>
+    <image src="{{project.avatar?http+project.avatar:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540987260174&di=ccb9fc445d326a772733db0f47c165a5&imgtype=0&src=http%3A%2F%2Fimage.bitautoimg.com%2Ftaoche%2F2016_pc_usedcar%2Ffail_150_150.png'}}" mode='aspectFill'></image>
+  </view>
+  <view class='recomend-title'>{{project.team_name}}</view>
+  <view class='recomend-intr'>
+    {{project.content==null?'':project.content}}
+  </view>
+</view>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents":{
+    "pickClass": "/components/pickClass/pickClass",
+    "salary": "/components2/salary/salary",
+    "pickCity": "/components/location/location",
+    "getDate":"/components2/date/date",
+    "common":"/components2/common/common",
+    "pickJob":"/components2/pickJob/pickJob",
+		"sliders": "/pages/extension/extencode/extencode"
+  }
+}

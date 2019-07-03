@@ -1,0 +1,91 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-left'>
+      <view class='header-title'>
+        <text class='header-name'>{{userDetail.team_name}}</text>
+        <!-- <image src='/images/1.png'></image> -->
+        <!-- <text class='header-job'>{{userDetail.detail.work_type.title}}</text> -->
+      </view>
+      <view class=''>
+        <!-- <text class='list padding-left'>{{userDetail.detail.has_bad_medical_history==1?'有病史':'无病史'}}</text> -->
+        <text class='list' style='padding-left:0'>{{userDetail.industry_type.title}}</text>
+        <text class='list'>{{userDetail.nums}}人</text>
+        <!-- <text class='list'>{{userDetail.team_create_time[1]}}</text> -->
+        <text class='list'>{{userDetail.avg_age}}</text>
+        <text class='list'>{{userDetail.team_create_time[1]}}</text>
+        <text class='list border-right'>{{userDetail.region[0].title}}-{{userDetail.region[1].title}}</text>
+      </view>
+      <view>
+        <text class='iconfont icon-phone relative'></text>
+        <text class='header-phone'>{{userDetail.mobile}}</text>
+        <text class='iconfont icon-wx relative' wx:if="{{userDetail.wechat_number}}"></text>
+        <text class='header-phone' wx:if="{{userDetail.wechat_number}}">{{userDetail.wechat_number}}</text>
+      </view>
+			<view class="claer"></view>
+    </view>
+		<view class="claer"></view>
+    <view class='header-right'>
+      <view class='avatar'>
+        <image src='{{http+userDetail.avatar}}' wx:if="{{userDetail.avatar}}" mode='aspectFill'></image>
+        <!-- <text class='store' wx:if="{{userDetail.detail.current_state==1}}">空闲中</text>
+        <text class='store' wx:if="{{userDetail.detail.current_state==2}}">在职中</text> -->
+      </view>
+      <view class='set' bindtap='setDetail'>
+        <image src='/images/set3.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 工程业绩 -->
+  <view class='job-main'>
+    <view class='job-title'>工程业绩</view>
+    <!-- 循环 -->
+    <view class='job-list' wx:for="{{projectList}}" wx:key="{{index}}">
+      <view>
+        <view class='job-title-left'>
+          <text class='name'>{{item.ach_name}}</text>
+          <text class='job-time'>{{item.start_time}}--{{item.end_time}}</text>
+        </view>
+        <navigator class='set right' url="/pages/pages2/resume/job/job?id={{item.id}}&typeId=2&tid={{tid}}" >
+          <image src='/images/set3.png'></image>
+        </navigator>
+      </view>
+      <view class='clear'></view>
+      <!-- <view>
+        <text class='list padding-left'>无病史</text>
+        <text class='list  border-right'>无病史</text>
+      </view> -->
+      <view class='job-content'>{{item.content}}</view>
+    </view>
+    
+    <navigator class='add' url='/pages/pages2/resume/job/job?typeId=2&tid={{tid}}'>添加工程业绩</navigator>
+  </view>
+  <!-- 资质证书 -->
+  <!-- <view class='book'>
+    <text class='job-title'>资质证书</text>
+    <view class='set right relative' bindtap='setBook'>
+      <image src='/images/set3.png'></image>
+    </view>
+    <view class='book-list'>
+      <view class='book-li' wx:for="{{2}}" wx:key="{{index}}">
+        <view class='book-img'>
+          <image src='/images/1.png'></image>
+        </view>
+        <view class='book-name'>名字</view>
+        <view class='book-icon'>初级</view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 个人介绍 -->
+  <view class='jiejie'>
+    <text class='job-title'>团队介绍</text>
+    <view class='set right relative' bindtap='setIntr'>
+      <image src='/images/set3.png'></image>
+    </view>
+    <view class='job-content' wx:if="{{userDetail.content}}">{{userDetail.content}}</view>
+  </view>
+
+
+
+</view>

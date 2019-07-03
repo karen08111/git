@@ -1,0 +1,9 @@
+<view class="section">
+  <view class="section__title"><slot></slot></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" data-name='{{objectArray[index]}}' range-key="name" range="{{objectArray}}">
+    <view class="li">
+      <input value="{{index?objectArray[index].name:''}}" disabled placeholder='{{pla}}' ></input>
+    </view>
+    <text class='jiantou'></text>
+  </picker>
+</view>

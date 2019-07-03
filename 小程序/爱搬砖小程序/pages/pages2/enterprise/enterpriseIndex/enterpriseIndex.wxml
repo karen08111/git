@@ -1,0 +1,101 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-left left'>
+      <view class='names'>
+        <text class='header-title'>{{enter.company.company_name}}</text>
+         <navigator class='set right relative' url='/pages/pages2/enterprise/enterBasic/enterBasic'>
+            <image src='/images/set3.png'></image>
+          </navigator>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-phone font-relative'></text>
+        <text class='font-value'>{{enter.company.detail.office_mobile}}</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-wx font-relative'></text>
+        <text class='font-value'>{{enter.company.detail.fax_number}}</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-email font-relative'></text>
+        <text class='font-value'>{{enter.company.detail.enterprise_email}}</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-intel font-relative'></text>
+        <text class='font-value'>{{enter.company.detail.official_website}}</text>
+      </view>
+    </view>
+    <view class='header-right right'>
+      <view class='avatar'>
+        <image src="{{enter.company.detail.avatar?http+enter.company.detail.avatar:''}}" bindtap='setJiben' mode='aspectFill'></image>
+      </view>
+    </view>
+  </view>
+  <view class='maps'>
+    <view class='location-name'>
+      <text class='iconfont icon-loca'></text>
+      <text>{{enter.company.detail.company_address}}</text>
+    </view>
+    <view class='map-main'>
+      <wxs module="mm">
+        var maps = function(str){
+          return str.split(",")
+        }
+        var markers = function(str){
+    
+          var arr=[]
+          var newArr={
+            iconPath:"/images/maps.png",
+            id:0,
+            latitude:str[0],
+            longitude:str[1],
+            width:20,
+            height:20
+          }
+          arr.push(newArr)
+          return arr
+          
+        }
+        module.exports = {
+          maps: maps,
+          markers:markers
+        } 
+      </wxs>
+      <map wx:if="{{enter.company.detail.map_pos}}" markers="{{mm.markers(mm.maps(enter.company.detail.map_pos))}}" longitude="{{mm.maps(enter.company.detail.map_pos)[1]}}" latitude="{{mm.maps(enter.company.detail.map_pos)[0]}}" scale="14"></map>
+    </view>
+  </view>
+  <!-- 资质证书 -->
+  <view class='book'>
+    <text class='job-title'>资质证书</text>
+    <navigator class='set right relative' url='/pages/pages2/resume/book/book?ident=3'>
+      <image src='/images/set3.png'></image>
+    </navigator>
+    <view class='book-list'>
+      <view class='book-li' wx:for="{{enter.company.detail.senioritys}}" wx:key="{{index}}">
+        <view class='book-img'>
+          <image src="{{http+item.img_path}}" data-index='{{index}}' mode='aspectFill' bindtap='identPrew'></image>
+        </view>
+        <view class='book-name'>{{item.seniority_name}}</view>
+        <view class='book-icon'>{{item.credential_level_type.title}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 公司图集 -->
+  <view class='photo-list'>
+    <text class='job-title'>公司图集</text>
+    <navigator class='set right relative' url="/pages/pages2/enterprise/enterPhoto/enterPhoto">
+      <image src='/images/set3.png'></image>
+    </navigator>
+    <view class='photo'>
+      <image src='{{http+item.path}}' mode='aspectFill' wx:for="{{enter.company.detail.imgs}}" wx:key="{{index}}" data-index='{{index}}' bindtap='prews'></image>
+    </view>
+  </view>
+  <!-- 介绍 -->
+  <view class=''>
+    <text class='job-title'>企业介绍</text>
+    <navigator class='set right relative' url='/pages/pages2/enterprise/enterIntr/enterIntr'>
+      <image src='/images/set3.png'></image>
+    </navigator>
+    <view class='job-content' wx:if="{{enter.company.detail.content}}">{{enter.company.detail.content}}
+    </view>
+  </view>
+</view>

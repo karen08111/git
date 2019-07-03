@@ -1,0 +1,36 @@
+/* pages/canvas/canvas.wxss */
+canvas{
+  width:750rpx;
+  height: 750rpx;
+  margin: auto
+}
+
+.img{
+  width: 100rpx;
+  height: 100rpx;
+  margin: auto;
+  position: relative;
+
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.ab{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0.5;
+}
+.abs{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  background: black;
+  opacity: 1!important;
+  z-index: 99
+}
+

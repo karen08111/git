@@ -1,0 +1,13 @@
+	<view class="tops">
+		<image src="http://resource.aibanzhuan.cn/ingenuity/rz_bg.jpg" mode="widthFix"></image>
+		<view class="fors">
+			<view class="biao">
+				<input placeholder="请填写您的姓名" placeholder-class="phClass" bindinput="getName"></input>
+				<input placeholder="请填写手机号码" type="number" placeholder-class="phClass" bindinput="getMobile"></input>
+				<input placeholder="请填写服务类型" placeholder-class="phClass" bindinput="getJob"></input>
+				<view class="tis" bindtap="{{isSave?'save':''}}">提交信息</view>
+			</view>
+		</view>
+	</view>
+	
+

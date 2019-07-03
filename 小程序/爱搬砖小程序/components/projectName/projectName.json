@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "basFond": "/components/basFond/basFond",
+    "basDate": "/components/basDate/basDate",
+    "basLocation": "/components/basLocation/basLocation",
+    "basOrd": "/components/basOrd/basOrd",
+    "ident": "/components/ident/ident"
+  }
+}

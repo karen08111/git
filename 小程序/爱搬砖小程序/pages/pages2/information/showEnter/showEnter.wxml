@@ -1,0 +1,108 @@
+<view class='main'>
+  <view class='header'>
+    <view class='header-left left'>
+      <view class='names'>
+        <text class='header-title'>{{user.info.name}}</text>
+        <!-- <image src='/images/set3.png' bindtap='setJiben'></image> -->
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-phone font-relative'></text>
+        <text class='font-value'>{{user.info.office_mobile}}</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-wx font-relative'></text>
+        <text class='font-value'>wx</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-email font-relative'></text>
+        <text class='font-value'>{{user.info.enterprise_email}}</text>
+      </view>
+      <view class='font-list'>
+        <text class='iconfont icon-intel font-relative'></text>
+        <text class='font-value'>{{user.info.official_website}}</text>
+      </view>
+    </view>
+    <view class='header-right right'>
+      <view class='avatar'>
+        <image src="{{user.info.avatar?http+user.info.avatar:''}}" mode='aspectFill'></image>
+        <view class='isRest' wx:if="{{reset ==0}}" bindtap='guanzhu'>关注</view>
+        <view class='isRest' wx:if="{{reset ==1}}" bindtap='quxiao'>取消关注</view>
+      </view>
+    </view>
+  </view>
+  <view class='maps'>
+    <view class='location-name'>
+      <text class='iconfont icon-loca'></text>
+      <text>{{user.info.company_address}}</text>
+    </view>
+    <view class='map-main'>
+      <wxs module="mm">
+        var maps = function(str){
+          return str.split(",")
+        }
+        var markers = function(str){
+          var arr=[]
+          var newArr={
+            iconPath:"/images/maps.png",
+            id:0,
+            latitude:str[1],
+            longitude:str[0],
+            width:20,
+            height:20
+          }
+          arr.push(newArr)
+          return arr
+          
+        }
+        module.exports = {
+          maps: maps,
+          markers:markers
+        } 
+      </wxs>
+      <map wx:if="{{user.info.map_pos}}" markers="{{mm.markers(mm.maps(user.info.map_pos))}}" longitude="{{mm.maps(user.info.map_pos)[0]}}" latitude="{{mm.maps(user.info.map_pos)[1]}}" scale="14"></map>
+    </view>
+  </view>
+  <!-- 资质证书 -->
+  <view class='book'>
+    <text class='job-title'>资质证书</text>
+    <!-- <navigator class='set right relative' url='/pages/pages2/resume/book/book'>
+      <image src='/images/set3.png'></image>
+    </navigator> -->
+    <view class='book-list'>
+      <view class='book-li' wx:for="{{user.info.senioritys}}" wx:key="{{index}}">
+        <view class='book-img'>
+          <image src="{{item.img_path?http+item.img_path:''}}" data-img='{{item.img_path}}' data-index='{{index}}' data-arr='{{user.info.senioritys}}' bindtap='prev' mode='aspectFill'></image>
+        </view>
+        <view class='book-name'>{{item.seniority_name}}</view>
+        <view class='book-icon'>{{item.credential_level_type.title}}</view>
+      
+      </view>
+    </view>
+  </view>
+  <!-- 公司图集 -->
+  <view class='photo-list'>
+    <text class='job-title'>公司图集</text>
+    <!-- <view class='set right relative' bindtap='setBook'>
+      <image src='/images/set3.png'></image>
+    </view> -->
+    <view class='photo'>
+      <image wx:for="{{user.info.imgs}}" bindtap='photoPrev' data-index='{{index}}' wx:key="{{index}}" mode='aspectFill' src="{{http+item.path}}"></image>
+      
+    </view>
+  </view>
+  <!-- 介绍 -->
+  <view class=''>
+    <text class='job-title'>企业介绍</text>
+    <!-- <navigator class='set right relative' url='/pages/pages2/enterprise/enterIntr/enterIntr'>
+      <image src='/images/set3.png'></image>
+    </navigator> -->
+    <view class='job-content'>{{user.info.content}}
+    </view>
+  </view>
+  <!-- <view class='guanzhu'>
+    <view class='guan' bindtap='quxiao' wx:if="{{reset==1}}">取消关注</view>
+    <view class='guan' bindtap='guanzhu' wx:if="{{reset==0}}">关注</view>
+    <view class='lianxi' bindtap='lianxi' data-id='{{user.info.uid}}'>联系方式</view>
+  </view> -->
+</view>
+<jumpIndex></jumpIndex>
