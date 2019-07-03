@@ -1,0 +1,27 @@
+
+formData 类型  数组
+[
+    {
+        label:''//标题 --------------必填
+        type:''//类型： input-输入框 select-选择框 radio-单选框 textarea-文本框  switch-开关按钮 date-日期  time=时间选择 city=地址级联 upImg=图片上传--------------------必填
+        returns:'' //自定义返回字段
+        children:[ {id:1,title/或者其他:'选项1'} ]  //选择框 单选框菜单列表
+        value: '' //默认值
+        pla:''//占位符
+        rules: { //是否必填
+            name: '字段，跟returns对应 ',
+            message：'提示语' 默认 不能为空
+        }
+    }
+]
+
+
+disabled  是否禁用   默认false  布尔
+inline   是否行内   默认false  布尔
+custom   修改表单保存按钮字段 字符串  默认为 保存   可修改查询等字段
+labelWidth  字符串   修改标题宽度   默认 100px
+
+
+
+接收传回来的对象    @giveForm=""
+
